@@ -1,0 +1,31 @@
+ .bodypart{
+    background-color: rgb(244, 244, 244);
+    align-items: center;
+    width: 100%;
+    min-width: 100%;
+     position: relative;
+    box-sizing: border-box;
+  }
+.bodyparttwo{
+    margin: 12px 16px;
+    display: flex;
+    flex-direction: column;
+}
+@media screen and  (min-width: 768px) { 
+.bodypart{
+    min-width: 996px;
+    max-width: 996px;
+    margin:0px 16px;
+ }
+}
+@media screen and (min-width:1028px){
+    .bodymainwrap{
+        display: flex;
+    }
+}
+@media screen and (min-width:1192px){
+.bodypart{
+    width: 100%;
+    max-width: 1600px;
+ }
+}

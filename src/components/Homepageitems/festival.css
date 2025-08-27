@@ -1,0 +1,63 @@
+.festivaladdwrapper{
+    display: flex;
+    width: 100%;   
+     position: relative;
+}
+.festivalinnerwrap{
+    background-image: url('https://rukminim1.flixcart.com/fk-p-flap/920/380/image/76d4257741e5f1a2.jpg?q=60');
+    background-size: contain;
+      width: 100%; 
+     height: auto;
+     border-radius: 16px;
+}
+.festivalflexarea{
+    display: flex;
+    flex-direction: column;
+}
+.festivaltoparea{
+    display: flex;         
+    flex-direction: column;
+}
+.festivalheading{ 
+    display: flex;
+    margin: 16px 16px 0px 16px;
+    color: #000000;
+    font-size: 17px;
+    line-height: 24px;
+    /* letter-spacing: -0.1px; */
+    font-family: "bold";
+    text-overflow: ellipsis;
+}
+.festivalbottomarea{
+     display: flex;
+     flex-direction: row;
+     overflow-x: scroll;
+     scrollbar-width: none;
+      margin:12px 0px;
+}
+.festivalimagecontainer{
+    display: flex;
+    padding: 0px 48px 0px 0px;
+    flex-grow: 1;
+    z-index: 11;
+    background-color:rgb(250, 250, 202);
+}
+.imagecontainer{
+    margin-left: 12px;
+    display: flex;
+    flex-direction: column;
+    width:106px;
+    flex-grow: 1;
+}
+.imagecontainer img{
+    filter: none; 
+    opacity: 1;
+     transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out; 
+     width: 100%; 
+     margin: auto;
+      display: block;
+      object-fit: cover;
+     aspect-ratio: 53 / 80;
+     border-radius: 16px;
+     width: 100%;
+}                 

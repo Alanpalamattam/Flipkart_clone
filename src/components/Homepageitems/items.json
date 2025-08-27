@@ -1,0 +1,133 @@
+{
+    "row1":[
+        {
+            "name":"Grocery",
+            "src" :"https://rukminim1.flixcart.com/fk-p-flap/102/102/image/7ae3689613a31599.jpg?q=60"
+        },
+        {
+            "name":"Mobiles",
+            "src" :"https://rukminim2.flixcart.com/fk-p-flap/126/126/image/ac8ae38a7d93283b.jpg?q=60"
+        },
+        {
+            "name":"Food & Health",
+            "src" :"https://rukminim2.flixcart.com/fk-p-flap/126/126/image/1f9dc6b50bd99b8c.jpg?q=60"
+        },
+        {
+            "name":"Beauty",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/126/126/image/8123975742d5c3ee.jpg?q=60"
+        },
+        {
+            "name":"Auto Acc",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/126/126/image/5ff269483d44627c.jpg?q=60"
+        },
+        {
+            "name":"Furniture",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/126/126/image/234cd8ae8ae8c2fa.jpg?q=60"
+        },
+        {
+            "name":"Sports",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/126/126/image/c632b839ac6d183e.jpg?q=60"
+        },
+        {
+            "name":"2 Wheelers",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/f7cac32fd5af7b01.jpg?q=60"
+        },
+        {
+            "name":"Flipkart Pay",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/7a5f28e96ae3e9ae.png?q=60"
+        },
+        {
+            "name":"SuperCoin",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/e476bbcf4677c695.jpg?q=60"
+        } 
+    ],
+    "row2":[
+         { 
+            "name":"Fashion",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/9f58cf265eb3c589.jpg?q=60"
+        },
+        {
+            "name":"Travel",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/d7eae409dc461a54.jpg?q=60"
+        },
+        {
+            "name":"Home",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/63de2d8f2afd51cb.jpg?q=60"
+        },
+        {
+            "name":"Appliances",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/51b0d5f9aabc2462.jpg?q=60"
+        },
+        {
+            "name":"Electronics",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/11425150b071f19d.jpg?q=60"
+        },
+        {
+            "name":"Toys, Baby... ",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/d71e924a3d3c5ffa.jpg?q=60"
+        },
+        {
+            "name":"Sell Phone",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/1edd72299034dc12.jpg?q=60"
+        },
+        {
+            "name":"GenZ Trends",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/e1b4ec56637b0ac0.jpg?q=60"
+        },
+        {
+            "name":"Next Gen",
+            "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/fa288ad62fffc1c1.jpg?q=60"
+        }
+    ],
+    "festivalitems":[
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/520/780/image/c04a254476366f50.jpg?q=90",
+            "alt":"image1"
+        },
+         {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/f38d173c92fca67c.jpg?q=90",
+            "alt":"image2"
+        },
+         {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/a8258dc9e3bf0af9.jpg?q=90",
+            "alt":"image3"
+        }
+        ,
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/b2ce8764cd051c3e.jpg?q=90",
+            "alt":"image4"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/165f4e76fbe514ba.jpg?q=90",
+            "alt":"image5"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/ea10f9bfcb27dfbf.png?q=90",
+            "alt":"image6"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/283b3ddf52df25a3.jpg?q=90",
+            "alt":"image7"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/ea0818f28f70c7f2.jpg?q=90",
+            "alt":"image8"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/7c288d1c54cc670a.jpg?q=90",
+            "alt":"image9"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/7c288d1c54cc670a.jpg?q=90",
+            "alt":"image10"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/2a360f25e2597f45.jpg?q=90",
+            "alt":"image11"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/b26f70db4c371b64.jpg?q=90",
+            "alt":"image12"
+        }
+    ]
+}

@@ -1,0 +1,138 @@
+.itemmain{
+    padding: 12px 0px 4px 8px;
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+
+    background-color: white;
+  }
+.itemwrapper{
+   background-color: white;
+}
+.flexitems{
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+ }
+ .itemfirstrow,.itemsecondrow{
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 8px;
+ }
+ .itemcontent{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 66.72727272727272px;
+    font-size: 10px;
+    box-sizing: border-box;
+
+ }
+ .itemcontent img{
+     width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+ }
+ .imagediv{
+    display: flex;
+    position: relative;
+    width: 50.72727272727273px;
+    height: 50.72727272727273px; 
+    min-width: 50.72727272727273px;
+ }
+ .itemname{
+    font-size:10px;
+    margin-top:6px;
+    text-align: center;
+    color: rgba(33,33,33,1.00);
+    font-family: "semi-bold";
+    white-space: nowrap;
+    max-width: 100%;
+    line-height:14px;
+    text-overflow: ellipsis;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
+
+/* New Lauch */
+
+
+.newlauchitemsflex{
+   display: flex;
+   flex-direction: row;
+   position: relative;
+   justify-content: space-between;
+   align-items: center;
+   max-width: 700px;
+}
+.newlauchitem{            
+   display: flex;
+   flex-grow: 1;
+  }
+ .itemmaindiv{
+   margin-right: 12px;
+   width: 100%;
+  }
+ .newlaunchimg{
+   width: 100%; margin: auto; display: block; object-fit: contain; aspect-ratio: 3 / 4;
+   border-radius: 12px;
+  }
+  .newlaunchitemdiv{
+   display: flex;  
+   margin: 12px 4px 12px 16px;
+   flex-direction: column;
+   position: relative;
+   box-sizing: border-box;
+   flex: 1 1 0%;
+}
+.newlauchwrapper{
+ display: flex; 
+ flex-direction: column;
+ width: 100%;
+ background-color: white;
+ height: 100%;
+ /* margin: 0px 16px; */
+}
+@media screen and (min-width:425px){
+   .imagediv{
+    display: flex;
+    position: relative;
+    width: 60px;
+    height: 60px;
+   }
+   .itemcontent{
+   width: 76px;
+   }
+}        
+@media screen and (min-width:768px) {
+   .itemcontent{
+      width: 78.54px;
+   } 
+   .itemmain{ 
+      margin: 0px 16px;
+   }
+   .imagediv{ 
+      display: flex;
+    width: 62.54545454545455px;
+    height: 62.54545454545455px;
+   }       
+   .itemsecondrow .imagediv{
+    height: 62.84545454545455px;
+   }
+   .newlauchwrapper{
+      margin: 0px 16px;
+      width: auto;
+   }
+}        
+@media screen and (min-width:1024px){
+.itemmain{
+   display: none;
+}
+.newlaunchitemdiv{
+   display: none;
+}
+}
+

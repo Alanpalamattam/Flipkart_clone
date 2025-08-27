@@ -1,0 +1,351 @@
+@font-face {
+    font-family: bold;
+    src: url("../../assets/Inter-Bold.woff2");
+}
+@font-face {
+    font-family: regular;
+    src: url("../../assets/Inter-Regular.woff2");
+}
+@font-face {
+    font-family: semi-bold;
+    src: url("../../assets/Inter-SemiBold.woff2");
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'regular';
+}
+
+.top{
+    height: 48px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 10;
+}
+header{
+    padding: 8px 16px;
+    box-sizing: border-box;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+.leftside{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding:0;
+}
+.Threeline{
+    margin-right: 12px;
+    text-decoration: none;
+    color: #333;
+}
+.Fliplogo{
+    margin-right: 0;
+    padding-top:2px;
+    max-width:120px;
+}
+.rightside{
+    display: flex;
+    align-items: center;   
+}
+.installicon,.profilebutton,.cartbutton{
+    margin-right: 0;
+    display: flex;
+    margin-left:12px;
+}
+.profilebutton{
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+ }
+.logintext{
+    margin-left: 4px;
+    letter-spacing: 0;
+} 
+
+
+/* location-mobile*/
+.locationmain{
+    align-items: stretch;
+     display: flex;
+     flex-direction: column;
+     margin: 0px;
+    padding: 0px;
+    position: relative;
+    text-decoration: none;
+    z-index: 0;
+    background-color: rgb(255, 255, 255);
+    height: 22px;
+}
+.locationwrapper{
+    padding: 4px 16px 4px;
+}
+.locationa,.pincode,.seacrchlocationcontent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.locationsvg{
+    background-color: rgba(0, 0, 0, 0)
+}
+.pincodenumber{
+    color: rgb(31, 31, 31);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin-left:4px;
+    font-family: semi-bold;
+}
+.seacrchlocationcontent{
+margin-left: 6px;
+}
+.searchlocationwrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.searchlocatopntext{
+    color: rgb(18,84,231);
+    text-overflow: ellipsis;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-family: semi-bold;
+}
+.Loactionarrow{
+    background-color: rgba(0, 0, 0, 0);
+}
+.searchbar{
+    display: flex;
+    margin:0;
+    padding: 12px 16px;
+}
+.searchbarwrapper{
+    display: flex;
+    flex:1 1 0%;
+    align-items: center;
+    border: 1.6px solid rgb(88,171,250);
+    border-radius: 12px;
+    padding-left: 12px;
+    padding-right: 4px;
+}
+.searchbarcontent{
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0%;
+    height: 48px;
+    position: relative;
+}
+.searchicon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+.searchtextwrapper{
+    display: flex;
+    align-items: center;
+    padding-left: 8px;   
+}
+.searchtext{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -.01px;
+    color: rgba(0, 0, 0, .87843);
+    font-family: "regular";
+}         
+.cartbutton{         
+    font-size: 20px;
+    align-self: start;
+    font-family: "regular";
+    align-items:center;
+  }
+ .top{
+    background-color: white;
+ }
+ .searchbarlap{
+    min-width: 200px;
+    margin:0;
+    width: 100%;
+}
+.searchform{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #f0f5ff;
+}
+.barwrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.searchbut{
+    height: 40px;
+    border-radius: 2px;
+    padding: 8px 8px 8px 12px;
+    font-family: "regular";
+    border: 0;
+    background: transparent;
+}
+.searchspace{
+    position:relative;
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+}
+.inputbox{
+    text-overflow: ellipsis;
+    border: 0;
+    outline: 0 none;
+    font-size: 17px;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+    background-color: transparent;
+    font-family: "regular";
+    letter-spacing: 0!important;
+}
+.searchbarlap{
+    display: none;
+}
+ .Logindownarrow{
+    transform: rotate(0deg);
+    transition: transform .3s ease-in-out;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    margin-top: 1px;
+    display: none;
+    }
+ .marketbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    display: none;
+ }
+ .threedot{
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    display: none;
+ }
+ .threedotatag{
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    padding: 8px;
+ }
+ .carttext{
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+ }
+ .cartarea{
+    display: flex;
+ }
+.carttext{
+    display: none;
+}
+ @media screen and (min-width:768px){
+    header{
+        max-width: 996px;
+        padding: 12px;
+    }
+    .Fliplogo{
+        margin-right:36px;
+        max-width: 160px;
+        padding-top:1px;
+    }
+    .Threeline{
+        display:none;
+    }
+    .top{
+        height: 67px;
+    }
+    .locationwrapper{
+        display: none;
+    }
+    .searchbar{
+        display: none;
+    }
+    .searchbarlap{
+        display: block;
+    }
+    .installicon{
+        display: none;
+    }
+    .Logindownarrow{
+        display: flex; 
+     } 
+    .profilebutton{
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        border: 1px solid transparent;
+    }
+    .logintext{
+        margin-left: 8px;
+    }
+    .cartbutton{
+        margin:0px 8px 0px 0px;
+        padding:0px 6px;
+    }
+    .marketwrapper{
+        display: flex;
+        padding: 0px 6px;    }
+    .marketbutton{
+        display: flex;
+        align-items: center;
+    }
+    .threedot{
+        display: block;
+    }
+    .leftside{
+        flex-grow: 1;
+    }
+    .profilewrapp{
+        padding: 0px 6px;
+    }
+    
+}
+@media screen and (min-width:1192px){
+    header{
+        max-width: 1600px;
+        padding: 12px 28px;
+    }
+    .profilewrapp,.marketwrapper,.cartarea,.threedot{
+        padding: 0 20px;
+    }
+    .cartbutton{
+        padding: 0;
+    }
+    .carttext{
+        display: block;
+    }
+}

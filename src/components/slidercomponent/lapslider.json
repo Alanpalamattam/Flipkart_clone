@@ -1,0 +1,51 @@
+{
+    "categorylist":[
+        {
+            "name":"Minutes",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/a22a213ca6221b65.png?q=100",
+        "arrow":false
+        },
+         {
+            "name":"Mobiles & Tablets",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/5f2ee7f883cdb774.png?q=100",
+        "arrow":false
+        },
+        {
+            "name":"Fashion",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/ff559cb9d803d424.png?q=100",
+            "arrow":true
+        },
+        {
+            "name":"Electronics",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/af646c36d74c4be9.png?q=100",
+            "arrow":true
+        },
+        {
+            "name":"Home & Furniture",
+            "src" :"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/1788f177649e6991.png?q=100",
+            "arrow":true,
+            "doubleline":true
+        },
+        {
+            "name":"TVs & Appliances",
+            "src" :"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/e90944802d996756.jpg?q=100",
+        "arrow":false
+        },
+        {
+            "name":"Flight Bookings",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/3c647c2e0d937dc5.png?q=100",
+        "arrow":false
+        },
+        {
+            "name":"Beauty, Food..",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/b3020c99672953b9.png?q=100",
+            "arrow":true,
+            "doubleline":true
+        },
+        {
+            "name":"Grocery",
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/128/128/image/e730a834ad950bae.png?q=100",
+        "arrow":false
+        }
+    ]
+} 

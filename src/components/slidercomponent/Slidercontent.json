@@ -1,0 +1,66 @@
+{
+    "slides":[
+    {
+      "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/48790c1a50cd03fa.jpeg?q=60",
+      "alt":"slider1"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/49e0c6f520432223.jpg?q=60",
+        "alt":"slider2"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/dd340f82b5e1de87.jpeg?q=60",
+        "alt":"slider3"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/a23401011ab9abad.jpg?q=60",
+        "alt":"slider4"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/ceccb3ea35647b34.jpeg?q=60",
+        "alt":"slider5"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/f48e8ae4a5ef8f08.jpg?q=60",
+        "alt":"slider6"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/f76c43b54109310b.jpeg?q=60",
+        "alt":"slider7"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/14c2f374b0b26c07.jpeg?q=60",
+        "alt":"slider8"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/960/460/image/7f0e5e96f713354a.jpeg?q=60",
+        "alt":"slider9"
+    }
+],
+"lapslides":[
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/2020/340/image/a8d47f5de1228262.jpg?q=60",
+        "alt":"Lapslider1"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/2020/340/image/1338bd4fc60390d8.jpg?q=60",
+        "alt":"Lapslider2"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/2020/340/image/120cf4ef8ab8045e.jpeg?q=60",
+        "alt":"Lapslider3"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/2020/340/image/9dcc0387f1eee062.jpeg?q=60",
+        "alt":"Lapslider4"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/2020/340/image/5b309e98775e22e4.jpg?q=60",
+        "alt":"Lapslider5"
+    },
+    {
+        "src":"https://rukminim1.flixcart.com/fk-p-flap/2020/340/image/076c4f2ee87225d7.jpg?q=60",
+        "alt":"Lapslider6"
+    }
+]
+}  
