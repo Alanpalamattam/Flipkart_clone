@@ -30,7 +30,7 @@
 }
 .festivalbottomarea{
      display: flex;
-     flex-direction: row;
+     flex-direction: row;  
      overflow-x: scroll;
      scrollbar-width: none;
       margin:12px 0px;
@@ -61,3 +61,10 @@
      border-radius: 16px;
      width: 100%;
 }                 
+
+
+@media screen and (min-width:1024px){
+    .festivaladdwrapper{
+        display: none;
+    }
+}

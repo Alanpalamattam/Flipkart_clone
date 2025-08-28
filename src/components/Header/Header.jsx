@@ -24,7 +24,7 @@ const Header = () => {
               <img
                 src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus_mobile-39120d.svg"
                 alt=""
-                width="160"r
+                width="160"
                 height="40"
               />
             </picture> 

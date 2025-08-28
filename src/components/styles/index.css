@@ -18,6 +18,12 @@
     margin:0px 16px;
  }
 }
+@media screen and (min-width:1024px){
+    .bodyparttwo{
+        display: none;
+    }
+
+}
 @media screen and (min-width:1028px){
     .bodymainwrap{
         display: flex;

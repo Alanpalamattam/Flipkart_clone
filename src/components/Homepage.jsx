@@ -1,15 +1,16 @@
 import React from 'react'
-import Header from '../components/Header/Header'
+import Header from './Header/Header'
 import Searchbar from './Header/Searchbar'
 import Smallslider from './slidercomponent/Smallslider'
-import {slides,lapslides} from "../components/slidercomponent/Slidercontent.json"
+import {slides,lapslides} from "./slidercomponent/Slidercontent.json"
 import Firstscroolitems from './Homepageitems/Firstscroolitems'
 import Categoryslider from './slidercomponent/Categoryslider'
-import Newlaunchitems from '../components/Homepageitems/Newlaunchitems'
+import Newlaunchitems from './Homepageitems/Newlaunchitems'
 import Lapmainslider from './slidercomponent/Lapmainslider'
 import './styles/index.css'
 import Festivalscroll from './Homepageitems/Festivalscroll'
- const Small = () => {
+import Bestinelectronics from './Laptopbbestcategory/Bestinelectronics'
+ const Homepage = () => {
   return (
     <div className='Mainbody'>
     <Header/> 
@@ -26,8 +27,9 @@ import Festivalscroll from './Homepageitems/Festivalscroll'
     <div className="bodyparttwo">
       <Festivalscroll/>
     </div>
+    <Bestinelectronics/>
    </div>
   ) 
 }
 
-export default Small 
+export default Homepage 
