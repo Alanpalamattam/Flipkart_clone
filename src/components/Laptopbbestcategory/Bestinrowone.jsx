@@ -8,8 +8,8 @@ const Bestinrowone = () => {
                 <div className="bestcategory-namepart">
                     <div className="bestcategory-namewrapper">
                         Best of Electronics
-                    </div>
-                </div> 
+                    </div>            
+                </div>           
                 {/* <div>
                    <div className="best-productarea">
                      <div className="productcontainer">
@@ -21,6 +21,7 @@ const Bestinrowone = () => {
                                  <div className="firstdescription">
                                     
                                  </div>
+                                 
                           </div>
                      </div>
                      <div className="bestproduct-innerwrap">

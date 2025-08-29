@@ -1,8 +1,13 @@
-import React from 'react'
+// import React, { useState } from 'react'
 import "../filter.css"
 import { Link} from 'react-router-dom'
 const Headersection = () => {
-  return (
+    // const [sortview,setsortview]=useState(false);
+    // const popup=()=>{
+    //      {console.log("fiif");}
+    //     return  
+    // }
+  return ( 
     <div>
         <div className="mobileheader">
             <div className="mobileheader-outer">
@@ -32,7 +37,7 @@ const Headersection = () => {
         </div>
         <div className="filterbuttons-mobile">
             <div className="filterbutwrap">
-                <div className="sortbut">
+                <div className="sortbut"  >
                    <svg width="20" height="20" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"></path><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path></svg>
                    <div className="sorttext">
                     Sort
@@ -57,11 +62,26 @@ const Headersection = () => {
                         <div className="deliverytext">
                           <span>Delivery in 1 Day</span> 
                         </div>                    
-                    </div>          
+                    </div>
+                    {/* <div className="deliverybutton">
+                        <div className="deliveryimg">
+                            <img src="https://rukminim1.flixcart.com/www/64/64/promos/31/05/2023/d09cf9fa-93e9-481f-a8ff-0b1e6b796f74.png?q=60" alt="deliveryimage" />
+                        </div> 
+                        <div className="deliverytext">
+                          <span>Premium Brands</span> 
+                        </div>                    
+                    </div>           */}
                 </div>     
             </div> 
         </div> 
-    </div>    
+        <div className="readmore">
+            <div className="readmoreflexarea">
+                <div className="readmorerow1">Computers</div>
+                <div className="readmorerow2">Read More</div>
+            </div>
+        </div>
+
+    </div>   
   )  
 }  
 

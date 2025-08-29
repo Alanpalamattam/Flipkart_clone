@@ -1,0 +1,60 @@
+{
+    "products":[
+        {
+            "name":"Lenovo 60.45 cm (24 inch) Full HD VA Panel 3-Side Near Edgeless with TUV Eye Care Monitor (D24-20/D24-40)",
+            "src":"https://rukminim1.flixcart.com/image/192/240/ko8xtow0/monitor/t/a/y/d24-20-66aekac1in-lenovo-original-imag2qwzazcdmqtb.jpeg?q=60&crop=false",
+            "purchasecount":"5,371",
+            "ratingpercent":"44",
+            "linedprice":"12,690",
+            "org_price":"7,099",
+            "bankoffer_price":"6,541",
+            "delivery_1day":true,
+            "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"]
+        },
+        {
+            "name":"Lenovo 68.58 cm (27 inch) Full HD VA Panel with TUV Eye Care Monitor (D27-40/D27-30)",
+            "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/i/u/w/-original-imagrkynyhv7vhzd.jpeg?q=60&crop=false",
+            "purchasecount":"5,371",
+            "ratingpercent":"32",
+            "linedprice":"14,690",
+            "org_price":"9,899",
+            "bankoffer_price":"9,121",
+            "delivery_1day":false,
+            "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"]
+        },
+        {
+             "name":"Acer 54.61 cm (22 inch) Full HD IPS Panel with sRGB 99%, ENERGY STAR Certified, VESA Supportive, VGA, HDMI, Ergonomic Stand, ZeroFrame Design Monitor (KA222Q)",
+            "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/c/n/8/-original-imahf4rbgwtzquxh.jpeg?q=60&crop=false",
+            "purchasecount":"8,569",
+            "ratingpercent":"15",
+            "linedprice":"6,999",
+            "org_price":"5,895",
+            "bankoffer_price":"5,320",
+            "delivery_1day":false,
+            "features":["Full HD Display | VA Panel","Response Time: 1 ms","VGA Support","2D Refresh Rate: 100 Hz"]
+        },
+        {
+            "name":"LG 108.0 cm (43 inch) 4K Ultra HD IPS Panel with WebOS, Smart Monitor (43SQ700S-WB.ATRLMSN)",
+            "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/f/j/4/43sq700-w-4k-ultra-hd-43-2023-43sq700-w-lg-original-imagtkcf7vjhvs7j.jpeg?q=60&crop=false",
+            "purchasecount":"303",
+            "ratingpercent":"49",
+            "linedprice":"67,000",
+            "org_price":"33,999",
+            "bankoffer_price":"32,299",
+            "delivery_1day":false,
+            "features":["4K Ultra HD Display | IPS Panel","Inbuilt Speaker","Response Time: 5 ms","VGA Support","2D Refresh Rate: 60 Hz"]
+        },
+        {
+            "name":"Acer 60.45 cm (24 inch) Full HD LED Backlit IPS Panel with 6 axis Color Adjustment, 2X2W Inbuilt Speakers, Display Widget, VisionCare, ENERGY STAR Certified, Robust Stand Monitor (KA242Y)",
+            "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60&crop=false",
+            "purchasecount":"1,021",
+            "ratingpercent":"16",
+            "linedprice":"7,999",
+            "org_price":"6,649",
+            "bankoffer_price":"6,316",      
+            "delivery_1day":false,
+            "features":["Full HD Display | IPS Panel","Response Time: 1 ms","HDMI Ports: 1","VGA Support","2D Refresh Rate: 120 Hz"]
+        }
+        
+    ]  
+}    
