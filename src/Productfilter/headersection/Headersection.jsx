@@ -1,12 +1,8 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react'
 import "../filter.css"
 import { Link} from 'react-router-dom'
 const Headersection = () => {
-    // const [sortview,setsortview]=useState(false);
-    // const popup=()=>{
-    //      {console.log("fiif");}
-    //     return  
-    // }
+    const [sortview,setsortview]=useState(false);
   return ( 
     <div>
         <div className="mobileheader">
@@ -35,9 +31,16 @@ const Headersection = () => {
             </div>       
             </div>
         </div>
+        {sortview && <div className="overlay" onClick={() => setsortview(false)}></div>}
+         <div className={`popup ${sortview ? "show" : ""}`}>
+          <div className="popupflexarea">
+            <div className="sortbytext">SORT BY</div>
+          </div>
+        
+        </div>
         <div className="filterbuttons-mobile">
             <div className="filterbutwrap">
-                <div className="sortbut"  >
+                <div className="sortbut" onClick={()=>setsortview(true)} >
                    <svg width="20" height="20" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"></path><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="m144 168 40 40 40-40M184 112v96M48 128h72M48 64h136M48 192h56"></path></svg>
                    <div className="sorttext">
                     Sort
@@ -80,7 +83,7 @@ const Headersection = () => {
                 <div className="readmorerow2">Read More</div>
             </div>
         </div>
-
+       
     </div>   
   )  
 }  

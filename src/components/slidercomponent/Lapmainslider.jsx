@@ -35,7 +35,7 @@ const Lapmainslider = ({ data }) => {
             }
           >
             <span className="arrowleft"></span>
-          </button>
+          </button> 
 
           <button
             className="rightscrollbutton"
