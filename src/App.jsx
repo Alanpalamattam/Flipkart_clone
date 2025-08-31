@@ -9,10 +9,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage/>}/>
         <Route path="/monitors" element={<Productfilterpage/>}/>
-      </Routes>
+       
+      </Routes>          
       {/* <Productfilterpage/> */}
     </Router>
   );
 }
- 
+  
 export default App;
+ 
+ 

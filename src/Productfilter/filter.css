@@ -545,18 +545,21 @@ font-family:'Times New Roman';
 .popup.show {
   transform: translateY(0);           
 }     
-
      
-.popupflexarea{
+ nbnbnbnbnbnbn
+
+ .popupflexarea{
     display: flex;
     padding-bottom: 24px;
     flex-direction: column;               
- }
+ }  
  .sortbytext{
         color: rgba(135, 135, 135, 1.00);
         font-family: "roboto";
         font-size: 14px; 
         margin: 12px;                   
-        margin-top: 11.2px;
+        margin-top: 11.2px;     
         padding-top: 0.8px;
- } 
+ }  
+  
+  

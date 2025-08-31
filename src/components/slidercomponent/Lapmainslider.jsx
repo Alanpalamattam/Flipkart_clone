@@ -49,7 +49,7 @@ const Lapmainslider = ({ data }) => {
         <div className="lapsliderdots">
           {data.map((_, index) => {
             return (
-              <div
+              <div  
                 key={index}
                 onClick={() => setslides(index)}
                 style={{
