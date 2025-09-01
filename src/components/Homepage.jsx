@@ -22,12 +22,14 @@ import Bestinelectronics from './Laptopbbestcategory/Bestinelectronics'
       <div className='bodypart'>
       <Categoryslider/>
        <Lapmainslider data={lapslides}/>
+        <Bestinelectronics/>
       </div>
     </div>
     <div className="bodyparttwo">
       <Festivalscroll/>
+     
     </div>
-    <Bestinelectronics/>
+    
    </div>
   ) 
 }

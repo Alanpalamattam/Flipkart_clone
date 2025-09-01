@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import "../filter.css"
 import { Link} from 'react-router-dom'
-const Headersection = () => {
+const Headersection = ({sortType, onSortChange }) => {
     const [sortview,setsortview]=useState(false);
-  return ( 
+    return ( 
     <div>
         <div className="mobileheader">
             <div className="mobileheader-outer">
@@ -34,7 +34,29 @@ const Headersection = () => {
         {sortview && <div className="overlay" onClick={() => setsortview(false)}></div>}
          <div className={`popup ${sortview ? "show" : ""}`}>
           <div className="popupflexarea">
-            <div className="sortbytext">SORT BY</div>
+            <div className="sortbytext">sort by</div>
+            <div className="sortbymargin"></div>
+            <div className="sortbybuttons">
+                <div>
+                    <div className="popularitybtn">
+                        <div className="popularitytextcontainer">Popularity</div>
+                        <div className="sortselecet-btn" onClick={() => onSortChange("popularity")&setsortview(false)}><img src={sortType==="popularity"?"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60":"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"}/></div>
+                    </div>
+                     <div className="popularitybtn" >
+                        <div className="popularitytextcontainer">Price -- Low to High</div>
+                        <div className="sortselecet-btn" onClick={() => onSortChange("lowtohigh")&setsortview(false)}><img src={sortType==="lowtohigh"?"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60":"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"}/></div>
+                    </div>
+                    <div className="popularitybtn">
+                        <div className="popularitytextcontainer">Price -- High to Low</div>
+                        <div className="sortselecet-btn" onClick={()=>onSortChange("hightolow")&setsortview(false)}><img  src={sortType==="hightolow"?"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60":"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"}/></div>
+                    </div>
+                    <div className="popularitybtn">
+                        <div className="popularitytextcontainer">Newest First</div>
+                        <div className="sortselecet-btn" onClick={()=>onSortChange("newest")&setsortview(false)} ><img  src={sortType==="newest"?"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60":"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"}/></div>
+                    </div>
+                </div>
+                
+            </div>   
           </div>
         
         </div>
@@ -47,12 +69,18 @@ const Headersection = () => {
                    </div>
                 </div>
                 <div className="seperaterline"></div>
+                
                 <div className="filterbut">
+                    <Link to={"/filter"}>
                    <svg width="20" height="20" viewBox="0 0 256 256"><path fill="none" d="M0 0h256v256H0z"></path><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M148 172H40M216 172h-28"></path><circle cx="168" cy="172" r="20" fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle><path fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" d="M84 84H40M216 84h-92"></path><circle cx="104" cy="84" r="20" fill="none" stroke="#111112" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"></circle></svg>
+                   </Link>
                    <div className='sorttext'>
                     Filter
-                   </div>
-                </div>
+                   </div>  
+                    
+                 </div>
+                 
+                
             </div>
         </div>
         <div className='devileryfilter-premiumbrands'>
@@ -75,7 +103,7 @@ const Headersection = () => {
                         </div>                    
                     </div>           */}
                 </div>     
-            </div> 
+            </div>  
         </div> 
         <div className="readmore">
             <div className="readmoreflexarea">

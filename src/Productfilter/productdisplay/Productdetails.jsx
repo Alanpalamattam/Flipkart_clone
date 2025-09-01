@@ -1,9 +1,8 @@
 import React from "react";
 import "../filter.css";
 import DrawStar from "./Drawstar";
-import {products} from "../products.json"
-const Productdetails = () => {
-  return (
+const Productdetails = ({products=[]}) => {
+   return (
     <div>
       <div className="productconatiner">
         {
@@ -15,7 +14,7 @@ const Productdetails = () => {
                 <img
                   className="pimage"
                   src={p.src}
-                  alt="productimage"
+                  alt="productimage" 
                 />
               </div>
             </div>

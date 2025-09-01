@@ -11,11 +11,11 @@
     src: url("../../assets/Inter-SemiBold.woff2");
 }
 @font-face{
-    font-family: roboto;
+    font-family:roboto;
     src: url("../../assets/roboto-regular.woff2");
 }
 @font-face {
-    font-family: roboto-medium;
+    font-family:roboto-medium;
     src: url("../../assets/roboto-medium.woff2");
 }
 body{

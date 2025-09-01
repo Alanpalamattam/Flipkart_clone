@@ -1,21 +1,22 @@
 .bestmain-wrapper{
     margin: 0px 16px;
+     display: none;
 }
-
 
 .best-outerwrapp{
     margin-top: 16px;
+   
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 16px;
 }
 .best-innerwrap{
-    grid-column: 1/11;   
+    grid-column: 1/13;   
     background-color: white;
     position: relative;
 }
 .bestcategory-namewrapper{
-   font-size: 22px;
+   font-size: 22px; 
     line-height: 30px;
     letter-spacing: -.02px;
    font-family: "semi-bold";
@@ -25,22 +26,29 @@
  .best-productarea{
     display: flex;
     padding: 0 4px 12px;
-    overflow: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
  }
 .bestproduct-innerwrap{
    padding: 12px 24px;
-    width: 216px;
+    min-width: 156px;
+    box-sizing: border-box;
+    max-width: 156px;
     margin: 8px;
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .best-imagearea{
-    width: "152px";
-     height:"152px";
-}
- 
+    width: 108px;
+     height:108px;
+    }
+ .best-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 .best-imagearea:hover{
     transform: scale(1.05);
 }
@@ -56,11 +64,11 @@
     line-height: 20px;
     letter-spacing: -.01px;
        font-family:"regular";
-    overflow-wrap: normal;
+    overflow-wrap: normal;   
     overflow: hidden;
     white-space: nowrap;
 }
-.offer{
+.secondescription{
     font-family:"semi-bold";
     text-overflow: ellipsis;
     text-align: center;
@@ -70,4 +78,9 @@
     overflow-wrap: normal;
     overflow: hidden;
     white-space: nowrap;
+}
+@media screen and (min-width:1024px){
+    .bestmain-wrapper{
+        display: contents;
+    }
 }
