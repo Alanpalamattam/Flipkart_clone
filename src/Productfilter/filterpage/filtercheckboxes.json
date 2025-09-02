@@ -1,0 +1,79 @@
+{
+    "checkbox":[
+        {
+            "name":"Price",
+            "checkboxes":[[2001,5000],[5001,10000],[10001,20000],[20001,30000],[30001,40000],[40001,50000],[50001,60000]],
+            "number-checkbox":true
+        },
+        {
+            "name":"F-Assured",
+            "checkboxes":["F-Assured"],
+            "subheading":"Popular Filters"
+         },
+        {
+            "name":"Brand",
+            "checkboxes":["DELL","LG","HP","BenQ","Lenova","Enter","MSI","ViewSonic","Samsung","Acer"]
+         },
+        {
+            "name":"Customer Ratings",
+            "checkboxes":["4★ & above","3★ & above","2★ & above","1★ & above"]
+        },
+        {
+            "name":"Discount",
+            "checkboxes":["30% or more","20% or more","10% or more"]
+        },
+        {
+            "name":"Display Size",
+            "checkboxes":["25 inch - 28 inch","28 inch Above","23 inch - 24.9 inch","20.1 inch - 22.9 inch","18 inch - 20 inch"]
+        },
+        {
+            "name":"Screen Resolution",
+            "checkboxes":["4K Ultra HD","Full HD","Quad HD","UHD","UWQHD","WFHD","WQHD"]
+        },
+        {
+            "name":"Screen Form Factor",
+            "checkboxes":["Curved","Flat"]
+        },
+        {
+            "name":"Inbuilt Speaker",
+            "checkboxes":["Yes","No"]
+        },
+        {
+           "name":"Panel Type",
+           "checkboxes":["IPS Panel","VA Panel","TN Panel"]
+        },
+        {
+            "name":"Connectivity",
+            "checkboxes":["HDMI","VGA"]
+        },
+        {
+            "name":"Suitable For",
+            "checkboxes":["Home and Office","Gaming","Business"]
+        },
+        {
+            "name":"Response Time",
+            "checkboxes":["5 ms - 10 ms","5 ms and Below"]
+        },
+        {
+            "name":"Offers",
+            "checkboxes":["Special Price","Buy More, Save More"]
+        },
+        {
+            "name":"GST Invoice Available",
+            "checkboxes":"GST Invoice Available"
+        },
+        {
+            "name":"Refresh Rate",
+            "checkboxes":["120 Hz - 143 Hz","144 Hz - 240 Hz","241 Hz and above","60 Hz - 119 Hz"]
+        },
+        {
+            "name":"Availability",
+            "checkboxes":["Include Out of Stock"]
+        },
+        {
+            "name":"Category",
+            "checkboxes":"Monitors"
+        }
+         
+    ]
+}  

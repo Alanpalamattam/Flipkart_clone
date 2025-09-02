@@ -22,7 +22,7 @@ const Sortparent = () => {
     }
     setProducts(sorted); 
     console.log(sorted)  
-  }, [sortType]); 
+  }, [sortType]);
 
   return (
     <div>

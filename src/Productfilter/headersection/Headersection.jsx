@@ -55,7 +55,6 @@ const Headersection = ({sortType, onSortChange }) => {
                         <div className="sortselecet-btn" onClick={()=>onSortChange("newest")&setsortview(false)} ><img  src={sortType==="newest"?"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60":"https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"}/></div>
                     </div>
                 </div>
-                
             </div>   
           </div>
         
