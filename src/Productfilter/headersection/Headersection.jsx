@@ -1,9 +1,9 @@
 import React, { useState} from 'react'
 import "../filter.css"
 import { Link} from 'react-router-dom'
-const Headersection = ({sortType, onSortChange }) => {
+ const Headersection = ({sortType, onSortChange}) => {
     const [sortview,setsortview]=useState(false);
-    return ( 
+     return ( 
     <div>
         <div className="mobileheader">
             <div className="mobileheader-outer">

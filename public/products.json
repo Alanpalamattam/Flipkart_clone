@@ -10,7 +10,8 @@
             "org_price":"7,099",
             "bankoffer_price":"6,541",
             "delivery_1day":true,
-            "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"]
+            "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"],
+            "brand":"Lenova"
         },
         {   
             "id":2,
@@ -22,7 +23,8 @@
             "org_price":"9,899",
             "bankoffer_price":"9,121",
             "delivery_1day":false,
-            "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"]
+            "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"],
+            "brand":"Lenova"
         },
         {    
             "id":3,
@@ -34,7 +36,8 @@
             "org_price":"5,895",
             "bankoffer_price":"5,320",
             "delivery_1day":false,
-            "features":["Full HD Display | VA Panel","Response Time: 1 ms","VGA Support","2D Refresh Rate: 100 Hz"]
+            "features":["Full HD Display | VA Panel","Response Time: 1 ms","VGA Support","2D Refresh Rate: 100 Hz"],
+            "brand":"Acer"
         },
         {    
             "id":4,
@@ -46,7 +49,8 @@
             "org_price":"33,999",
             "bankoffer_price":"32,299",
             "delivery_1day":false,
-            "features":["4K Ultra HD Display | IPS Panel","Inbuilt Speaker","Response Time: 5 ms","VGA Support","2D Refresh Rate: 60 Hz"]
+            "features":["4K Ultra HD Display | IPS Panel","Inbuilt Speaker","Response Time: 5 ms","VGA Support","2D Refresh Rate: 60 Hz"],
+            "brand":"LG"
         },
         {
             "id":5,
@@ -58,7 +62,8 @@
             "org_price":"6,649",
             "bankoffer_price":"6,316",      
             "delivery_1day":false,
-            "features":["Full HD Display | IPS Panel","Response Time: 1 ms","HDMI Ports: 1","VGA Support","2D Refresh Rate: 120 Hz"]
+            "features":["Full HD Display | IPS Panel","Response Time: 1 ms","HDMI Ports: 1","VGA Support","2D Refresh Rate: 120 Hz"],
+            "brand":"Acer"
         }
         
     ]  

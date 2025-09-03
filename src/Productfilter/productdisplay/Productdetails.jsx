@@ -1,24 +1,27 @@
 import React from "react";
 import "../filter.css";
 import DrawStar from "./Drawstar";
-const Productdetails = ({products=[]}) => {
-   return (
+import { useItems } from "../../context/Filtercontext";
+const Productdetails = () => {
+  const {items}=useItems();
+   return (  
     <div>
+      {console.log("displayy",items)} 
       <div className="productconatiner">
         {
-            products.map((p,index)=>{
+            items.map((p,index)=>{
                 return <div className="productflexarea">  
           <div className="producttopflexarea" key={index}>
             <div className="productimagearea">
-              <div className="pimageouter">
-                <img
+              <div className="pimageouter"> 
+                <img    
                   className="pimage"
                   src={p.src}
                   alt="productimage" 
                 />
               </div>
             </div>
-            <div className="productdetails-section">
+            <div className="productdetails-section"> 
               <div className="sponsertext">Sponsored</div>
               <div className="productname-container">
                 <div className="productname-area">
@@ -107,8 +110,8 @@ const Productdetails = ({products=[]}) => {
             })
         }
          
-        
-      </div>  
+         
+      </div> 
     </div>
   );
 }; 

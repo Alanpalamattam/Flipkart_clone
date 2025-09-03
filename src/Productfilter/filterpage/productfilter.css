@@ -37,7 +37,7 @@
     bottom: 0;
     width: 100%;
  }
- .filterbottom-flex{
+ .filterbottom-flex{  
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -159,11 +159,12 @@ display: flex;
  }
  
  .subheading-filter{
-   display: flex;
-    padding:12px 16px 0px 15px ;
+       display: flex;
+       padding:12px 16px 0px 15px ;
        color:#878787;
        font-size: 12px;
        font-family:serif;
        letter-spacing: 0.1px;
        margin-bottom: 12px;
  }
+
