@@ -16,7 +16,8 @@
          },
         {
             "name":"Customer Ratings",
-            "checkboxes":["4★ & above","3★ & above","2★ & above","1★ & above"]
+            "checkboxes":["4","3","2","1"],
+            "rating-checkbox":true
         },
         {
             "name":"Discount",

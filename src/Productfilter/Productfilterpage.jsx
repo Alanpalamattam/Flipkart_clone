@@ -10,6 +10,4 @@ const Productfilterpage = () => {
     </div>
   )
 }
-
 export default Productfilterpage
- 

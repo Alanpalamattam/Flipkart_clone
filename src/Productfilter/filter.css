@@ -73,9 +73,13 @@
     min-height: 48px;
     background-color: white;
     height: 48px;
-    position:sticky !important;
+    position:sticky;
     top: 0px;
     z-index: 100;
+ }
+ .stickysortbar{
+    position: fixed;
+    top: 0;
  }
 .filterbutwrap{
     display: flex;
@@ -601,4 +605,9 @@ font-family:'Times New Roman';
     height: 100%;
     margin: auto;
     object-fit: contain;
+}
+@media screen and (min-width:1171px){
+    .mobilefilter{
+        display: none;
+    }
 }

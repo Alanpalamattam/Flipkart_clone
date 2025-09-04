@@ -4,53 +4,57 @@ import Productdetails from "../productdisplay/Productdetails";
 import { Link } from "react-router-dom";
 import { useItems } from "../../context/Filtercontext";
 const FilterSelection = () => {
-  const { items,selectedfilters ,setselectedfilters} = useItems();
+  const {selectedfilters ,setselectedfilters} = useItems();
    const [filter, setfilter] = useState(0);
-    const handleTick = (category, item) => {
+  
+ 
+  //   const handleTick = (category, item) => {
     
-    setselectedfilters((prev) => {
-      const prevValues = prev[category] || []; 
+  //   setselectedfilters((prev) => {
+  //     const prevValues = prev[category] || []; 
        
-      if (prevValues.includes(item)) {
-        return {
-          ...prev,
-          [category]: prevValues.filter((v) => v !== item),
-        }; 
-      } else {                
-        return {
-          ...prev, 
-          [category]: [...prevValues, item],
-        };
-      }
-    });  
-    
-    { 
-      console.log(category);
+  //     if (prevValues.includes(item)) {
+  //       return {
+  //         ...prev,
+  //         [category]: prevValues.filter((v) => v !== item),
+  //       }; 
+  //     } else {                
+  //       return {
+  //         ...prev, 
+  //         [category]: [...prevValues, item],
+  //       };   
+  //     } 
+  //   });   
+       
+  //   { 
+  //     console.log(category);
+  //   }
+  // };
+   const handleTick = (category, item) => { 
+  setselectedfilters((prev) => {
+    const prevValues = prev[category]; 
+    if (prevValues.includes(item)) {
+       
+      return {
+        ...prev,
+        [category]: prevValues.filter((v) => v !== item),
+      };
+    } else {
+      
+      return {  
+        ...prev,
+        [category]: [...prevValues, item],
+      };
     }
-  };
-  // const filteredProducts = products.filter((product) => {
-     
-  //    if (selectedfilters.Brand && selectedfilters.Brand.length > 0) {
-  //      return selectedfilters.Brand.includes(product.brand);
-  //   }
-  //   if (selectedfilters.Price && selectedfilters.Price.length > 0) {
-  //     const price = Number(product.org_price.replace(/,/g, ""));
-  //     return selectedfilters.Price.some(
-  //       ([min, max]) => price >= min && price <= max
-  //     );
-  //   }
-     
-  //   return true; 
-  // });
-   
-
+  }); 
+}; 
    useEffect(() => {
     console.log("ticked filters:", selectedfilters);
    }, [selectedfilters]);
-  return (
+  return ( 
     <div>
       <div className="Filterselection-main">
-        {console.log("iems",items)}
+        {/* {console.log("iems",items)} */} 
         <div className="selection-flex">
             <div className="filter-leftarea">
             {checkbox.map((checkitem, index) => (
@@ -59,7 +63,7 @@ const FilterSelection = () => {
                   className="filtercategory-names"
                   onClick={() => setfilter(index)}
                   style={{
-                    paddingTop: index % 2 == 0 ? "13px" : "12px",
+                   
                     backgroundColor:
                       filter === index ? "white" : "rgb(241, 243, 246)",
                     color: filter === index ? "#2874F0" : "black",
@@ -71,7 +75,7 @@ const FilterSelection = () => {
               </div>
             ))}
           </div>
-          {console.log(filter)}
+          {console.log(filter)} 
           <div className="filter-rightarea">
             {filter != null &&
               checkbox[filter].checkboxes.map((x, index) => {
@@ -104,12 +108,20 @@ const FilterSelection = () => {
                             />
                           </div>
                           {checkbox[filter]["number-checkbox"] === true ? (
+                            
                             <div className="checkbox-value">
                               Rs. {x[0]} - Rs. {x[1]}
                             </div>
                           ) : (
                             <div className="checkbox-value">{x}</div>
-                          )}
+                          )}{
+                            checkbox[filter]["rating-checkbox"]===true?(
+                              <div className="checkbox-value">
+                               ★&nbsp;& above
+                              </div>
+                            ):""
+                          }
+                          
                         </div>
                       </div>
                     </div>

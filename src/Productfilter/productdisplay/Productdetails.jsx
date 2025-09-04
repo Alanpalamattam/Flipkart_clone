@@ -17,7 +17,7 @@ const Productdetails = () => {
                 <img    
                   className="pimage"
                   src={p.src}
-                  alt="productimage" 
+                 alt="productimage" 
                 />
               </div>
             </div>
@@ -108,9 +108,7 @@ const Productdetails = () => {
           </div>          
         </div>
             })
-        }
-         
-         
+        }         
       </div> 
     </div>
   );

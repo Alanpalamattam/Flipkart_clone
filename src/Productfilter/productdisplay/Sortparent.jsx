@@ -3,6 +3,7 @@ import Headersection from "../headersection/Headersection";
  import Productdetails from "./Productdetails";
 import FilterSelection from "../filterpage/FilterSelection";
 import { useItems } from "../../context/Filtercontext";
+import MonitorLarge from "../../components/Pages/MonitorLarg/MonitorLarge";
 const Sortparent = () => {
   const { items,setItems} = useItems();
   const [sortType, setSortType] = useState("popularity");
@@ -31,8 +32,10 @@ const Sortparent = () => {
     
     <div>
       <Headersection sortType={sortType} onSortChange={setSortType} />
-       <Productdetails items={items}  />
+       {/* <Productdetails items={items}  /> */}
       
+        <MonitorLarge/>
+   
     </div>
   );
 };

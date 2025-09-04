@@ -88,12 +88,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
- }
+ }            
  .filter-leftarea{
     display: flex;
     flex-direction: column;
     align-items: center;
-      
+       
   } 
  .filter-rightarea{
    display: block;
@@ -168,3 +168,10 @@ display: flex;
        margin-bottom: 12px;
  }
 
+ @media screen and (min-width:425px){
+   .filter-leftarea{
+      width: calc(100vw - 66.5%); 
+      align-items:flex-start;
+      background-color: rgb(241, 243, 246);
+    }
+ } 

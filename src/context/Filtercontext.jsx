@@ -1,9 +1,20 @@
 import { createContext, useContext, useState,useEffect} from "react";
- // Create Context
+ 
+ const initialFilters = {
+  Brand: [],
+  Price: [],
+  Size: [],
+  "FAssured": [],
+  "Customer Ratings":[],
+  Offers:[],
+  Discount:[],
+  "Display Size":[],
+  "Screen Resolution":[],
+  
+};
 const ItemsContext = createContext();
  
-// Provider
-export const ItemsProvider = ({ children }) => {
+ export const ItemsProvider = ({ children }) => {
      useEffect(()=>{
    const fetchproducts=async()=>{
       try{
@@ -14,12 +25,12 @@ export const ItemsProvider = ({ children }) => {
         console.log("Error fetching JSON:", err);
       } finally{
         console.log("")
-      }
+      } 
     }   
     fetchproducts(); 
   },[]);
   const [items, setItems] = useState([]);
-    const [selectedfilters, setselectedfilters] = useState({});
+    const [selectedfilters, setselectedfilters] = useState(initialFilters);
   
    return (
     <ItemsContext.Provider value={{ items, selectedfilters,setselectedfilters,setItems }}>

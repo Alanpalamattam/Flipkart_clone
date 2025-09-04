@@ -11,7 +11,10 @@
             "bankoffer_price":"6,541",
             "delivery_1day":true,
             "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"],
-            "brand":"Lenova"
+            "brand":"Lenova",
+            "rating":"4",
+            "display_size":"27",
+            "screenresolution":"Full HD"
         },
         {   
             "id":2,
@@ -24,7 +27,10 @@
             "bankoffer_price":"9,121",
             "delivery_1day":false,
             "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"],
-            "brand":"Lenova"
+            "brand":"Lenova",
+            "rating":"3",
+            "display_size":"30",
+            "screenresolution":"Full HD"
         },
         {    
             "id":3,
@@ -37,7 +43,10 @@
             "bankoffer_price":"5,320",
             "delivery_1day":false,
             "features":["Full HD Display | VA Panel","Response Time: 1 ms","VGA Support","2D Refresh Rate: 100 Hz"],
-            "brand":"Acer"
+            "brand":"Acer",
+            "rating":"2",
+            "display_size":"19",
+            "screenresolution":"Full HD"
         },
         {    
             "id":4,
@@ -50,7 +59,10 @@
             "bankoffer_price":"32,299",
             "delivery_1day":false,
             "features":["4K Ultra HD Display | IPS Panel","Inbuilt Speaker","Response Time: 5 ms","VGA Support","2D Refresh Rate: 60 Hz"],
-            "brand":"LG"
+            "brand":"LG",
+            "rating":"4",
+            "display_size":"20",
+            "screenresolution":"4K Ultra HD"
         },
         {
             "id":5,
@@ -63,7 +75,10 @@
             "bankoffer_price":"6,316",      
             "delivery_1day":false,
             "features":["Full HD Display | IPS Panel","Response Time: 1 ms","HDMI Ports: 1","VGA Support","2D Refresh Rate: 120 Hz"],
-            "brand":"Acer"
+            "brand":"Acer",
+            "rating":"3",
+            "display_size":"23",
+            "screenresolution":"Full HD"
         }
         
     ]  

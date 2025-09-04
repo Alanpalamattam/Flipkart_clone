@@ -1,10 +1,13 @@
 import React, { useState} from 'react'
 import "../filter.css"
 import { Link} from 'react-router-dom'
+import { useItems } from '../../context/Filtercontext'
+import Productdetails from '../productdisplay/Productdetails';
  const Headersection = ({sortType, onSortChange}) => {
+    const {items}=useItems();
     const [sortview,setsortview]=useState(false);
      return ( 
-    <div>
+    <div className="mobilefilter">
         <div className="mobileheader">
             <div className="mobileheader-outer">
                 <div className="header-rightside">
@@ -110,7 +113,7 @@ import { Link} from 'react-router-dom'
                 <div className="readmorerow2">Read More</div>
             </div>
         </div>
-       
+        <Productdetails items={items}  />
     </div>   
   )  
 }  

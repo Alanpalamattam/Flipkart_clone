@@ -24,7 +24,7 @@ import Bestinelectronics from './Laptopbbestcategory/Bestinelectronics'
        <Lapmainslider data={lapslides}/>
         <Bestinelectronics/>
       </div>
-    </div>
+    </div> 
     <div className="bodyparttwo">
       <Festivalscroll/>
      
