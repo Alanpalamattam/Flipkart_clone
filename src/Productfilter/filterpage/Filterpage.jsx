@@ -1,22 +1,22 @@
 import React from "react";
 import "../filter.css";
-// import { products } from "../../../public/products.json";
+import { products } from "../../../public/products.json";
 import { Link } from "react-router-dom";
 import "./productfilter.css";
 import FilterSelection from "./FilterSelection";
 import { useItems } from "../../context/Filtercontext";
 import { ItemsProvider } from "../../context/Filtercontext";
 const Filterpage = () => {
-  const {items,setItems, selectedfilters } = useItems();
+  const {setItems, selectedfilters } = useItems();
   const handleApply = () => {
-    const filteredProducts = items.filter((product) => {
+    const filteredProducts = products.filter((product) => {
       const price = Number(product.org_price.replace(/,/g, ""));
 
       const brandOk =
         selectedfilters.Brand.length === 0 ||
         selectedfilters.Brand.includes(product.brand);
-
-      const priceOk =
+    
+      const priceOk =  
         selectedfilters.Price.length === 0 ||
         selectedfilters.Price.some(
           ([min, max]) => price >= min && price <= max

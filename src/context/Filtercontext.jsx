@@ -11,7 +11,7 @@ import { createContext, useContext, useState,useEffect} from "react";
   "Display Size":[],
   "Screen Resolution":[],
   
-};
+};    
 const ItemsContext = createContext();
  
  export const ItemsProvider = ({ children }) => {
