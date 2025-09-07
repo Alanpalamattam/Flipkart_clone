@@ -119,7 +119,7 @@ const Header = () => {
             </a>
             <div className="carttext">Become a Seller</div>
           </div>
-          <div >
+          <div >     
             <div className="threedot">
                  <a href=""className="threedotatag">
                   <img class="-dOa_b" src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg" width="24" height="24" alt="Dropdown with more help links"></img>
@@ -128,10 +128,9 @@ const Header = () => {
 
           </div>
         </div>
-      </header>
+      </header> 
     </div>
   );
 };
 
 export default Header;
- 
