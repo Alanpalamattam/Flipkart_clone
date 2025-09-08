@@ -18,7 +18,7 @@ const FilterSelection = () => {
   //         ...prev,
   //         [category]: prevValues.filter((v) => v !== item),
   //       }; 
-  //     } else {                
+  //     } else {                ffe
   //       return {
   //         ...prev, 
   //         [category]: [...prevValues, item],
@@ -118,11 +118,11 @@ const FilterSelection = () => {
                             checkbox[filter]["rating-checkbox"]===true?(
                               <div className="checkbox-value">
                                ★&nbsp;& above
-                              </div>
+                              </div> 
                             ):""
                           }
-                          
-                        </div>
+                                
+                        </div>  
                       </div>
                     </div>
                   </>
