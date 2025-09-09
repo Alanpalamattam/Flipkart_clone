@@ -85,7 +85,8 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    height: 46.4px;
+    /* height: 46.4px; */
+    height: 48px;
    border-top: 1px solid rgb(220, 223, 230);
     border-bottom: 1px solid rgb(220, 223, 230);
     align-items: center;
@@ -404,7 +405,8 @@ position: relative;
     align-items: center;
     flex-wrap: wrap;    
  }
- .wowimage{
+
+  .wowimage{
     display: inline-flex;
     position: relative;
     margin-right: 2px;
@@ -506,7 +508,8 @@ font-family:'Times New Roman';
   /*FAV BUTTON */
 
   .favbutton{
-    top: 11.7px;
+    /* top: 11.7px; */
+    top: 12px;
     right: 12px;
     position: absolute;
     align-items: center;
@@ -606,7 +609,7 @@ font-family:'Times New Roman';
     margin: auto;
     object-fit: contain;
 }
-@media screen and (min-width:1171px){
+@media screen and (min-width:1001px){
     .mobilefilter{
         display: none;
     }

@@ -1,69 +1,65 @@
 import React, { useEffect, useState } from "react";
- import { checkbox } from "./filtercheckboxes.json";
+import { checkbox } from "./filtercheckboxes.json";
 import Productdetails from "../productdisplay/Productdetails";
 import { Link } from "react-router-dom";
-import { useItems } from "../../context/Filtercontext";
+import { useItems } from "../../../context/Filtercontext";
 const FilterSelection = () => {
-  const {selectedfilters ,setselectedfilters} = useItems();
-   const [filter, setfilter] = useState(0);
-  
- 
+  const { selectedfilters, setselectedfilters } = useItems();
+  const [filter, setfilter] = useState(0);
+
   //   const handleTick = (category, item) => {
-    
+
   //   setselectedfilters((prev) => {
-  //     const prevValues = prev[category] || []; 
-       
+  //     const prevValues = prev[category] || [];
+
   //     if (prevValues.includes(item)) {
   //       return {
   //         ...prev,
   //         [category]: prevValues.filter((v) => v !== item),
-  //       }; 
+  //       };
   //     } else {                ffe
   //       return {
-  //         ...prev, 
+  //         ...prev,
   //         [category]: [...prevValues, item],
-  //       };   
-  //     } 
-  //   });   
-       
-  //   { 
+  //       };
+  //     }
+  //   });
+
+  //   {
   //     console.log(category);
   //   }
   // };
-   const handleTick = (category, item) => { 
-  setselectedfilters((prev) => {
-    const prevValues = prev[category]; 
-    if (prevValues.includes(item)) {
-       
-      return {
-        ...prev,
-        [category]: prevValues.filter((v) => v !== item),
-      };
-    } else {
-      
-      return {  
-        ...prev,
-        [category]: [...prevValues, item],
-      };
-    }
-  }); 
-}; 
-   useEffect(() => {
+  const handleTick = (category, item) => {
+    setselectedfilters((prev) => {
+      const prevValues = prev[category];
+      if (prevValues.includes(item)) {
+        return {
+          ...prev,
+          [category]: prevValues.filter((v) => v !== item),
+        };
+      } else {
+        return {
+          ...prev,
+          [category]: [...prevValues, item],
+        };
+      }
+    });
+  };
+  useEffect(() => {
     console.log("ticked filters:", selectedfilters);
-   }, [selectedfilters]);
-  return ( 
+  }, [selectedfilters]);
+  return (
     <div>
       <div className="Filterselection-main">
-        {/* {console.log("iems",items)} */} 
+        {/* {console.log("iems",items)} */}
         <div className="selection-flex">
-            <div className="filter-leftarea">
+          <div className="filter-leftarea">
             {checkbox.map((checkitem, index) => (
               <div className="filtercategory-names-outer">
                 <div
                   className="filtercategory-names"
                   onClick={() => setfilter(index)}
                   style={{
-                   
                     backgroundColor:
                       filter === index ? "white" : "rgb(241, 243, 246)",
                     color: filter === index ? "#2874F0" : "black",
@@ -75,7 +71,7 @@ const FilterSelection = () => {
               </div>
             ))}
           </div>
-          {console.log(filter)} 
+          {console.log(filter)}
           <div className="filter-rightarea">
             {filter != null &&
               checkbox[filter].checkboxes.map((x, index) => {
@@ -108,21 +104,18 @@ const FilterSelection = () => {
                             />
                           </div>
                           {checkbox[filter]["number-checkbox"] === true ? (
-                            
                             <div className="checkbox-value">
                               Rs. {x[0]} - Rs. {x[1]}
                             </div>
                           ) : (
                             <div className="checkbox-value">{x}</div>
-                          )}{
-                            checkbox[filter]["rating-checkbox"]===true?(
-                              <div className="checkbox-value">
-                               ★&nbsp;& above
-                              </div> 
-                            ):""
-                          }
-                                
-                        </div>  
+                          )}
+                          {checkbox[filter]["rating-checkbox"] === true ? (
+                            <div className="checkbox-value">★&nbsp;& above</div>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </div>
                     </div>
                   </>
@@ -132,7 +125,7 @@ const FilterSelection = () => {
         </div>
       </div>
     </div>
-  );    
+  );
 };
 
 export default FilterSelection;

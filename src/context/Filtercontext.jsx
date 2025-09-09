@@ -15,12 +15,16 @@ import { createContext, useContext, useState,useEffect} from "react";
 const ItemsContext = createContext();
  
  export const ItemsProvider = ({ children }) => {
+   const [items, setItems] = useState([]);
+   const [allitems,setallitems]=useState([])
+
      useEffect(()=>{
    const fetchproducts=async()=>{
       try{
            const res=await fetch("/public/products.json");
            const data=await res.json();
            setItems(data.products);
+           setallitems(data.products);
       }catch (err) {
         console.log("Error fetching JSON:", err);
       } finally{
@@ -29,11 +33,10 @@ const ItemsContext = createContext();
     }   
     fetchproducts(); 
   },[]);
-  const [items, setItems] = useState([]);
     const [selectedfilters, setselectedfilters] = useState(initialFilters);
   
    return (
-    <ItemsContext.Provider value={{ items, selectedfilters,setselectedfilters,setItems }}>
+    <ItemsContext.Provider value={{ allitems,items, selectedfilters,setselectedfilters,setItems }}>
       {children}
     </ItemsContext.Provider>
   );

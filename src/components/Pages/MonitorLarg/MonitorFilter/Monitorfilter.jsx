@@ -1,29 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useItems } from "../../../../context/Filtercontext";
-
-import { checkbox } from "../../../../Productfilter/filterpage/filtercheckboxes.json";
+import { checkbox } from "../../../Productfilter/filterpage/filtercheckboxes.json";
 const Monitorfilter = () => {
-  const [visible, setVisible] = useState(false);
-  const [indexx, setindex] = useState(0);
-    const {selectedfilters ,setselectedfilters} = useItems();
-  const handleTick = (category, item) => { 
-  setselectedfilters((prev) => {
-    const prevValues = prev[category]; 
-    if (prevValues.includes(item)) {
-       
-      return {
-        ...prev,
-        [category]: prevValues.filter((v) => v !== item),
-      };
-    } else {
-      
-      return {  
-        ...prev,
-        [category]: [...prevValues, item],
-      };
-    }
-  }); 
-}; 
+  // const [visible, setVisible] = useState(false);
+  // const [indexx, setindex] = useState(0);
+  const { allitems, setItems, selectedfilters, setselectedfilters } =
+    useItems();
+  const handleTick = (category, item) => {
+    setselectedfilters((prev) => {
+      const prevValues = prev[category];
+      if (prevValues.includes(item)) {
+        return {
+          ...prev,
+          [category]: prevValues.filter((v) => v !== item),
+        };
+      } else {
+        return {
+          ...prev,
+          [category]: [...prevValues, item],
+        };
+      }
+    });
+  };
+  useEffect(() => {
+    filterapply();
+  }, [selectedfilters]);
   const [openIndex, setOpenIndex] = useState([]);
   const handleclick = (index) => {
     if (openIndex.includes(index)) {
@@ -31,8 +32,44 @@ const Monitorfilter = () => {
     } else {
       setOpenIndex([...openIndex, index]);
     }
-  };   
-  return (  
+  };
+  const filterapply = () => {
+    const filteredProducts = allitems.filter((product) => {
+      const price = Number(product.org_price.replace(/,/g, ""));
+
+      const brandOk =
+        selectedfilters.Brand.length === 0 ||
+        selectedfilters.Brand.includes(product.brand);
+
+      const priceOk =
+        selectedfilters.Price.length === 0 ||
+        selectedfilters.Price.some(
+          ([min, max]) => price >= min && price <= max
+        );
+
+      const ratingOk =
+        selectedfilters["Customer Ratings"].length === 0 ||
+        Number(product.rating) >=
+          Math.max(...selectedfilters["Customer Ratings"]);
+
+      const discountOk =
+        selectedfilters.Discount.length === 0 ||
+        Number(product.ratingpercent) >=
+          Math.max(
+            ...selectedfilters.Discount.map((d) =>
+              Number(d.replace("% or more", ""))
+            )
+          );
+      const screenOK =
+        selectedfilters["Screen Resolution"].length === 0 ||
+        selectedfilters["Screen Resolution"].includes(product.screenresolution);
+      console.log(selectedfilters["Screen Resolution"]);
+      return brandOk && priceOk && ratingOk && discountOk && screenOK;
+    });
+    setItems(filteredProducts);
+    console.log("apply", filteredProducts);
+  };
+  return (
     <div className="filter-section-main">
       <div className="filter-large-flexarea">
         <div className="Filters-heading-large">
@@ -205,7 +242,7 @@ const Monitorfilter = () => {
             <div
               className="filter-types-area"
               key={index}
-              onClick={() => handleclick(index) & setindex(index)}
+              onClick={() => handleclick(index)}
             >
               <div className="individualarea-filter">
                 <div className="filter-namearea-large">{x.name}</div>
@@ -230,44 +267,49 @@ const Monitorfilter = () => {
 
               {openIndex.includes(index) &&
                 x.checkboxes.map((opt, i) => {
-                  const category =x.name;
-                  console.log(category)
+                  const category = x.name;
+                  console.log(category);
                   const isChecked =
-                           selectedfilters[category]?.includes(opt) || false;
+                    selectedfilters[category]?.includes(opt) || false;
                   return (
                     <>
-                  
                       <div
-                        style={{ display:openIndex.includes(index)?"block":"none" }}
+                        style={{
+                          display: openIndex.includes(index) ? "block" : "none",
+                        }}
                         key={i}
                         className="filter-dropdown-contentarea"
                       >
                         <div style={{ marginTop: "17px" }}>
-                          <div className="checkbox-wrapper-box2" onClick={() => handleTick(category, opt)}>
+                          <div
+                            className="checkbox-wrapper-box2"
+                            onClick={() => handleTick(category, opt)}
+                          >
                             <img
                               style={{
                                 objectFit: "cover",
-                                   height: "13px",
-                                width: "13px",  
+                                height: "13px",
+                                width: "13px",
                                 paddingTop: "-2px",
                               }}
-                              src={isChecked
+                              src={
+                                isChecked
                                   ? "https://static-assets-web.flixcart.com/www/linchpin/batman-returns/cross-platform-images/images/checked-b672f083.png"
-                                 : "https://static-assets-web.flixcart.com/www/linchpin/batman-returns/cross-platform-mages/images/unchecked-58d79d4f.png"}
+                                  : "https://static-assets-web.flixcart.com/www/linchpin/batman-returns/cross-platform-mages/images/unchecked-58d79d4f.png"
+                              }
                             />
-                            <div className="delltest">{opt}
-                              {
-                                                          x["rating-checkbox"]===true?(
-                                                            <div className="checkbox-value">
-                                                             ★&nbsp;& above
-                                                            </div> 
-                                                          ):""
-                                                        }
-                              
+                            <div className="delltest">
+                              {opt}
+                              {x["rating-checkbox"] === true ? (
+                                <div className="checkbox-value">
+                                  ★&nbsp;& above
+                                </div>
+                              ) : (
+                                ""
+                              )}
                             </div>
                           </div>
                         </div>
-                        
                       </div>
                     </>
                   );
@@ -275,7 +317,7 @@ const Monitorfilter = () => {
             </div>
           ))}
       </div>
-      {console.log("filter",selectedfilters)}
+      {console.log("filter", selectedfilters)}
     </div>
   );
 };

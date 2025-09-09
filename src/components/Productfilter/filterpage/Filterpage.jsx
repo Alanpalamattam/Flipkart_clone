@@ -1,15 +1,13 @@
 import React from "react";
 import "../filter.css";
-import { products } from "../../../public/products.json";
-import { Link } from "react-router-dom";
+ import { Link } from "react-router-dom";
 import "./productfilter.css";
 import FilterSelection from "./FilterSelection";
-import { useItems } from "../../context/Filtercontext";
-import { ItemsProvider } from "../../context/Filtercontext";
-const Filterpage = () => {
-  const {setItems, selectedfilters } = useItems();
+import { useItems } from "../../../context/Filtercontext";
+ const Filterpage = () => {
+  const {allitems,setItems, selectedfilters } = useItems();
   const handleApply = () => {
-    const filteredProducts = products.filter((product) => {
+    const filteredProducts = allitems.filter((product) => {
       const price = Number(product.org_price.replace(/,/g, ""));
 
       const brandOk =
@@ -21,7 +19,7 @@ const Filterpage = () => {
         selectedfilters.Price.some(
           ([min, max]) => price >= min && price <= max
         );
-
+                
       const ratingOk =
         selectedfilters["Customer Ratings"].length === 0 ||
         Number(product.rating) >=

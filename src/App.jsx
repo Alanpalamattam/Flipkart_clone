@@ -2,9 +2,10 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Homepage from "./components/Homepage";
- import Productfilterpage from "./Productfilter/Productfilterpage";
-import Filterpage from "./Productfilter/filterpage/Filterpage";
+ import Productfilterpage from "./components/Productfilter/Productfilterpage";
+import Filterpage from "./components/Productfilter/filterpage/Filterpage";
 import { ItemsProvider } from "./context/Filtercontext";
+import Footer from "./components/Footer";
  
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       </ItemsProvider>
       {/* <Productfilterpage/> */}
      </Router> 
+     <Footer/>
     </React.StrictMode>
   );
 }
