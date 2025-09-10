@@ -2,10 +2,34 @@ import React, { useEffect, useState } from "react";
 import { useItems } from "../../../../context/Filtercontext";
 import { checkbox } from "../../../Productfilter/filterpage/filtercheckboxes.json";
 const Monitorfilter = () => {
-  // const [visible, setVisible] = useState(false);
-  // const [indexx, setindex] = useState(0);
   const { allitems, setItems, selectedfilters, setselectedfilters } =
     useItems();
+    const minLimit = 250;
+  const maxLimit = 60000;
+  const [minVal, setMinVal] = useState(minLimit);
+  const [maxVal, setMaxVal] = useState(maxLimit);
+  
+const handleMinChange = (e) => {
+  const value = Math.min(Number(e.target.value), maxVal - 1); 
+  setMinVal(value);
+
+  setselectedfilters((prev) => ({
+    ...prev,
+    Price: [[value, prev.Price?.[0]?.[1] ?? maxVal]], 
+  }));
+};
+
+const handleMaxChange = (e) => {
+  const value = Math.max(Number(e.target.value), minVal + 1);
+  setMaxVal(value);
+
+  setselectedfilters((prev) => ({
+    ...prev,
+    Price: [[prev.Price?.[0]?.[0] ?? minVal, value]], 
+  }));
+};
+
+  
   const handleTick = (category, item) => {
     setselectedfilters((prev) => {
       const prevValues = prev[category];
@@ -40,7 +64,7 @@ const Monitorfilter = () => {
       const brandOk =
         selectedfilters.Brand.length === 0 ||
         selectedfilters.Brand.includes(product.brand);
-
+  
       const priceOk =
         selectedfilters.Price.length === 0 ||
         selectedfilters.Price.some(
@@ -134,7 +158,117 @@ const Monitorfilter = () => {
           </div>
         </div>
         <div className="f-large-price">
-          <div className="f-large-price-section"></div>
+          <div className="f-large-price-section">
+            <div className="f-large-price-wrap">
+              <span>Price</span>
+            </div>
+          </div>
+          <div className="slider-price-image-section">
+            <div className="slider-price-image-wrapper">
+              <div
+                className="slider-top-image"
+                style={{ height: "3.125px", width: "33.83px" }}
+              ></div>
+              <div
+                className="slider-top-image"
+                style={{ height: "21.87px", width: "39.4683px" }}
+              ></div>
+              <div
+                className="slider-top-image"
+                style={{ height: "25px", width: "39.4683px" }}
+              ></div>
+              <div
+                className="slider-top-image"
+                style={{ height: "12.5px", width: "39.4683px" }}
+              ></div>
+              <div
+                className="slider-top-image"
+                style={{ height: "9.375px", width: "39.4683px" }}
+              ></div>
+              <div
+                className="slider-top-image"
+                style={{ height: "6.25px", width: "39.4683px" }}
+              ></div>
+            </div>
+          </div>
+          <div className="sliderrange">
+            <div className="sliderfade"></div>
+            <div
+              className="rangearea"
+              style={{
+                left: `${((minVal - minLimit) / (maxLimit - minLimit)) * 100}%`,
+                width: `${((maxVal - minVal) / (maxLimit - minLimit)) * 100}%`,
+              }}
+            ></div>
+
+            <input
+              type="range"
+              className="sliderinputleft"
+              min={minLimit}
+              max={maxLimit}
+              value={minVal}
+              onChange={handleMinChange}
+            />
+
+            <input
+              type="range"
+              className="sliderinputright"
+              min={minLimit}
+              max={maxLimit}
+              value={maxVal}
+              onChange={handleMaxChange}
+            />
+          </div>
+          <div className="price-dots">
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+           <div className="price-dot-content">.</div>
+          </div>
+          <div className="min-max-price-section">
+           <div className="min-price-section">
+            <select className="min-select" name="" id="">
+             <option value="value" className="min-option">Min</option>
+             <option value="250" className="min-option" >250</option>
+             <option value="500" className="min-option">500</option>
+             <option value="1000" className="min-option" >1000</option>
+             <option value="2000" className="min-option" >2000</option>
+             <option value="5000" className="min-option">5000</option>
+             <option value="10000" className="min-option" >10000</option>
+             <option value="20000" className="min-option" >20000</option>
+             <option value="30000" className="min-option" >30000</option>
+             <option value="40000" className="min-option">40000</option>
+            </select>
+           </div> 
+           <div className="min-max-price-to-text">to</div>
+          <div className="max-price-section">
+           <select className="min-select" name="" id="">
+            <option value="Max" className="min-option">{maxVal}</option>
+             <option value="250" className="min-option">250</option>
+              <option value="500" className="min-option">500</option>
+             <option value="1000" className="min-option" >1000</option>
+             <option value="2000" className="min-option" >2000</option>
+             <option value="5000" className="min-option">5000</option>
+             <option value="10000" className="min-option" >10000</option>
+             <option value="20000" className="min-option" >20000</option>
+             <option value="30000" className="min-option" >30000</option>
+             <option value="40000" className="min-option">40000</option>
+              <option value="500" className="min-option">60000</option>
+              
+             
+           </select>
+          </div>
+
+           
+          </div>               
         </div>
         <div className="flp-assured-large-checkbox">
           <label className="checkboxarea-f-assured">
