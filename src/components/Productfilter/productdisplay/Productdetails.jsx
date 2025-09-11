@@ -1,6 +1,7 @@
 import React from "react";
 import "../filter.css";
 import DrawStar from "./Drawstar";
+import { Link } from "react-router-dom";
 import { useItems } from "../../../context/Filtercontext";
 const Productdetails = () => {
   const { items } = useItems();
@@ -10,6 +11,7 @@ const Productdetails = () => {
       <div className="productconatiner">
         {items.map((p, index) => {
           return (  
+            <Link className="productflexarea" style={{textDecoration:"none"}} to={"/product"}>
             <div className="productflexarea" key={index}>
               <div className="producttopflexarea" key={index}>
                 <div className="productimagearea">
@@ -129,10 +131,12 @@ const Productdetails = () => {
                 })}
               </div>
             </div>
+            </Link>
           );
         })}
       </div>
     </div>
+    
   );
 };
 

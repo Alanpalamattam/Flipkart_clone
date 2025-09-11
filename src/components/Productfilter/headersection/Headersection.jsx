@@ -3,6 +3,7 @@ import "../filter.css";
 import { Link } from "react-router-dom";
 import { useItems } from "../../../context/Filtercontext";
 import Productdetails from "../productdisplay/Productdetails";
+import Footerr from "../../../../src/components/Footerr"
 const Headersection = ({ sortType, onSortChange }) => {
   const { items } = useItems();
   const [sortview, setsortview] = useState(false);
@@ -283,6 +284,7 @@ const Headersection = ({ sortType, onSortChange }) => {
         </div>
       </div>
       <Productdetails items={items} />
+      <Footerr/>
     </div>
   );
 };

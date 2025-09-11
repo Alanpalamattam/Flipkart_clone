@@ -18,6 +18,10 @@
     font-family:roboto-medium;
     src: url("../../assets/roboto-medium.woff2");
 }
+@font-face {
+    font-family: extrabold;
+    src: url("../../../src/assets/Inter-ExtraBold.woff2");
+}
 body{
     padding: 0;
     margin: 0;    
@@ -33,7 +37,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    z-index: 10;
+    z-index: 100;
 }
 header{
     padding: 8px 16px;
@@ -355,5 +359,8 @@ margin-left: 6px;
     }
     .carttext{
         display: block;
+    }
+    .top{
+       height:69.2px;
     }
 }

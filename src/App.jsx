@@ -5,8 +5,8 @@ import Homepage from "./components/Homepage";
  import Productfilterpage from "./components/Productfilter/Productfilterpage";
 import Filterpage from "./components/Productfilter/filterpage/Filterpage";
 import { ItemsProvider } from "./context/Filtercontext";
-import Footer from "./components/Footer";
- 
+import IndividualMain from "./components/Pages/Individual_product_page/IndividualMain";
+  
 function App() {
   return (
     <React.StrictMode>
@@ -16,15 +16,14 @@ function App() {
         <Route path="/" element={<Homepage/>}/>
         <Route path="/monitors" element={<Productfilterpage/>}/>
         <Route path="/filter" element={<Filterpage/>}/>
+        <Route path="/product" element={<IndividualMain/>}></Route>
       </Routes>          
       </ItemsProvider>
       {/* <Productfilterpage/> */}
      </Router> 
-     <Footer/>
     </React.StrictMode>
+
   );
 }
   
 export default App;
- 
- 

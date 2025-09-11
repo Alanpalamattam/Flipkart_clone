@@ -152,12 +152,13 @@
      padding-bottom: 4px;
      padding-top: 3px;
      border: 1px solid #dbdbdb;
+   
       max-height:30px
 }
 .becameseller_large{
     display: flex;
         margin: 0 20px;
-        margin-left: 21px;
+        margin-left: 20px;
     max-width: 150px;
     flex:0 0 auto;
     justify-content: flex-end;
@@ -173,6 +174,7 @@
     font-family: "semi-bold";
     text-decoration: none;
     position: relative;
+    letter-spacing: 0.2px;
 }
 .more_button{
     display: flex;
@@ -187,7 +189,7 @@
    height: 100%;
    line-height: 20px;
    font-size: 15px;
-   letter-spacing: 0.4px; 
+   letter-spacing: 0.4px;
    font-weight: 500;
 }
 .more_Textwrap{
@@ -684,7 +686,7 @@ color: #2874f0;
   }
   .p-display-large-outer-wrap{
     line-height: 1;
-    padding: 24px 0 30px 24px;
+    padding: 24px 0 32.5px 24px;
     display: block;
     position: relative;
     border-bottom: 1px solid #f0f0f0;
@@ -706,22 +708,24 @@ color: #2874f0;
   position: relative;
   margin: 0 auto;
  }
+ 
  .p-large-img{
   position: absolute;
     /* bottom: 0;
     left: 0;
     right: 0; */
-    top:-1px;
+    top:-.3px;
     bottom: 0;
     margin: auto;
     opacity: 1;
     max-width: 100%;
+    width: 100%;
     max-height: 100%;
  }
  .fav-button-p-large{
      position: absolute;
     display: inline-block;
-    top: 1.2px;
+    top: 2.3px;
     right: -8px;
     cursor: pointer;
 }
@@ -906,28 +910,30 @@ color: #2874f0;
 }
 
 .sliderinputleft::-webkit-slider-thumb {
-  pointer-events: auto;
-  width: 13px;
-  height: 13px;
+  /* pointer-events: all; */
+  width: 12.8px;
+  height: 12.8px;
   border-radius: 50%;
   background: white;
   border: 1px solid #bababa;
   position: relative;
-  top: -2px;
-  right:8.5px;
+  top: -2.2px;
+  right:10px;
   appearance: none;
+  cursor: pointer;
 } 
 .sliderinputright::-webkit-slider-thumb {
-  pointer-events:all;
-  width: 13px;
+  /* pointer-events:all; */
+  width: 13.5px;
   height: 13px;
   border-radius: 50%;
   background: white;
   border: 1px solid #bababa;
   position: relative;
-  top:0px;
-  right: -6px;
+  top:-2.2px;
+  right: -4.4px;
   appearance: none;
+  cursor: pointer;
  }
     
  
@@ -985,6 +991,7 @@ color: #2874f0;
   color: #212121;
   padding:0px 5px;
   outline: none;
+  display: flex;
   font-family: "regular";
 
 }
@@ -1006,8 +1013,17 @@ color: #2874f0;
   flex-grow: 2;
 
 }
+.p-name-large:hover{
+ color:#2874f0;
+ }
 @media screen and (min-width:1001px){
     .MonitorfilterLarge{
         display: block;
     }
 }     
+
+@media screen and (min-width:1500px){
+  .login_flex a{
+      letter-spacing: 0.2px;
+  }
+}

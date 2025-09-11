@@ -11,8 +11,8 @@ const Monitorfilter = () => {
   
 const handleMinChange = (e) => {
   const value = Math.min(Number(e.target.value), maxVal - 1); 
-  setMinVal(value);
-
+  setMinVal(value); 
+  
   setselectedfilters((prev) => ({
     ...prev,
     Price: [[value, prev.Price?.[0]?.[1] ?? maxVal]], 
@@ -235,7 +235,7 @@ const handleMaxChange = (e) => {
           </div>
           <div className="min-max-price-section">
            <div className="min-price-section">
-            <select className="min-select" name="" id="">
+            <select className="min-select" onChange={handleMinChange} name="" id="">
              <option value="value" className="min-option">Min</option>
              <option value="250" className="min-option" >250</option>
              <option value="500" className="min-option">500</option>
@@ -250,8 +250,8 @@ const handleMaxChange = (e) => {
            </div> 
            <div className="min-max-price-to-text">to</div>
           <div className="max-price-section">
-           <select className="min-select" name="" id="">
-            <option value="Max" className="min-option">{maxVal}</option>
+           <select className="min-select" onChange={handleMaxChange} name="" id="">
+            <option value="Max" className="min-option">{maxVal===60000?"60000+":maxVal}</option>
              <option value="250" className="min-option">250</option>
               <option value="500" className="min-option">500</option>
              <option value="1000" className="min-option" >1000</option>
@@ -262,12 +262,8 @@ const handleMaxChange = (e) => {
              <option value="30000" className="min-option" >30000</option>
              <option value="40000" className="min-option">40000</option>
               <option value="500" className="min-option">60000</option>
-              
-             
            </select>
           </div>
-
-           
           </div>               
         </div>
         <div className="flp-assured-large-checkbox">
@@ -281,7 +277,7 @@ const handleMaxChange = (e) => {
                   width: "100%",
                   paddingTop: "-2px",
                 }}
-                src={""}
+               src={""}
               />
             </div>
             <div className="f-assured-logoarea-large">

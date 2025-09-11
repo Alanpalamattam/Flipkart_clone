@@ -10,25 +10,33 @@ import Lapmainslider from './slidercomponent/Lapmainslider'
 import './styles/index.css'
 import Festivalscroll from './Homepageitems/Festivalscroll'
 import Bestinelectronics from './Laptopbbestcategory/Bestinelectronics'
+import Footerr from './Footerr'
  const Homepage = () => {
   return (
     <div className='Mainbody'>
-    <Header/> 
+      <>
+      <Header/> 
     <Searchbar/>
-    
     <Smallslider data={slides}/>
     <Firstscroolitems/>
-     <div className="bodymainwrap" style={{width:"100%",justifyContent:"center"}}>
+     <div className="bodyparttwo">
+      <Festivalscroll/>
+       
+    </div>
+    <div className="bodymainwrap" style={{width:"100%",justifyContent:"center"}}>
       <div className='bodypart'>
       <Categoryslider/>
        <Lapmainslider data={lapslides}/>
         <Bestinelectronics/>
       </div>
     </div> 
-    <div className="bodyparttwo">
-      <Festivalscroll/>
+    <Footerr/>
+      </>
+    
+    
+    
      
-    </div>
+   
     
    </div>
   ) 
