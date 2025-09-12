@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     min-height: 0px;
-    min-width: 0px;  
+    min-width: 0px;   
     position: relative;
     z-index: 0;
     box-sizing: border-box;
@@ -225,12 +225,8 @@
     padding-right: 8px; */
    }
 
- .i-ad-ad-text span{
-padding-right:0.1px;
-} 
-.i-adsection{
-    display: none;
-}
+  
+ 
 .i-main-image-section{
     display: flex;
     
@@ -538,7 +534,7 @@ height: 44px;
 .i-product-price-content{
     display: flex;
     flex-direction: column;
-    padding: 8px 16px;
+    padding: 8px 16px 16px;
 }
 .i-product-price-section-row1{
     display: flex;
@@ -595,3 +591,355 @@ color: #008b37ff;
     line-height: 12px;
     font-family:"regular";
 }
+.i-product-bankoffer-emi-card-section{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: auto; */
+    width: 100%;
+ 
+}
+.i-product-bankoffer-content-area{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+.i-product-bank-top-part{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.i-product-bank-top-main-wrap{
+        border-radius: 0px;
+    background: linear-gradient(rgb(18, 84, 231), rgb(24, 60, 145));
+    min-height: 84px;
+    position: relative;
+}
+.i-product-bank-offer-content-area{
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+    display: flex;
+    position: relative;
+    padding: 4px 16px;
+    padding-top: 12px;
+}  
+.i-product-bank-offer-row1-text{
+    display: flex;
+
+}
+.i-product-bank-offer-row1-contentarea{
+        color: rgb(255, 255, 255);
+    margin-left: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "regular";
+    max-width: 100%;
+    text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+} 
+.i-product-offer-row1-text2{
+    display: flex;
+    flex: 1 1 0%;
+    min-width: 21px;
+}
+.i-product-bank-offer-up-arrow{
+    display: flex;
+    flex-direction: column;
+    transform:rotate(180deg);
+}
+.i-product-bank-offer-bottomm-part-main{
+    display: flex;
+}
+.i-product-bank-offer-bottom-wrap{
+    display: flex; 
+     flex-grow: 1;
+}
+.i-product-bank-offer-bottom-wrap{
+        background-color: rgb(207, 235, 254);
+    border-radius: 16px;
+    margin-top: -36px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+.i-product-bank-offer-curved-image{
+        position: absolute;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.curver-banner{
+width: 344px;
+ left: -0.5px;
+  top: -1px;
+}
+  
+ .i-product-bank-offer-curved-image-bottom{
+    flex: 1 1 0%;
+    top: -3px;
+    background-color: rgb(207, 235, 254);
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-color: rgb(141, 201, 253);
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    display: flex;
+    position: relative;
+ }
+ .i-product-bank-offer-bottom-price-section{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.00);
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+ }
+ .i-product-bo-flex-area{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+ }
+ .i-product-bo-price-wrap{
+     display: flex;
+     flex-direction: column;
+     flex: 4 1 0%; 
+ }
+.i-product-bo-price-content{
+        border-radius: 16px 16px 0px 0px;
+    min-width: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: flex-start;
+    padding-left: 12px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.i-product-bo-price-content-r{
+      border-radius: 16px 16px 0px 0px;
+    min-width: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    align-items: flex-start;
+     justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+.i-product-bo-org-price-content{
+    color: rgb(51, 51, 51);
+    font-size: 17px;
+    line-height: 22px;
+    font-family:"bold";
+}
+.i-product-bo-lowest-price-content{
+   color: rgb(51, 51, 51);
+    font-size: 11px;
+    line-height: 14px;
+    font-family: "regular";
+    margin-top: 4px; 
+}
+.i-product-bo-or-text-flex-area{
+    border-radius: 24px;
+    height: 24px;
+    width: 24px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+     top: 50%;
+    left: 44.44%;
+    margin-left: -12px;
+    margin-top: -12px;
+    display: flex;
+}
+.i-product-bo-or-text-content{
+    color: rgb(51, 51, 51);
+    font-size: 10px;
+    line-height: 12px;
+    font-family: "bold";
+}
+.i-product-bank-exchange-section{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px 4px;
+}
+.i-product-bank-exchange-section-top{
+    display: flex;
+    margin-bottom: 8px;
+}
+.i-product-bank-exchange-outer-wrap{
+    border-radius: 12px;
+    height: 78px;
+    overflow: hidden;
+    transition: height 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: height;
+     display: flex;
+    flex-grow: 1;
+}
+.i-product-bank-exchange-content{
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.i-product-bank-exchange-row1{
+    margin-right: 80px;
+    padding: 1px 2px 8px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;   
+}
+.i-product-bank-exchange-row1-exchange-content{
+    color: rgb(112, 112, 112);
+    font-size: 11px;
+    line-height: 14px;
+    font-family: "bold";
+}
+.i-exchange-bank-exchange-row2{
+    display: flex;
+    flex-direction: column;
+}
+.i-exchange-bank-exchange-row2-flexarea{
+        flex-direction: row;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.i-bank-exchange-button{
+   display: flex;
+    padding: 6px;
+    background-color: rgb(250, 250, 250);
+    margin-right: 4px;
+    border-radius: 8px;
+}
+.i-bank-exchange-row2-right-side{
+    display: flex;
+    flex-direction: column;
+    flex:1 1 0%;
+    padding-left: 6px;
+    position: relative; 
+}
+.i-bank-exchange-row2-right-side-first-text{
+   display: flex;
+   flex-direction: row;
+    align-items: center;
+}
+.i-bank-exchange-row2-right-side-first-content{
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    line-height: 18px;
+    font-family: "bold";
+    max-width: 100%;
+    
+}
+.i-bank-exchange-row2-seconf-text-second-content{
+        color: rgb(51, 51, 51);
+    font-size: 11px;
+    line-height: 14px;
+    font-family: "regular";
+    flex-shrink: 1;
+} 
+.i-exchange-apply-button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    align-items: flex-end;
+    padding-top: 6px;
+    display: flex;
+    flex-direction: column;
+ }
+ .i-exchange-apply-content{
+ color: rgb(25, 103, 242);
+    font-size: 14px;
+    line-height: 18px;
+    font-family:"bold";
+    padding-right: 12px;
+}      
+.i-product-highlights-section{
+    display: flex; 
+    background-color: rgb(255, 255, 255);
+    margin: 0px 0px 8px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 1px 0px;
+    flex-direction: column;
+    flex: 1;
+}
+.i-highlights-top-section{
+    display:flex;
+    align-items: center;
+    padding: 12px 16px;
+    flex-flow: wrap;
+}
+.i-highlights-section-text{
+    display: flex;
+        color: rgb(32, 34, 36);
+    font-size: 17px;
+    line-height: 24px;
+    font-family: "semi-bold";
+    letter-spacing: -0.01px;
+        flex: 1 1 0%;
+    flex-direction: column;
+}
+.i-highlights-bottom-section{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px 0px;
+
+}
+.i-highlight-feature-area{
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 16px;
+    align-items: center;
+}
+.i-highlight-feature-img{
+   display: flex;
+    position: relative;
+    margin-right: 16px;
+    width: 28px;
+    height: 28px;
+}
+.i-highlight-feature-img img{
+    opacity: 1;
+    transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+}
+.i-display-feature-description-area{
+    display: flex;
+    flex-direction: column;
+    width:85%;
+}
+.i-display-feature-heading{
+    line-height:20px;
+    font-size: 14px;
+    color: rgba(113,116,120,1.00);
+    margin-bottom: 4px;
+    font-family:"roboto";
+ }
+.i-display-feature-text1{
+    line-height: 20px;
+    font-size: 14px;
+    font-family: "roboto-medium";
+ 
+ }
+.i-display-feature-text2{
+    color: rgb(17, 17, 18);
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    font-family: "regular";
+    letter-spacing: 0px;
+ }      
+ 
