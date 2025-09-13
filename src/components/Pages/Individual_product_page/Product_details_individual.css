@@ -602,6 +602,7 @@ color: #008b37ff;
     display: flex;
     flex-direction: column;
     padding: 16px;
+    flex-grow: 1;
 }
 .i-product-bank-top-part{
     display: flex;
@@ -670,14 +671,19 @@ color: #008b37ff;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     display: flex;
-}
+     width: 92.7%;
+     flex-grow: 1;
+         
+    }
 .curver-banner{
-width: 344px;
+/* width: 344px; */
  left: -0.5px;
+ width: 100%;
   top: -1px;
-}
-  
- .i-product-bank-offer-curved-image-bottom{
+} 
+     
+
+  .i-product-bank-offer-curved-image-bottom{
     flex: 1 1 0%;
     top: -3px;
     background-color: rgb(207, 235, 254);
