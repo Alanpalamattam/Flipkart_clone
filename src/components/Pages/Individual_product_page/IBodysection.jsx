@@ -77,7 +77,15 @@ const IBodysection = () => {
                 <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
               </picture>
             </div>
-
+             <div className="i-image-area">
+              <picture>
+                <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
+              </picture>
+            </div> <div className="i-image-area">
+              <picture>
+                <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
+              </picture>
+            </div>ijukjjk m
           </div>
           <div className="i-image-heart-container">
             <div className="i-image-heart-button">
@@ -332,7 +340,7 @@ const IBodysection = () => {
         </div>
         <div className="i-buy-now-rightarea">
           <div className="i-buy-now-emi-area">
-            <div style={{display:"flex"}}>
+            <div className='i-buy-now-outer'>
               <div className="i-buy-now-emi-wrap">
    
                 <div className="i-buy-emi-text1">Buy with EMI</div>
@@ -340,9 +348,9 @@ const IBodysection = () => {
                 </div>
           
             </div>
-          </div>
+          </div> 
           <div className="i-buy-now-emi-area">
-            <div style={{display:"flex"}}>
+            <div className='i-buy-now-outer'>
               <div className="i-buy-now-wrap">
    
                 <div className="i-buy-now-text1">Buy now</div>

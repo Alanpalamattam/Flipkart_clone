@@ -17,8 +17,7 @@ const ItemsContext = createContext();
  export const ItemsProvider = ({ children }) => {
    const [items, setItems] = useState([]);
    const [allitems,setallitems]=useState([])
-
-     useEffect(()=>{
+  useEffect(()=>{
    const fetchproducts=async()=>{
       try{
            const res=await fetch("/public/products.json");
