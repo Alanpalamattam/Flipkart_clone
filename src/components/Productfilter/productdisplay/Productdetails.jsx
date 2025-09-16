@@ -4,15 +4,16 @@ import DrawStar from "./Drawstar";
 import { Link } from "react-router-dom";
 import { useItems } from "../../../context/Filtercontext";
 const Productdetails = () => {
-  const { items } = useItems();
+  const { items,setselectedfilters,initialFilters} = useItems();
   return (
     <div>
       {console.log("displayy", items)} 
       <div className="productconatiner">
-        {items.map((p, index) => {
+        {items.length> 0?(
+        items.map((p, index) => {
           return (  
-            <Link className="productflexarea" style={{textDecoration:"none"}} to={"/product"}>
-            <div className="productflexarea" key={index}>
+            <div className="productflexarea" key={p.id}>
+            <Link className="productflexarea" style={{textDecoration:"none"}} to={`/product/${p.id}`}>
               <div className="producttopflexarea" key={index}>
                 <div className="productimagearea">
                   <div className="pimageouter">
@@ -130,10 +131,16 @@ const Productdetails = () => {
                   );
                 })}
               </div>
+               </Link>
             </div>
-            </Link>
+           
           );
-        })}
+        }
+        
+        )):<div className="resetsection">
+          <p>No products found</p>
+          <button onClick={()=>setselectedfilters(initialFilters)}>reset Filter</button>
+        </div>}
       </div>
     </div>
     

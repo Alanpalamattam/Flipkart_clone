@@ -35,14 +35,6 @@ import { useItems } from "../../../context/Filtercontext";
           );
         const screenOK=selectedfilters["Screen Resolution"].length===0 || selectedfilters["Screen Resolution"].includes(product.screenresolution)
         console.log(selectedfilters["Screen Resolution"])
-      // const displaysize = selectedfilters["Display Size"].some((d) => {
-      //   const [min, max] = d.replace(/ inch/g, "").split(" - ");
-      //   // .map(Number);
-
-      //   return product.display_size >= min && product.display_size <= max;
-      // });
-
-      // console.log("Display size check:", displaysize);
       return brandOk && priceOk && ratingOk && discountOk && screenOK;
     });
     setItems(filteredProducts);
@@ -76,21 +68,23 @@ import { useItems } from "../../../context/Filtercontext";
         <div>
           <FilterSelection />
         </div>
-
+  
         <div className="filterbottom">
+          <Link to={"/Monitors"} className="filterbottom" style={{ textDecoration: "none" }}>
           <div className="filterbottom-flex">
             <div className="filterbottom-right">
               <div className="filterbottom-number">74</div>
               <div className="product-foundtxt">products found</div>
             </div>
             <div className="filerbottom-left">
-              <Link to={"/Monitors"} style={{ textDecoration: "none" }}>
+              
                 <div className="applybutton" onClick={handleApply}>
                   Apply
                 </div>
-              </Link>
+             
             </div>
           </div>
+           </Link>
         </div>
       </div>
     </div>

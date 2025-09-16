@@ -1,12 +1,30 @@
-import React from 'react'
-import Footerr from "../../../components/Footerr"
+import { useParams } from "react-router-dom";
+import { useState,useEffect } from "react";
+ import Footerr from "../../../components/Footerr"
 const IBodysection = () => {
-    const dots = [1,2, 3, 4, 5];
-    const feature=[
+    const { id } = useParams();
+    const [products,setProducts]=useState([]);
+    console.log("object",products)
+    useEffect(() => {
+      fetch("/products.json")
+        .then((res) => res.json())                       
+        .then((data) => setProducts(data.products))
+        .catch((err) => console.error("Error loading products:", err));
+    }, []);
+const product = products.find((p) => p.id.toString() === id);
+
+  console.log("isdd",product)
+     const dots = [1,2, 3, 4, 5];
+       if (!product) {
+    return <p>Loading product...</p>;
+  }
+      const imagearray=[product.src2,"https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/1/k/o/-original-imahbzhctzaqjpfy.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/h/d/s/-original-imahbzhcntnyaygh.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/6/k/l/-original-imahbzhcj8fzrzcf.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/k/j/b/-original-imahbzhcfxpusfnk.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/i/j/w/-original-imahbzhchfgyq7ey.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/j/b/c/-original-imahbzhcgwdhaz38.jpeg?q=70&crop=false"]
+      
+     const feature=[   
       {
         "img":"https://rukminim2.flixcart.com/image/xif0q/internalised/original-display_size.png?q=60",
         "heading":"Display Size",
-        "firsttext":"23.8 inch",
+        "firsttext":product.display_size,
         "secondtext":"Get lost in the visuals"
       },
       {
@@ -18,19 +36,19 @@ const IBodysection = () => {
       {
         "img":"https://rukminim2.flixcart.com/image/xif0q/internalised/original-screen_resolution_type.png?q=60",
         "heading":"Resolution",
-        "firsttext":"Full HD",
+        "firsttext":product.screenresolution,
         "secondtext":"Crystal clear visuals for immersive experience"
       },
       {
         "img":"https://rukminim2.flixcart.com/image/xif0q/internalised/original-maximum_2d_refresh_rate_digital.png?q=60",
         "heading":"2D Refresh Rate",
-        "firsttext":"120 Hz",
+        "firsttext":product.refreshrate+" Hz",
         "secondtext":"Immersive visuals for gaming and entertainment"
       },
       {
         "img":"https://rukminim2.flixcart.com/image/xif0q/internalised/original-response_time.png?q=60",
         "heading":"Response Time",
-        "firsttext":"1 ms",
+        "firsttext":product.responsetime+" ms",
         "secondtext":"Quick and seamless display"
       }
     ]
@@ -71,10 +89,19 @@ const IBodysection = () => {
 
         </div>
         <div className="i-main-image-section">
-          <div className="i-image-wrapp">
-            <div className="i-image-area">
+          <div className="i-image-wrapp"> 
+            {
+              imagearray.map((x,i)=>
+                 <div className="i-image-area" key={i}>
               <picture>
-                <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
+                <img className='i-image-container' src={x} alt="" />
+              </picture>
+            </div>
+              )
+            }
+            {/* <div className="i-image-area">
+              <picture>
+                <img className='i-image-container' src={product.src2} alt="" />
               </picture>
             </div>
              <div className="i-image-area">
@@ -85,7 +112,7 @@ const IBodysection = () => {
               <picture>
                 <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
               </picture>
-            </div>ijukjjk m
+            </div>  */}
           </div>
           <div className="i-image-heart-container">
             <div className="i-image-heart-button">
@@ -106,7 +133,7 @@ const IBodysection = () => {
           </div> 
           <div className="i-image-down-over-items">
             <div className="i-image-down-over-item-rating">
-              4.3
+             {product.rating}
             </div>
             <svg width="14" height="14" viewBox="0 0 12 12"> 
               <path d="M5.99953 8.86357L8.56453 10.4409C8.63108 10.4813 8.70812 10.5011 8.7859 10.4977C8.86368 10.4943 8.93871 10.468 9.00152 10.422C9.06433 10.376 9.11209 10.3124 9.13877 10.2393C9.16545 10.1661 9.16985 10.0867 9.15141 10.0111L8.45391 7.06779L10.7367 5.09904C10.7949 5.04793 10.8369 4.9809 10.8574 4.90621C10.878 4.83153 10.8762 4.75247 10.8523 4.67878C10.8284 4.6051 10.7835 4.54002 10.7231 4.49159C10.6626 4.44315 10.5893 4.41347 10.5122 4.40622L7.51641 4.16247L6.36234 1.36872C6.33292 1.29665 6.2827 1.23497 6.21808 1.19155C6.15347 1.14813 6.07738 1.12495 5.99953 1.12495C5.92168 1.12495 5.8456 1.14813 5.78098 1.19155C5.71636 1.23497 5.66614 1.29665 5.63672 1.36872L4.48266 4.16247L1.48688 4.40622C1.40924 4.41304 1.33532 4.44259 1.27438 4.49117C1.21343 4.53975 1.16815 4.60521 1.1442 4.67938C1.12024 4.75355 1.11867 4.83313 1.13968 4.90818C1.1607 4.98324 1.20336 5.05043 1.26235 5.10138L3.54516 7.07013L2.84766 10.0111C2.82922 10.0867 2.83361 10.1661 2.86029 10.2393C2.88697 10.3124 2.93473 10.376 2.99754 10.422C3.06035 10.468 3.13539 10.4943 3.21317 10.4977C3.29095 10.5011 3.36798 10.4813 3.43453 10.4409L5.99953 8.86357Z" fill="#008b37ff"></path>
@@ -120,7 +147,7 @@ const IBodysection = () => {
             <div className="i-image-blue-content">
                <div className="i-blue-dot">
                 <svg  width="8" height="8" viewBox="0 0 9 9" fill="none"> 
-                  <circle cx="4.98926" cy="4.5" r="4" fill="#1254e7ff"></circle>
+                  <circle cx="4.98926" cy="4.5" r="4" fill="#e0e0e0ff"></circle>
                 </svg>
               </div>
               { dots.map((dot, i) => 
@@ -137,7 +164,7 @@ const IBodysection = () => {
           <div className="i-product-name-brand-outer-wrap">
             <div className="i-product-brand-area">
               <div className="i-product-brand-name">
-                acer
+                {product.brand}
               </div>
               <div className="i-product-visit-store-text">
                 Visit store
@@ -145,8 +172,8 @@ const IBodysection = () => {
             </div>
             <div className="i-product-name-area">
               <div className="i-product-name-content">
-                Acer 60.45 cm (24 inch) Full HD LED Backlit IPS Panel with 6 axis...
-                <span className='i-more-text'>
+                {product.name}
+                 <span className='i-more-text'>
                more
               </span>
               </div>
@@ -162,16 +189,16 @@ const IBodysection = () => {
                   <path d="M6 1.875v8.25M2.625 6.75 6 10.125 9.375 6.75" stroke="#008b37ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
                 <div className="i-product-price-discound">
-                  20%
+                  {product.ratingpercent}%
                 </div>
               </div>
               <div className="i-product-cutted-price">
                 <div className="i-product-cut-price-container">
-                  7,999
+                  {product.linedprice}
                 </div>
               </div>
               <div className="i-product-org-price-section">
-                <div className="i-product-org-price">₹6,399</div>
+                <div className="i-product-org-price">₹{product.org_price}</div>
               </div>
             </div>
             <div className="i-price-section-row2">
@@ -181,15 +208,14 @@ const IBodysection = () => {
               </svg>
             </div>
           </div>
-        </div >
+        </div>
         <div className="i-product-bankoffer-emi-card-section">
           <div className="i-product-bankoffer-content-area">
             <div className="i-product-bank-top-part">
               <div className="i-product-bank-top-main-wrap">
                 <div className="i-product-bank-offer-content-area">
                    <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
-                    <path d="M.977 19.286c.267.443.746.714 1.263.714h33.067c.688 0 1.283-.476 1.436-1.145a1300.66 1300.66 0 003.223-14.692 1.6 1.6 0 00-.105-.963c-.343-.795-.515-1.447-.891-2.11a89.51 89.51 0 00-20.442 1.022C12.123 3.178 6.468-.237 2.016 1.41 1.464 4.905.66 11.853.011 17.07c-.04.326.03.657.199.94l.767 1.279v-.002z" fill="#0A0A0A"></path>
-                    <path d="M9.011 9.166c-.549 0-.915 0-1.21-.292-.297-.29-.305-.652-.318-1.199l-.019-1.16c-.222.521-.471 1.1-.75 1.74-.148.336-.255.582-.51.747-.256.166-.51.166-.893.166H4.28c-.542 0-.899 0-1.194-.284-.295-.284-.31-.64-.336-1.179l-.246-5.412c-.025-.585-.044-.972.259-1.287.3-.318.69-.318 1.274-.318h.44c.58 0 .964 0 1.265.31.302.306.291.692.278 1.278 0 0-.023 1.056-.024 1.2.259-.623.528-1.254.794-1.865.147-.34.252-.585.508-.752.255-.165.524-.165.894-.165h.585c.558 0 .926 0 1.225.29.3.294.303.662.314 1.22 0 0 .02 1.01.023 1.26.24-.619.483-1.231.716-1.81.148-.368.244-.613.503-.787.26-.177.52-.177.92-.177h.225c.83 0 1.381 0 1.68.481.303.481.062.973-.3 1.72L11.46 8.303c-.156.32-.269.553-.517.709-.248.156-.492.156-.865.156H9.011v-.002z" fill="#FFFFFF"></path>
+                    <path d="M.977 19.286c.267.443.746.714 1.263.714h33.067c.688 0 1.283-.476 1.436-1.145a1300.66 1300.66 0 003.223-14.692 1.6 1.6 0 00-.105-.963c-.343-.795-.515-1.447-.891-2.11a89.51 89.51 0 00-20.442 1.022C12.123 3.178 6.468-.237 2.016 1.41 1.464 4.905.66 11.853.011 17.07c-.04.326.03.657.199.94l.767 1.279v-.002z" fill="#0A0A0A"></path><path d="M9.011 9.166c-.549 0-.915 0-1.21-.292-.297-.29-.305-.652-.318-1.199l-.019-1.16c-.222.521-.471 1.1-.75 1.74-.148.336-.255.582-.51.747-.256.166-.51.166-.893.166H4.28c-.542 0-.899 0-1.194-.284-.295-.284-.31-.64-.336-1.179l-.246-5.412c-.025-.585-.044-.972.259-1.287.3-.318.69-.318 1.274-.318h.44c.58 0 .964 0 1.265.31.302.306.291.692.278 1.278 0 0-.023 1.056-.024 1.2.259-.623.528-1.254.794-1.865.147-.34.252-.585.508-.752.255-.165.524-.165.894-.165h.585c.558 0 .926 0 1.225.29.3.294.303.662.314 1.22 0 0 .02 1.01.023 1.26.24-.619.483-1.231.716-1.81.148-.368.244-.613.503-.787.26-.177.52-.177.92-.177h.225c.83 0 1.381 0 1.68.481.303.481.062.973-.3 1.72L11.46 8.303c-.156.32-.269.553-.517.709-.248.156-.492.156-.865.156H9.011v-.002z" fill="#FFFFFF"></path>
                     <path d="M12.696 1.2c.733 0 1.098 0 1.25.241.15.241-.011.57-.33 1.23l-2.622 5.408c-.136.282-.205.42-.327.498-.124.08-.28.08-.592.08H9.01c-.47 0-.705 0-.853-.147-.149-.147-.154-.378-.164-.846a96.776 96.776 0 01-.01-3.678c0-.01-.009-.019-.016-.019-.008 0-.011.006-.015.01-.423 1.108-1.094 2.67-1.705 4.065-.13.297-.193.443-.321.526-.128.084-.29.084-.613.084h-1.03c-.462 0-.693 0-.842-.14-.146-.141-.157-.374-.178-.833L3.016 2.27c-.023-.5-.032-.753.118-.91.15-.155.4-.157.904-.157h.44c.498 0 .748 0 .9.154.15.154.145.406.132.91-.032 1.385-.045 2.92-.15 4.05 0 .01.007.018.014.018a.018.018 0 00.015-.01c.538-1.37 1.228-3.03 1.869-4.51.127-.297.191-.445.319-.528.128-.084.29-.084.615-.084h.584c.477 0 .716 0 .866.146.149.147.155.386.164.867.026 1.338.062 2.806.023 4.042 0 .01.007.02.018.02a.018.018 0 00.017-.012c.478-1.447 1.141-3.11 1.663-4.42.126-.313.188-.468.318-.555.13-.086.297-.086.633-.086h.226M12.696.178h-.225c-.42 0-.818 0-1.207.264-.285.193-.441.445-.567.72a1.358 1.358 0 00-.346-.546c-.447-.44-.974-.44-1.582-.44h-.585c-.408 0-.793 0-1.176.25-.297.194-.455.45-.585.726A1.39 1.39 0 006.1.635C5.65.173 5.104.173 4.47.173h-.44c-.612 0-1.189 0-1.642.475-.453.476-.426 1.053-.398 1.664l.248 5.408c.024.568.05 1.102.494 1.526.446.425.983.425 1.549.425h1.03c.407 0 .789 0 1.172-.25.31-.201.468-.47.604-.761.067.205.176.397.355.573.447.436.992.436 1.569.436h1.064c.39 0 .76 0 1.133-.235.374-.235.536-.567.707-.919l2.621-5.408c.387-.805.726-1.498.277-2.216C14.36.173 13.59.173 12.695.173v.005z" fill="#0A0A0A"></path>
                     <path d="M29.197 9.166c-.549 0-.913 0-1.21-.292-.3-.291-.305-.652-.318-1.195-.007-.389-.011-.776-.017-1.163-.222.52-.473 1.1-.752 1.738-.148.337-.255.583-.51.748-.256.166-.508.166-.892.166h-1.03c-.543 0-.9 0-1.193-.284-.297-.284-.312-.64-.338-1.179l-.244-5.412c-.027-.585-.044-.972.257-1.287.303-.318.69-.318 1.276-.318h.438c.58 0 .964 0 1.265.31.302.306.291.692.28 1.278 0 0-.025 1.056-.026 1.2.26-.623.528-1.255.794-1.865.145-.34.254-.585.508-.752.256-.165.524-.17.895-.17h.586c.556 0 .924 0 1.221.292.3.293.307.662.316 1.222l.023 1.257c.24-.618.483-1.231.714-1.81.148-.368.244-.613.505-.787.262-.177.521-.177.921-.177h.224c.83 0 1.383 0 1.682.481.3.481.06.974-.303 1.72l-2.623 5.412c-.156.322-.269.553-.517.709-.248.156-.492.156-.863.156h-1.069v.002z" fill="#FFFFFF"></path>
                     <path d="M32.882 1.2c.733 0 1.1 0 1.25.241.15.241-.011.57-.329 1.23l-2.621 5.408c-.138.282-.205.42-.33.498-.123.08-.28.08-.59.08h-1.061c-.47 0-.705 0-.853-.147-.149-.147-.154-.378-.164-.846a105.586 105.586 0 01-.011-3.678c0-.01-.008-.019-.015-.019a.018.018 0 00-.015.01c-.421 1.108-1.094 2.67-1.705 4.065-.13.297-.193.443-.321.526-.128.084-.29.084-.615.084h-1.03c-.462 0-.691 0-.84-.14-.148-.141-.158-.374-.178-.833l-.248-5.409c-.023-.5-.034-.753.118-.91.15-.157.4-.157.904-.157h.44c.498 0 .748 0 .898.154.152.154.147.406.134.91-.034 1.385-.046 2.92-.15 4.05 0 .01.007.018.014.018a.018.018 0 00.015-.01c.538-1.37 1.227-3.03 1.868-4.51.128-.297.192-.445.32-.528.128-.084.291-.084.613-.084h.586c.477 0 .714 0 .862.146.149.147.155.386.164.867.026 1.338.062 2.806.024 4.042 0 .01.008.02.017.02.008 0 .015-.005.02-.012.476-1.447 1.136-3.11 1.662-4.42.124-.313.186-.468.316-.555.132-.086.297-.086.633-.086h.226M32.882.178h-.225c-.42 0-.818 0-1.205.264-.287.193-.443.445-.567.72a1.401 1.401 0 00-.346-.546c-.447-.44-.974-.44-1.58-.44h-.587c-.406 0-.791 0-1.175.25-.296.194-.454.45-.586.73a1.385 1.385 0 00-.321-.517c-.45-.462-.996-.462-1.63-.462h-.44c-.614 0-1.191 0-1.642.475-.453.476-.428 1.053-.4 1.663l.248 5.41c.026.567.052 1.1.496 1.525.445.425.98.425 1.549.425h1.03c.405 0 .789 0 1.172-.25.31-.201.468-.47.603-.761.066.205.177.396.355.573.448.436.991.436 1.57.436h1.062c.39 0 .763 0 1.135-.235.374-.235.534-.568.704-.92l2.622-5.41c.391-.804.728-1.497.277-2.217-.45-.718-1.222-.718-2.117-.718v.005h-.002z" fill="#0A0A0A"></path>
@@ -221,7 +247,7 @@ const IBodysection = () => {
                   <div className="i-product-bo-price-wrap">
                      <div className="i-product-bo-price-content">
                       <div className="i-product-bo-org-price-content">
-                        ₹5,759
+                        ₹{product.org_price}
                       </div>
                       <div className="i-product-bo-lowest-price-content">
                         Lowest price for you
@@ -237,7 +263,7 @@ const IBodysection = () => {
                         ₹283 x 24m
                       </div>
                       <div className="i-product-bo-lowest-price-content">
-                        Pay ₹6,774
+                        Pay ₹{product.org_price}
                       </div>
                      </div>
                   </div>
@@ -354,11 +380,11 @@ const IBodysection = () => {
               <div className="i-buy-now-wrap">
    
                 <div className="i-buy-now-text1">Buy now</div>
-                <div className="i-buy-now-text2"><span>at&nbsp;&nbsp;₹6,399 </span></div>
+                <div className="i-buy-now-text2"><span>at&nbsp;&nbsp;₹{product.org_price} </span></div>
                 </div>
             </div>
           </div>  
-        </div>
+        </div> 
       </div>
     </div>
     </>

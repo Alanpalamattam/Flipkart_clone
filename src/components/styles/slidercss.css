@@ -16,21 +16,6 @@
   position: relative;
   padding: 0;
 }
-/* .slidercomponent,.lapslidercomponent{
-    display: grid;
-    scrollbar-width: none;
-    grid-auto-flow: column;
-    box-sizing: border-box;
-    grid-auto-columns:100%;
-    padding: 0;
-    scroll-padding-inline-start: 0px;
-    scroll-behavior: smooth;
-    scroll-snap-type:x mandatory;
-    overflow-x:auto;
-    overflow-y: hidden;
-    box-sizing: border-box;
-  
-} */
 .slidera,
 .lapslidera {
   display: flex;
@@ -78,6 +63,9 @@
   display: none;
 }
 .lapslidermain {
+  display: none;
+}
+.big-million-wrap{
   display: none;
 }
 /* Lap slider*/
@@ -163,7 +151,25 @@
 .leftscrollbutton,.rightscrollbutton{
   display: none;
 }
+.big-million-wrap{
+    height: calc(100% - 16px);
+    background-color: rgb(255, 255, 255);
+    margin-top:16px;
+}
+.big-million-main{
+  display:flex;
+  flex-direction: column;
+  margin: 0px 0px 16px;
+  flex: 1 1 0%;
+}
+.big-million-main img{
+      width: 100%;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 139 / 20;
 
+}
 @media screen and (min-width: 768px) {
   .slidermain {
     margin: 0px 16px;
@@ -181,9 +187,15 @@
   }
   .lapitem {
     display: block;
+    margin-right: 4px;
   }
   .lapslidermain {
     display: flex;
+    margin-right: 4px;
+  }
+  .big-million-wrap{
+    display: flex;
+    margin-right: 4px;
   }
   .lapsliderdots{
     width: 100%;
@@ -193,7 +205,52 @@
     margin-bottom: 0;
     margin-top:11px;
   }
+  
 }
+@media screen and (min-width: 1025px) {
+ .lapitem {
+    margin-right: 2.8px;
+  }
+  .lapslidermain{
+    margin-right: 2.8px;
+  }
+  .big-million-wrap{
+    margin-right: 2.8px;
+  }
+}
+@media screen and (min-width: 1026px) {
+ .lapitem {
+    margin-right: 2.8px;
+  }
+  .lapslidermain{
+    margin-right: 2.8px;
+  }
+  .big-million-wrap{
+    margin-right: 2.8px;
+  }
+}
+@media screen and (min-width: 1027px) {
+ .lapitem {
+    margin-right: 1.8px;
+  }
+  .lapslidermain{
+    margin-right: 1.8px;
+  }
+  .big-million-wrap{
+    margin-right: 1.8px;
+  }
+}
+@media screen and (min-width: 1028px) {
+ .lapitem {
+    margin-right: 0px;
+  }
+  .lapslidermain{
+    margin-right: 0px;
+  }
+  .big-million-wrap{
+    margin-right:0px;
+  }
+}      
 
 @media screen and (min-width: 1192px) {
   .laptopscrollimgdiv { 

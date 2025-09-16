@@ -66,7 +66,12 @@ const Lapmainslider = ({ data }) => {
           })}
         </div>
       </div>
-    </div>
+      <div className="big-million-wrap">
+        <div className="big-million-main">
+           <img src="https://rukminim1.flixcart.com/fk-p-flap/2000/280/image/c6e003e409dd71c8.jpg?q=60" alt="" />
+        </div>
+      </div> 
+    </div> 
   );
 };
 

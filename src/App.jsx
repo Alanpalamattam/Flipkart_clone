@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Homepage/>}/>
         <Route path="/monitors" element={<Productfilterpage/>}/>
         <Route path="/filter" element={<Filterpage/>}/>
-        <Route path="/product" element={<IndividualMain/>}></Route>
+        <Route path="/product/:id" element={<IndividualMain/>}></Route>
       </Routes>          
       </ItemsProvider>
       {/* <Productfilterpage/> */}

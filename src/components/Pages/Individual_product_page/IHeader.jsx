@@ -16,7 +16,7 @@ const IHeader = () => {
                 </div>
                 <div className="i-searchtext">
                     Search for products
-                </div>
+                </div>    
             </div>
             <div className="i-cartarea">
                 <div style={{height:"100%",width:"100%"}}> 

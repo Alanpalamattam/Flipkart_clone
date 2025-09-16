@@ -61,7 +61,7 @@
         },
         {
             "name":"GST Invoice Available",
-            "checkboxes":"GST Invoice Available"
+            "checkboxes":["GST Invoice Available"]
         },
         {
             "name":"Refresh Rate",
@@ -73,7 +73,7 @@
         },
         {
             "name":"Category",
-            "checkboxes":"Monitors"
+            "checkboxes":["Monitors"]
         }
          
     ]

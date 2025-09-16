@@ -57,12 +57,13 @@ header{
 }
 .Threeline{
     margin-right: 12px;
+    margin-top: 1px;
     text-decoration: none;
     color: #333;
 }
 .Fliplogo{
     margin-right: 0;
-    padding-top:2px;
+    padding-top:3px;
     max-width:120px;
 }
 .rightside{
@@ -297,7 +298,7 @@ margin-left: 6px;
         display:none;
     }
     .top{
-        height: 67px;
+        height: 69.2px;
     }
     .locationwrapper{
         display: none;

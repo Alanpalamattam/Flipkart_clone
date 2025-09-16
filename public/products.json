@@ -4,6 +4,7 @@
             "id":1,
             "name":"Lenovo 60.45 cm (24 inch) Full HD VA Panel 3-Side Near Edgeless with TUV Eye Care Monitor (D24-20/D24-40)",
             "src":"https://rukminim1.flixcart.com/image/192/240/ko8xtow0/monitor/t/a/y/d24-20-66aekac1in-lenovo-original-imag2qwzazcdmqtb.jpeg?q=60&crop=false",
+            "src2":"https://rukminim2.flixcart.com/image/832/832/ko8xtow0/monitor/t/a/y/d24-20-66aekac1in-lenovo-original-imag2qwzazcdmqtb.jpeg?q=70&crop=false",
             "purchasecount":"5,371",
             "ratingpercent":"44",
             "linedprice":"12,690",
@@ -13,6 +14,8 @@
             "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"],
             "brand":"Lenova",
             "rating":"4",
+            "responsetime":"4",
+            "refreshrate":"75",
             "display_size":"27",
             "screenresolution":"Full HD"
         },
@@ -20,6 +23,7 @@
             "id":2,
             "name":"Lenovo 68.58 cm (27 inch) Full HD VA Panel with TUV Eye Care Monitor (D27-40/D27-30)",
             "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/i/u/w/-original-imagrkynyhv7vhzd.jpeg?q=60&crop=false",
+            "src2":"https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/i/u/w/-original-imagrkynyhv7vhzd.jpeg?q=70&crop=false",
             "purchasecount":"5,371",
             "ratingpercent":"32",
             "linedprice":"14,690",
@@ -28,6 +32,8 @@
             "delivery_1day":false,
             "features":["Full HD Display | VA Panel","Response Time: 4 ms","2D Refresh Rate: 75 Hz"],
             "brand":"Lenova",
+            "responsetime":"4",
+             "refreshrate":"75",
             "rating":"3",
             "display_size":"30",
             "screenresolution":"Full HD"
@@ -36,6 +42,7 @@
             "id":3,
              "name":"Acer 54.61 cm (22 inch) Full HD IPS Panel with sRGB 99%, ENERGY STAR Certified, VESA Supportive, VGA, HDMI, Ergonomic Stand, ZeroFrame Design Monitor (KA222Q)",
             "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/c/n/8/-original-imahf4rbgwtzquxh.jpeg?q=60&crop=false",
+            "src2":"https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/c/n/8/-original-imahf4rbgwtzquxh.jpeg?q=70&crop=false",
             "purchasecount":"8,569",
             "ratingpercent":"15",
             "linedprice":"6,999",
@@ -44,6 +51,8 @@
             "delivery_1day":false,
             "features":["Full HD Display | VA Panel","Response Time: 1 ms","VGA Support","2D Refresh Rate: 100 Hz"],
             "brand":"Acer",
+             "refreshrate":"100",
+             "responsetime":"1",
             "rating":"2",
             "display_size":"19",
             "screenresolution":"Full HD"
@@ -52,6 +61,7 @@
             "id":4,
             "name":"LG 108.0 cm (43 inch) 4K Ultra HD IPS Panel with WebOS, Smart Monitor (43SQ700S-WB.ATRLMSN)",
             "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/f/j/4/43sq700-w-4k-ultra-hd-43-2023-43sq700-w-lg-original-imagtkcf7vjhvs7j.jpeg?q=60&crop=false",
+            "src2":"https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/f/j/4/43sq700-w-4k-ultra-hd-43-2023-43sq700-w-lg-original-imagtkcf7vjhvs7j.jpeg?q=70&crop=false",
             "purchasecount":"303",
             "ratingpercent":"49",
             "linedprice":"67,000",
@@ -60,6 +70,8 @@
             "delivery_1day":false,
             "features":["4K Ultra HD Display | IPS Panel","Inbuilt Speaker","Response Time: 5 ms","VGA Support","2D Refresh Rate: 60 Hz"],
             "brand":"LG",
+             "refreshrate":"60",
+             "responsetime":"5",
             "rating":"4",
             "display_size":"20",
             "screenresolution":"4K Ultra HD"
@@ -68,6 +80,7 @@
             "id":5,
             "name":"Acer 60.45 cm (24 inch) Full HD LED Backlit IPS Panel with 6 axis Color Adjustment, 2X2W Inbuilt Speakers, Display Widget, VisionCare, ENERGY STAR Certified, Robust Stand Monitor (KA242Y)",
             "src":"https://rukminim1.flixcart.com/image/192/240/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60&crop=false",
+            "src2":"https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60",
             "purchasecount":"1,021",
             "ratingpercent":"16",
             "linedprice":"7,999",
@@ -76,10 +89,11 @@
             "delivery_1day":false,
             "features":["Full HD Display | IPS Panel","Response Time: 1 ms","HDMI Ports: 1","VGA Support","2D Refresh Rate: 120 Hz"],
             "brand":"Acer",
+             "refreshrate":"120",
+             "responsetime":"1",
             "rating":"3",
             "display_size":"23",
             "screenresolution":"Full HD"
-        }
-        
-    ]  
-}    
+        }   
+    ]   
+}

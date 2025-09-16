@@ -1,9 +1,9 @@
 import React from 'react'
 import "./festival.css"
-import {festivalitems} from "./items.json"
+import {festivalitems1,festivalitems2} from "./items.json"
  const Festivalscroll = () => {
   return (
-    <div>
+    <div>  
       <div className="festivaladdwrapper">
         <div className="festivalinnerwrap">
           
@@ -16,7 +16,7 @@ import {festivalitems} from "./items.json"
                 <div className="festivalbottomarea">
                   <div className="festivalimagecontainer">
                     {
-                      festivalitems.map((item,index)=>{
+                      festivalitems1.map((item,index)=>{
                         return(
                            <a href="" className='imagecontainer'>
                       <img key={index} src={item.src} alt={item.alt}  srcset={item.src}/>
@@ -29,7 +29,32 @@ import {festivalitems} from "./items.json"
             </div>
         </div>     
       </div>
-    </div>
+      <div className="festivaladdwrapper">
+        <div className="festivalinnerwrap2">
+          
+            <div className="festivalflexarea">
+                <div className="festivaltoparea">
+                    <div className="festivalheading">
+                        Tyohaar trends
+                    </div>
+                </div>
+                <div className="festivalbottomarea">
+                  <div className="festivalimagecontainer2">
+                    {
+                      festivalitems2.map((item,index)=>{
+                        return(
+                           <a href="" className='imagecontainer'>
+                      <img key={index} src={item.src} alt={item.alt}  srcset={item.src}/>
+                    </a>
+                        )
+                      })
+                    }
+                  </div>
+                </div> 
+            </div>            
+        </div>     
+      </div>
+    </div> 
   )
 } 
 

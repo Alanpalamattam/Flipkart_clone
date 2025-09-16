@@ -6,29 +6,6 @@ import { useItems } from "../../../context/Filtercontext";
 const FilterSelection = () => {
   const { selectedfilters, setselectedfilters } = useItems();
   const [filter, setfilter] = useState(0);
-
-  //   const handleTick = (category, item) => {
-
-  //   setselectedfilters((prev) => {
-  //     const prevValues = prev[category] || [];
-
-  //     if (prevValues.includes(item)) {
-  //       return {
-  //         ...prev,
-  //         [category]: prevValues.filter((v) => v !== item),
-  //       };
-  //     } else {                ffe
-  //       return {
-  //         ...prev,
-  //         [category]: [...prevValues, item],
-  //       };
-  //     }
-  //   });
-
-  //   {
-  //     console.log(category);
-  //   }
-  // };
   const handleTick = (category, item) => {
     setselectedfilters((prev) => {
       const prevValues = prev[category];

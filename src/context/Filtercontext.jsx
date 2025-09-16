@@ -10,7 +10,6 @@ import { createContext, useContext, useState,useEffect} from "react";
   Discount:[],
   "Display Size":[],
   "Screen Resolution":[],
-  
 };    
 const ItemsContext = createContext();
  
@@ -20,28 +19,27 @@ const ItemsContext = createContext();
   useEffect(()=>{
    const fetchproducts=async()=>{
       try{
-           const res=await fetch("/public/products.json");
+           const res=await fetch("/products.json");
            const data=await res.json();
-           setItems(data.products);
+            setItems(data.products);
            setallitems(data.products);
       }catch (err) {
-        console.log("Error fetching JSON:", err);
+         console.log("Error fetching JSON:", err);
       } finally{
-        console.log("")
-      } 
+        console.log("");   
+      }
     }   
     fetchproducts(); 
   },[]);
     const [selectedfilters, setselectedfilters] = useState(initialFilters);
   
    return (
-    <ItemsContext.Provider value={{ allitems,items, selectedfilters,setselectedfilters,setItems }}>
+    <ItemsContext.Provider value={{ allitems,items,initialFilters,selectedfilters,setselectedfilters,setItems }}>
       {children}
     </ItemsContext.Provider>
   );
 };
 
-// Custom hook for easy usage
-export const useItems = () => useContext(ItemsContext);
+ export const useItems = () => useContext(ItemsContext);
 
    

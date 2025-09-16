@@ -79,7 +79,7 @@
             "src":"https://rukminim2.flixcart.com/fk-p-flap/102/102/image/fa288ad62fffc1c1.jpg?q=60"
         }
     ],
-    "festivalitems":[
+    "festivalitems1":[
         {
             "src":"https://rukminim1.flixcart.com/fk-p-flap/520/780/image/c04a254476366f50.jpg?q=90",
             "alt":"image1"
@@ -129,5 +129,40 @@
             "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/b26f70db4c371b64.jpg?q=90",
             "alt":"image12"
         }
-    ]
-}
+    ],
+    "festivalitems2":[
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/6851ab83d3de82cd.jpg?q=60",
+            "alt":"image1"
+        },
+         {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/fd252144320705bc.jpg?q=60",
+            "alt":"image2"
+        },
+         {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/d124a9731e6e58e1.png?q=60",
+            "alt":"image3"
+        }
+        ,
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/4e6310b4db3e337b.jpg?q=60",
+            "alt":"image4"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/f1cd148f92b2a089.jpg?q=60",
+            "alt":"image5"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/75b69f664df9877a.jpg?q=60",
+            "alt":"image6"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/eb3686f6b6b90c61.jpg?q=60",
+            "alt":"image7"
+        },
+        {
+            "src":"https://rukminim1.flixcart.com/fk-p-flap/1040/1560/image/068170d217948b1f.jpg?q=60",
+            "alt":"image8"
+        }
+    ] 
+}   

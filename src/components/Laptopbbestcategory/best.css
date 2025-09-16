@@ -79,8 +79,37 @@
     overflow: hidden;
     white-space: nowrap;
 }
+.home-ad-section{
+    height: calc(100% - 16px);
+    background-color: rgb(255, 255, 255);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.home-ad-flex-area{
+    display: flex;
+    flex-flow: wrap;
+    position: relative;
+}
+.home-ad-outer-wrap{ 
+   flex-basis: 33.3333%;
+    width: 33.3333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.home-ad-content{
+        background-color: rgb(240, 242, 245);
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.home-ad-content img{
+        width: 100%;
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 41 / 22;
+}
 @media screen and (min-width:1024px){
     .bestmain-wrapper{
         display: contents;
     }
-}
+} 

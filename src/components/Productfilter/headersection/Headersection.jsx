@@ -205,9 +205,9 @@ const Headersection = ({ sortType, onSortChange }) => {
             <div className="sorttext">Sort</div>
           </div>
           <div className="seperaterline"></div>
-
+         <Link to={"/filter"} style={{textDecoration:"none"}} className="filterbut">
           <div className="filterbut">
-            <Link to={"/filter"}>
+            
               <svg width="20" height="20" viewBox="0 0 256 256">
                 <path fill="none" d="M0 0h256v256H0z"></path>
                 <path
@@ -217,7 +217,7 @@ const Headersection = ({ sortType, onSortChange }) => {
                   stroke-linejoin="round"
                   stroke-width="12"
                   d="M148 172H40M216 172h-28"
-                ></path>
+                ></path>     
                 <circle
                   cx="168"
                   cy="172"
@@ -247,9 +247,10 @@ const Headersection = ({ sortType, onSortChange }) => {
                   stroke-width="12"
                 ></circle>
               </svg>
-            </Link>
+            
             <div className="sorttext">Filter</div>
           </div>
+          </Link>
         </div>
       </div>
       <div className="devileryfilter-premiumbrands">

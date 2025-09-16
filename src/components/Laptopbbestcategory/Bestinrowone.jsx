@@ -1,6 +1,48 @@
 import "./best.css";
 import { Link } from "react-router-dom";
 const Bestinrowone = () => {
+  const topproducts=[
+    {
+     "img":"https://rukminim1.flixcart.com/image/100/100/xif0q/shoe/m/l/m/-original-imahddyzhk9mqnw6.jpeg?q=60",
+     "firstheading":"PUMA, ADIDAS ...",
+     "secondheading":"Min. 65% Off"
+    },
+    {
+     "img":"https://rukminim1.flixcart.com/image/220/220/kx50gi80/pen/h/z/k/119766-flair-original-imag9nzubznagufg.jpeg?q=60",
+     "firstheading":"Top Selling Stationery",
+     "secondheading":"From ₹49"
+    },
+    {
+       "img":"https://rukminim1.flixcart.com/image/100/100/l111lzk0/cycle/m/r/e/xc-900-grey-lite-26-15-5-cradiac-21-gear-120-original-imagczuzpxeweczm.jpeg?q=60",
+     "firstheading":"Geared Cycles",
+     "secondheading":"Up to 70% Off"
+    },      
+    {
+      "img":"https://rukminim1.flixcart.com/image/100/100/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=60",
+      "firstheading":"Best of Action Toys",
+     "secondheading":"Up to 70% Off"
+    },
+    {
+      "img":"https://rukminim1.flixcart.com/image/220/220/k6fd47k0/nut-dry-fruit/p/z/7/200-100-natural-california-pouch-happilo-original-imafzvw2tcazeur6.jpeg?q=60",
+      "firstheading":"Dry Fruits",
+     "secondheading":"Up to 75% Off"
+    },
+    {
+      "img":"https://rukminim1.flixcart.com/image/100/100/k0plpjk0/remote-control-toy/9/g/k/4-function-remote-control-high-speed-big-racing-car-toy-funkey-original-imafkg33umd8dy93.jpeg?q=60",
+      "firstheading":"Remote Control Toys",
+     "secondheading":"Up to 80% Off"
+    },
+    {
+       "img":"https://rukminim1.flixcart.com/image/100/100/kzzw5u80/coffee/s/b/x/-original-imagbwf3wvhzfh5z.jpeg?q=60",
+      "firstheading":"Coffee Powder",
+     "secondheading":"Up to 80% Off"
+    },
+    {
+       "img":"https://rukminim1.flixcart.com/image/100/100/klzhq4w0/jam-spread/w/q/u/510-chocolate-peanut-butter-crunchy-510g-jar-nut-butter-original-imagyzpqqfaguxny.jpeg?q=60",
+      "firstheading":"Food Spreads",
+     "secondheading":"Up to 75% Off"
+    }
+  ]    
   return (
     <div>
       <div className="best-outerwrapp">
@@ -148,16 +190,62 @@ const Bestinrowone = () => {
                   </div>
                   <div className="secondescription">From ₹8279</div>
                 </div>
-              </div>
-              
-              
-
-              
+              </div>       
             </div>
           </div>
         </div>
       </div>
-      
+      <div className="home-ad-section">
+        <div className="home-ad-flex-area">
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/a8e2ebb6e3486665.jpg?q=60" alt="" />
+             </div>
+           </div>
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/a2c99766fe520090.jpg?q=60" alt="" />
+             </div>
+           </div>
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/1156864a33cbce2e.jpg?q=60" alt="" />
+             </div>
+           </div>
+        </div>
+      </div>
+      <div className="best-outerwrapp">
+        <div className="best-innerwrap">
+          <div className="bestcategory-namepart">
+            <div className="bestcategory-namewrapper">Top Products for you</div>
+          </div>
+          <div>
+            <div className="best-productarea">
+              {
+               topproducts.map((x)=>
+               <div className="bestproduct-innerwrap">
+                <div
+                  className="best-imagearea"
+                >
+                  <img
+                    className="best-img"
+                    src={x.img}
+                    alt=""
+                  />
+                </div>
+                <div className="bestdecription">
+                  <div className="firstdescription">
+                    {x.firstheading}
+                  </div>
+                  <div className="secondescription">{x.secondheading}</div>
+                </div>
+              </div> 
+              )
+              }      
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

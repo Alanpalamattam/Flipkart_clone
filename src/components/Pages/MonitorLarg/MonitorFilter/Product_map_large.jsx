@@ -1,25 +1,27 @@
 import React from 'react'
 import { useItems } from "../../../../context/Filtercontext";
-
+import { Link } from 'react-router-dom';
 const Product_map_large = () => {
-      const { items} = useItems();
+      const { items,setselectedfilters,initialFilters} = useItems();
    return (
   <div>   
   {
+    items.length >0?(
     items.map((p,index)=>
-      
+        
         <div className="p-large-display-main" key={index}>
+            <Link to={`/product/${p.id}`} className='p-large-display-main' style={{textDecoration:"none"}}>
             <div style={{width:"100%"}} >
              <div className="p-display-large-outer-wrap">
-                <a href="" className="p-display-atag">
+                <div className="p-display-atag">
                     <div className="p-large-image-area">
                          <div className="p-large-image-wrap">
                             <img src={p.src} alt="" className="p-large-img" />
                         </div>
                           <div className="fav-button-p-large">
                             <div className="fav-button-flex-area"><svg xmlns="http://www.w3.org/2000/svg"   width="16" height="16" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#c2c2c2" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg></div>
-                        </div>
-                    </div>
+                         </div>
+                    </div>  
                     <div className="p-details-area-large">
                         <div className="p-name-description-area">
                           <div className="p-name-large">
@@ -81,11 +83,15 @@ const Product_map_large = () => {
                            </div>
                         </div> 
                     </div>
-                </a>  
+                </div>  
              </div>
             </div>
+            </Link>
         </div>
-    )
+    )):<div className="resetsection">
+          <p>No products found</p>
+          <button onClick={()=>setselectedfilters(initialFilters)}>reset Filter</button>
+        </div>
   }
     
       
