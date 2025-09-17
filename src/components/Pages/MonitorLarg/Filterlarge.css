@@ -559,16 +559,13 @@ margin-top: 0.5px;
      letter-spacing: 0.3px;
   }
   .delltest{
-    display:flex;
-
-    margin-left: 24px;
-    
-       min-width:210px;
+    display:flex;   
+    margin-left: 12px;
+    min-width:210px;
     font-size: 13px;
     font-weight: 500;
     line-height: 17px;
     font-family: "regular";
-    
     color: #212121;
   }
   .filter-display-main-large{

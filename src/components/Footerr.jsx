@@ -123,5 +123,3 @@ const Footerr = () => {
 } 
 
 export default Footerr
-
-  

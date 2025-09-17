@@ -6,7 +6,7 @@ const IHeader = () => {
        <div>
         <div className="i-header-main-wrap">
             <div className="i-header-content">
-                <a href="/Monitors" className='iback-button'><svg width="24" height="24" fill="none" viewBox="0 0 32 32">
+                <a href="/monitors" className='iback-button'><svg width="24" height="24" fill="none" viewBox="0 0 32 32">
                     <path d="M27 16H5M14 7l-9 9 9 9" stroke="#333333ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg></a>
             </div>
