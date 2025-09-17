@@ -70,7 +70,7 @@ import { useItems } from "../../../context/Filtercontext";
           <FilterSelection />
         </div>
          <div className="filterbottom">
-          <Link to={"/Monitors"} className="filterbottom" style={{ textDecoration: "none" }}>
+          <Link to={"/monitors"} className="filterbottom" style={{ textDecoration: "none" }}>
           <div className="filterbottom-flex">
             <div className="filterbottom-right">
               <div className="filterbottom-number">74</div>
