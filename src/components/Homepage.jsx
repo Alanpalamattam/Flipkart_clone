@@ -14,7 +14,7 @@ import Footerr from './Footerr'
  const Homepage = () => {
   return (
     <div className='Mainbody'>
-      <>
+      <> 
       <Header/> 
     <Searchbar/>
     <Smallslider data={slides}/>

@@ -5,7 +5,7 @@ import { useItems } from "../../../context/Filtercontext";
 import Productdetails from "../productdisplay/Productdetails";
 import Footerr from "../../../../src/components/Footerr"
 const Headersection = ({ sortType, onSortChange }) => {
-  const { items } = useItems();
+  const { items} = useItems();
   const [sortview, setsortview] = useState(false);
   return (
     <div className="mobilefilter">
@@ -267,14 +267,6 @@ const Headersection = ({ sortType, onSortChange }) => {
                 <span>Delivery in 1 Day</span>
               </div>
             </div>
-            {/* <div className="deliverybutton">
-                        <div className="deliveryimg">
-                            <img src="https://rukminim1.flixcart.com/www/64/64/promos/31/05/2023/d09cf9fa-93e9-481f-a8ff-0b1e6b796f74.png?q=60" alt="deliveryimage" />
-                        </div> 
-                        <div className="deliverytext">
-                          <span>Premium Brands</span> 
-                        </div>                    
-                    </div>           */}
           </div>
         </div>
       </div>

@@ -17,7 +17,7 @@ const Footerr = () => {
            </div> 
            <div className='footer-text-section'>
             <div className="heading-footer-bold">
-                Group Companies
+                Group  
              </div>
              <a href="" className="footer-a-tag">Myntra</a>
              <a href="" className="footer-a-tag">Cleartrip</a>
@@ -124,3 +124,4 @@ const Footerr = () => {
 
 export default Footerr
 
+  

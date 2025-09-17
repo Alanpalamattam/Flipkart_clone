@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useItems } from "../../../../context/Filtercontext";
 import { checkbox } from "../../../Productfilter/filterpage/filtercheckboxes.json";
 const Monitorfilter = () => {
-  const { allitems, setItems, selectedfilters, setselectedfilters } =
+  const { allitems, setItems, selectedfilters, setselectedfilters,initialFilters } =
     useItems();
     const minLimit = 250;
   const maxLimit = 60000;
@@ -99,13 +99,14 @@ const handleMaxChange = (e) => {
         <div className="Filters-heading-large">
           <div className="f-headingflex">
             <div>Filters</div>
+            <div className="clear-filter-header" onClick={()=>setselectedfilters(initialFilters)}>CLEAR ALL</div>
           </div>
         </div>
         <div className="f-large-categories">
           <div className="f_large_hading1">
             <span>CATEGORIES</span>
           </div>
-          <div className="f-large-heading2">
+          <div className="f-large-heading2">      
             <span>
               <svg
                 width="10"
@@ -294,78 +295,6 @@ const handleMaxChange = (e) => {
             <span className="q-innertext">?</span>
           </div>
         </div>
-        {/* <div className="filter-types-area" onClick={handleclick}>
-          <div className="individualarea-filter">
-            <div className="filter-namearea-large">BRAND</div>
-            <svg
-              width="16"
-              height="27"
-              viewBox="0 0 16 27"
-              xmlns="http://www.w3.org/2000/svg"
-              className="filterl-downarrow"
-            >
-              <path
-                d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z"
-                fill="#878787"
-              ></path>
-            </svg>
-          </div>
-          <div style={{ display: visible ? "block" : "none" }}>
-            <div className="filter-dropdown-contentarea">
-              <div className="filter-brandsearch-area">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 17 18"
-                  className="search-filter-brand"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g fill="#878787" fill-rule="evenodd">
-                    <path d="m11.618 9.897l4.225 4.212c.092.092.101.232.02.313l-1.465 1.46c-.081.081-.221.072-.314-.02l-4.216-4.203"></path>
-                    <path
-                      class="JVQyl9"
-                      d="m6.486 10.901c-2.42 0-4.381-1.956-4.381-4.368 0-2.413 1.961-4.369 4.381-4.369 2.42 0 4.381 1.956 4.381 4.369 0 2.413-1.961 4.368-4.381 4.368m0-10.835c-3.582 0-6.486 2.895-6.486 6.467 0 3.572 2.904 6.467 6.486 6.467 3.582 0 6.486-2.895 6.486-6.467 0-3.572-2.904-6.467-6.486-6.467"
-                    ></path>
-                  </g>{" "}
-                </svg>
-                <input
-                  type="text"
-                  placeholder="Search Brand"
-                  className="searchbrand-input"
-                ></input>
-              </div>
-              <div style={{ marginTop: "17px" }}>
-                <div className="checkbox-wrapper-box2">
-                  <img
-                    style={{
-                      objectFit: "cover",
-                      height: "13px",
-                      width: "100%",
-                      paddingTop: "-2px",
-                    }}
-                    src={""}
-                  />
-                  <div className="delltest">DELL</div>
-                </div>
-              </div>
-              <div style={{ marginTop: "17px" }}>
-                <div className="checkbox-wrapper-box2">
-                  <img
-                    style={{
-                      objectFit: "cover",
-                      height: "13px",
-                      width: "100%",
-                      paddingTop: "-2px",
-                    }}
-                    src={""}
-                  />
-                  <div className="delltest">LG</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         {checkbox
           .filter((x) => !["Price", "F-Assured"].includes(x.name))
           .map((x, index) => (

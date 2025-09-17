@@ -19,7 +19,7 @@ function App() {
         <Route path="/product/:id" element={<IndividualMain/>}></Route>
       </Routes>          
       </ItemsProvider>
-      {/* <Productfilterpage/> */}
+     
      </Router> 
     </React.StrictMode>
 

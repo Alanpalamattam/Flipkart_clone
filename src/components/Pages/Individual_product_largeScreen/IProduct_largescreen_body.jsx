@@ -20,13 +20,9 @@ const IProduct_largescreen_body = () => {
 }, [product]);
  if (!product) {
     return <p>Loading product...</p>; 
-  }
-  
+  } 
    console.log("is",product)
         const imagearray=[product.src2,"https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/1/k/o/-original-imahbzhctzaqjpfy.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/h/d/s/-original-imahbzhcntnyaygh.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/6/k/l/-original-imahbzhcj8fzrzcf.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/k/j/b/-original-imahbzhcfxpusfnk.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/i/j/w/-original-imahbzhchfgyq7ey.jpeg?q=70&crop=false","https://rukminim2.flixcart.com/image/832/832/xif0q/monitor/j/b/c/-original-imahbzhcgwdhaz38.jpeg?q=70&crop=false"]
-
-    
-     
      const routearray=["Home","Computers","Computer Components","Monitors & Accessories","Monitors","Acer Monitors"]
   return (
      <>
@@ -36,7 +32,7 @@ const IProduct_largescreen_body = () => {
             <div className="il-img-section">
                 <div className="il-img-flex-area">
                     <div className="il-img-list-area">
-                        <ul className="il-img-ul">
+                        <ul className="il-img-ul" >
                         {
                             imagearray.map((x,i)=>
                               <li className='il-img-li' key={i} onClick={()=>setmainimage(x) & setindex(i)}>

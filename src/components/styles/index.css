@@ -1,3 +1,9 @@
+ *{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
  .bodypart{
     background-color: rgb(244, 244, 244);
     align-items: center;

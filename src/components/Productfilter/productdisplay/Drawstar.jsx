@@ -1,19 +1,11 @@
- import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
-const DrawStar = ({totalStars = 5, rating}) => {
+const DrawStar = ({ totalStars = 5, rating }) => {
   const canvasRef = useRef(null);
 
-  const drawStar = (
-    ctx,
-    cx,
-    cy,
-    spikes,
-    outerRadius,
-    innerRadius,
-    fillStyle
-  ) => {
+  const drawStar = (ctx, cx, cy, spikes, outerRadius, innerRadius, fillStyle) => {
     let rot = (Math.PI / 2) * 3;
-    let x = cx; 
+    let x = cx;
     let y = cy;
     let step = Math.PI / spikes;
 
@@ -32,7 +24,6 @@ const DrawStar = ({totalStars = 5, rating}) => {
       rot += step;
     }
 
-    ctx.lineTo(cx, cy - outerRadius);
     ctx.closePath();
     ctx.fillStyle = fillStyle;
     ctx.fill();
@@ -42,38 +33,44 @@ const DrawStar = ({totalStars = 5, rating}) => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
+    // target width = 77px
+    canvas.width = 80;
+    canvas.height = 22;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    const spacing = canvas.width / totalStars; // ~15.4px per star
+    const outerRadius = 8; // smaller radius so all fit
+    const innerRadius = 4;
+    const y = canvas.height / 2;
+
     for (let i = 0; i < totalStars; i++) {
-      const x = 30 + i * 60;
-      const y = 110;
+      const x = spacing / 2 + i * spacing;
 
       if (i < Math.floor(rating)) {
-        drawStar(ctx, x, y, 5, 50, 22, "#008c00");
+        drawStar(ctx, x, y, 5, outerRadius, innerRadius, "#077807ff");
       } else if (i < rating) {
-        drawStar(ctx, x, y, 5, 50, 22, "rgba(220, 220, 220, 1)");
+        drawStar(ctx, x, y, 5, outerRadius, innerRadius, "lightgray");
         ctx.save();
         ctx.beginPath();
-        ctx.rect(x - 24, y - 24, 24, 48);
+        ctx.rect(x - outerRadius, y - outerRadius, outerRadius, outerRadius * 2);
         ctx.clip();
-        drawStar(ctx, x, y, 5, 50, 22, "#008c00");
+        drawStar(ctx, x, y, 5, outerRadius, innerRadius, "#008c00");
         ctx.restore();
       } else {
-        drawStar(ctx, x, y, 5, 28, 14, "rgba(220, 220, 220, 1)");
+        drawStar(ctx, x, y, 5, outerRadius, innerRadius, "lightgray");
       }
-    } 
+    }
   }, [rating, totalStars]);
 
   return (
     <div className="stararea">
-      <div className="starouter">
-        <canvas
-          style={{ width: "77px", height: "20px" }}
-          ref={canvasRef}
-        ></canvas>
-      </div>
+      <canvas
+        style={{ width: "80px", height: "22px" }}
+        ref={canvasRef}
+      />
     </div>
   );
-}; 
+};
 
-export default DrawStar; 
+export default DrawStar;

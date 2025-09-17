@@ -14,8 +14,22 @@
  }
 .festivalinnerwrap2{
         background-image: url('https://rukminim1.flixcart.com/fk-p-flap/920/380/image/7c7c9254cc6306c4.jpg?q=60');
-
-    background-size: contain;
+    background-size: cover;
+      width: 100%; 
+     height: auto;
+     border-radius: 16px;
+}
+.festivalinnerwrap3{
+    background-image:url('https://rukminim1.flixcart.com/fk-p-flap/920/380/image/3121b9e3931ab5b2.jpg?q=60');
+    background-size: cover;
+      width: 100%; 
+     height: auto;
+     border-radius: 16px;
+}
+.festivalinnerwrap4{
+        background-image: url('https://rukminim1.flixcart.com/www/940/360/promos/17/09/2025/6309def7-f590-4055-aabd-6e75e3c298c5.jpg?q=60');
+     color: white;
+    background-size: cover;
       width: 100%; 
      height: auto;
      border-radius: 16px;
@@ -54,10 +68,24 @@
 }
 .festivalimagecontainer2{
     display: flex;
-    padding: 0px 48px 0px 0px;
+    padding: 0px 48px 0px 0px;  
     flex-grow: 1;
     z-index: 11;
    background-color:rgb(247, 64, 134);
+}
+.festivalimagecontainer3{
+    display: flex;
+    padding: 0px 48px 0px 0px;
+    flex-grow: 1;
+    z-index: 11;
+   background-color:rgb(150, 106, 210);
+}
+.festivalimagecontainer4{
+    display: flex;
+    padding: 0px 48px 0px 0px;
+    flex-grow: 1;
+    z-index: 11;
+   background-color:rgb(234, 81, 139);
 }
 .imagecontainer{
     margin-left: 12px;

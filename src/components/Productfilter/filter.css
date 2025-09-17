@@ -1,6 +1,7 @@
-
+.mobilefilter{
+    background-color: white;
+}
 .mobileheader{
-
     display:flex;
     flex-direction: column;  
     height: 52px; 
@@ -9,7 +10,7 @@
 .mobileheader-outer{
     color: rgb(0, 0, 0);
     background-color: white;
-    display: flex;
+    display: flex;  
     font-size: 16px;
     width: 100%;
 
@@ -222,6 +223,7 @@ flex-shrink: 1;
     flex-direction: column;
     position: relative;
     margin: 0;
+     border-bottom: 1px solid rgb(244, 244, 244);
     padding: 0;
 }
 .producttopflexarea{
@@ -308,8 +310,10 @@ flex-shrink: 1;
 .stararea{
     display: flex;
     flex-direction: row;
-    padding: 5px 0px; 
-    margin-top: -6px;
+    padding-top: 7.5px; 
+     margin-top: -6px;
+     padding-bottom: .8px;
+    margin-left: -1px;
     position: relative; 
      
 }
@@ -508,8 +512,7 @@ font-family:'Times New Roman';
   /*FAV BUTTON */
 
   .favbutton{
-    /* top: 11.7px; */
-    top: 12px;
+     top: 12px;
     right: 12px;
     position: absolute;
     align-items: center;
@@ -523,35 +526,28 @@ font-family:'Times New Roman';
     flex-direction: column;
 }
    
-/* Button */
-
-/* Overlay */
+ 
 .overlay {
   position: fixed;
-  inset: 0; /* top:0, left:0, right:0, bottom:0 */
+  inset: 0; 
   background: rgba(0, 0, 0, 0.5);
   z-index: 150;
 }
  
-/* Popup container */
+
 .popup {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-
   background: white;
-  
    height: 225px;
    max-height: 225px;
-
-  /* animation */
   transform: translateY(100%);
   transition: transform 0.3s ease-in-out;
   z-index: 1500;
 }
  
-/* When open */
 .popup.show {
   transform: translateY(0);           
 }      

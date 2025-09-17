@@ -27,11 +27,11 @@ const Productdetails = () => {
                   </div>
                   <div className="product-ratingarea">
                     <div className="product-stararea">
-                      {/* <div className="stararea"> */}
+                     
                       <div>
-                        <DrawStar rating={4.5} />
+                        <DrawStar rating={p.rating} />
                       </div>
-                      {/* </div> */}
+                      
                       <div className="product-number">
                         <div className="product-ownum">({p.purchasecount})</div>
                       </div>

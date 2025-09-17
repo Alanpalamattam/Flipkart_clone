@@ -20,18 +20,18 @@ import "../styles/slidercss.css";
                   {category.arrow ? (
                     <span
                       className="categorydropdown"
-                      style={{
-                        width: category.doubleline ? "10px" : "6px",
-                        marginTop: category.doubleline ? "3px" : "4px",
-                      }}
+                      // style={{
+                      //   width: category.doubleline ? "10px" : "6px",
+                      //   marginTop: category.doubleline ? "3px" : "4px",
+                      // }}
                     ></span>
-                  ) : (
+                  ) : ( 
                     <span></span>
-                  )}
+                  )} 
                 </div>
-              </div>
+              </div>   
             </div>
-          ))}
+          ))} 
         </div>
       </div>
      </div>

@@ -5,7 +5,7 @@ import "./productfilter.css";
 import FilterSelection from "./FilterSelection";
 import { useItems } from "../../../context/Filtercontext";
  const Filterpage = () => {
-  const {allitems,setItems, selectedfilters } = useItems();
+  const {allitems,setItems, selectedfilters,setselectedfilters,initialFilters} = useItems();
   const handleApply = () => {
     const filteredProducts = allitems.filter((product) => {
       const price = Number(product.org_price.replace(/,/g, ""));
@@ -64,12 +64,12 @@ import { useItems } from "../../../context/Filtercontext";
             </Link>
           </div>
           <div className="filter-text">Filters</div>
+          <div className="filter-text2" onClick={()=>setselectedfilters(initialFilters)}>Clear All</div>
         </div>
         <div>
           <FilterSelection />
         </div>
-  
-        <div className="filterbottom">
+         <div className="filterbottom">
           <Link to={"/Monitors"} className="filterbottom" style={{ textDecoration: "none" }}>
           <div className="filterbottom-flex">
             <div className="filterbottom-right">
@@ -92,3 +92,4 @@ import { useItems } from "../../../context/Filtercontext";
 };
 
 export default Filterpage;
+

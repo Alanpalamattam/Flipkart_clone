@@ -292,6 +292,14 @@
     width: 16.6%;
 
 }
+.clear-filter-header{
+      cursor: pointer;
+    color: #2874f0;
+    font-size: 11px;
+    letter-spacing: -0.01px;
+     font-weight: 500;
+
+}
 .filter-large-flexarea{
     display: flex;
     flex-direction: column;
@@ -749,7 +757,7 @@ color: #2874f0;
     font-size: 17.2px;
     display: block;
     cursor: pointer;
-    font-family:"Inter1";
+    font-family:"semi-bold";
     line-height:18px; 
     letter-spacing: normal;
 }

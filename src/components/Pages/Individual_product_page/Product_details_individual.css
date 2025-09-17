@@ -6,6 +6,7 @@ margin: 0;
   display: flex;
   width: 100%;
   flex-direction: column;
+  background-color: white;
   flex: 1;
 }
 .iheader-main {
@@ -1477,7 +1478,7 @@ margin: 0;
     aspect-ratio: 3 / 2;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1250px) {
   .i-product-details-main {
     display: none;
   }

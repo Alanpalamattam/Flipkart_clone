@@ -1,6 +1,44 @@
 import "./best.css";
 import { Link } from "react-router-dom";
 const Bestinrowone = () => {
+  const bestproducts = [
+  {
+    img: "https://rukminim2.flixcart.com/image/220/220/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=60",
+    firstheading: "Best Truewireless Headphones",
+    secondheading: "Grab Now"
+  },
+  {
+    img: "https://rukminim2.flixcart.com/image/240/240/xif0q/dslr-camera/8/q/r/compact-camera-portable-small-point-and-shoot-digital-camera-for-original-imahec6vcssf4hzg.jpeg?q=60",
+    firstheading: "Top Mirrorless Cameras",
+    secondheading: "Shop Now!"
+  },
+  {
+    img: "https://rukminim2.flixcart.com/image/240/240/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60",
+    firstheading: "Fastrack Smartwatches",
+    secondheading: "From ₹1,399"
+  },
+  {
+    img: "https://rukminim2.flixcart.com/image/240/240/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=60",
+    firstheading: "Best Selling Mobile Speakers",
+    secondheading: "From ₹499*"
+  },
+  {
+    img: "https://rukminim2.flixcart.com/image/240/240/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=60",
+    firstheading: "Projector",
+    secondheading: "From ₹6990"
+  },
+  {
+    img: "https://rukminim2.flixcart.com/image/240/240/kl9rssw0/monitor/y/c/2/proart-display-pa278qv-27-pa278qv-asus-original-imagyfpfyzwgdygs.jpeg?q=60",
+    firstheading: "Asus Monitors",
+    secondheading: "From ₹14999"
+  },
+  {
+    img: "https://rukminim2.flixcart.com/image/240/240/xif0q/monitor/v/g/f/p2725h-99-srgb-1xhdmi-1x-dp-5x-usb-3-2-gen1-height-adjust-tilt-original-imahfxshcvrcrugk.jpeg?q=60",
+    firstheading: "Monitor",
+    secondheading: "From ₹8279"
+  }
+];
+
   const topproducts=[
     {
      "img":"https://rukminim1.flixcart.com/image/100/100/xif0q/shoe/m/l/m/-original-imahddyzhk9mqnw6.jpeg?q=60",
@@ -42,7 +80,50 @@ const Bestinrowone = () => {
       "firstheading":"Food Spreads",
      "secondheading":"Up to 75% Off"
     }
+  ]   
+  const mobiles=[
+    {
+     "img":"https://rukminim1.flixcart.com/image/220/220/xif0q/mobile/p/a/i/-original-imahfvuagzmf2ppf.jpeg?q=60",
+     "firstheading":"Samsung Galaxy S25 5G",
+     "secondheading":"Just ₹68,999*"
+    },
+    {
+     "img":"https://rukminim1.flixcart.com/image/220/220/xif0q/mobile/q/l/i/-original-imahegqhjqz38uks.jpeg?q=60",
+     "firstheading":"Google Pixel 9",
+     "secondheading":"Just ₹62,999*"
+    },
+    {
+       "img":"https://rukminim1.flixcart.com/image/220/220/xif0q/mobile/e/l/m/-original-imahcfcfhxrf5hzg.jpeg?q=60",
+     "firstheading":"Nothing Phone (3a)",
+     "secondheading":"From ₹22,999*"
+    },      
+    {
+      "img":"https://rukminim1.flixcart.com/image/220/220/xif0q/mobile/6/9/t/-original-imahfkvfhpfaftmb.jpeg?q=60",
+      "firstheading":"vivo T4 Lite 5G",
+     "secondheading":"From ₹9,999"
+    },
+    {
+      "img":"https://rukminim1.flixcart.com/image/220/220/xif0q/mobile/h/q/k/-original-imahfw4vamrf5xhf.jpeg?q=60",
+      "firstheading":"Oppo K13x 5G",
+     "secondheading":"Just ₹10,749*"
+    },
+    {
+      "img":"https://rukminim1.flixcart.com/image/220/220/xif0q/mobile/j/n/1/-original-imah9gtmya9qhqse.jpeg?q=60",
+      "firstheading":"Realme P3x 5G",
+     "secondheading":"Just ₹12,449*"
+    },
+    {
+       "img":"https://rukminim1.flixcart.com/image/100/100/kzzw5u80/coffee/s/b/x/-original-imagbwf3wvhzfh5z.jpeg?q=60",
+      "firstheading":"Coffee Powder",
+     "secondheading":"Up to 80% Off"
+    },
+    {
+       "img":"https://rukminim1.flixcart.com/image/220/220/jxz0brk0/stuffed-toy/n/t/s/4-feet-pink-very-beautiful-best-quality-for-special-gift-125-13-original-imafgv92puzkdytg.jpeg?q=60",
+      "firstheading":"Soft Toys",
+     "secondheading":"Up to 70% Off"
+    }
   ]    
+  
   return (
     <div>
       <div className="best-outerwrapp">
@@ -71,126 +152,27 @@ const Bestinrowone = () => {
                 </div>
               </div>
               </Link>
-              
-              <div className="bestproduct-innerwrap">
+              {
+                bestproducts.map((x,i)=>
+                   <div className="bestproduct-innerwrap" key={i}>
                 <div
                   className="best-imagearea"
                 >
                   <img
                     className="best-img"
-                    src="https://rukminim2.flixcart.com/image/220/220/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=60"
+                    src={x.img}
                     alt=""
                   />
                 </div>
                 <div className="bestdecription">
                   <div className="firstdescription">
-                    Best Truewireless Headphones
+                    {x.firstheading}
                   </div>
-                  <div className="secondescription">Grab Now</div>
+                  <div className="secondescription">{x.secondheading}</div>
                 </div>
               </div>
-              <div className="bestproduct-innerwrap">
-                <div
-                  className="best-imagearea"
-                >
-                  <img
-                    className="best-img"
-                    src="https://rukminim2.flixcart.com/image/240/240/xif0q/dslr-camera/8/q/r/compact-camera-portable-small-point-and-shoot-digital-camera-for-original-imahec6vcssf4hzg.jpeg?q=60"
-                    alt=""
-                  />
-                </div>
-                <div className="bestdecription">
-                  <div className="firstdescription">
-                    Top Mirrorless Cameras
-                  </div>
-                  <div className="secondescription">Shop Now!</div>
-                </div>
-              </div>
-              <div className="bestproduct-innerwrap">
-                <div
-                  className="best-imagearea"
-                >
-                  <img
-                    className="best-img"
-                    src="https://rukminim2.flixcart.com/image/240/240/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60"
-                    alt=""
-                  />
-                </div>
-                <div className="bestdecription">
-                  <div className="firstdescription">
-                    Fastrack Smartwatches
-                  </div>
-                  <div className="secondescription">From ₹1,399</div>
-                </div>
-              </div>
-              <div className="bestproduct-innerwrap">
-                <div
-                  className="best-imagearea"
-                >
-                  <img
-                    className="best-img"
-                    src="https://rukminim2.flixcart.com/image/240/240/kcf4lu80/speaker/mobile-tablet-speaker/h/u/f/srs-xb23-sony-original-imaftk66vjxp86h5.jpeg?q=60"
-                    alt=""
-                  />
-                </div>
-                <div className="bestdecription">
-                  <div className="firstdescription">
-                    Best Selling Mobile Speakers
-                  </div>
-                  <div className="secondescription">From ₹499*</div>
-                </div>
-              </div>
-              <div className="bestproduct-innerwrap">
-                <div
-                  className="best-imagearea"
-                >
-                  <img
-                    className="best-img"
-                    src="https://rukminim2.flixcart.com/image/240/240/xif0q/projector/q/7/6/i9-pro-10-ei9027-led-projector-egate-original-imah5e3bggu5qcgp.jpeg?q=60"
-                    alt=""
-                  />
-                </div>
-                <div className="bestdecription">
-                  <div className="firstdescription">
-                    Projector
-                  </div>
-                  <div className="secondescription">From ₹6990</div>
-                </div>
-              </div>
-              <div className="bestproduct-innerwrap">
-                <div
-                  className="best-imagearea"
-                >
-                  <img
-                    className="best-img"
-                    src="https://rukminim2.flixcart.com/image/240/240/kl9rssw0/monitor/y/c/2/proart-display-pa278qv-27-pa278qv-asus-original-imagyfpfyzwgdygs.jpeg?q=60"
-                    alt=""
-                  />
-                </div>
-                <div className="bestdecription">
-                  <div className="firstdescription">
-                    Asus Monitors
-                  </div>
-                  <div className="secondescription">From ₹14999</div>
-                </div>
-              </div>
-              <div className="bestproduct-innerwrap">
-                <div
-                  className="best-imagearea"
-                >
-                  <img
-                    className="best-img"
-                    src="https://rukminim2.flixcart.com/image/240/240/xif0q/monitor/v/g/f/p2725h-99-srgb-1xhdmi-1x-dp-5x-usb-3-2-gen1-height-adjust-tilt-original-imahfxshcvrcrugk.jpeg?q=60"
-                    alt=""
-                  />
-                </div>
-                <div className="bestdecription">
-                  <div className="firstdescription">
-                    Monitor
-                  </div>
-                  <div className="secondescription">From ₹8279</div>
-                </div>
-              </div>       
+                )
+              }       
             </div>
           </div>
         </div>
@@ -246,8 +228,78 @@ const Bestinrowone = () => {
           </div>
         </div>
       </div>
+      <div className="home-ad-section">
+        <div className="home-ad-flex-area">
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/60d4531d13f60d2a.jpg?q=60" alt="" />
+             </div>
+           </div>
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/031abc39613d5ee6.jpg?q=60" alt="" />
+             </div>
+           </div>
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/e87849d49fc95c4a.jpg?q=60" alt="" />
+             </div>
+           </div>
+        </div>
+      </div>
+      <div className="best-outerwrapp">
+        <div className="best-innerwrap">
+          <div className="bestcategory-namepart">
+            <div className="bestcategory-namewrapper">Mobiles</div>
+          </div>
+          <div>
+            <div className="best-productarea">
+              {
+               mobiles.map((x)=>
+               <div className="bestproduct-innerwrap">
+                <div
+                  className="best-imagearea"
+                >
+                  <img
+                    className="best-img"
+                    src={x.img}
+                    alt=""
+                  />
+                </div>
+                <div className="bestdecription">
+                  <div className="firstdescription">
+                    {x.firstheading}
+                  </div>
+                  <div className="secondescription">{x.secondheading}</div>
+                </div>
+              </div> 
+              )
+              }      
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div className="home-ad-section">
+        <div className="home-ad-flex-area">
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/f6ed964fe7ec97c3.jpg?q=60" alt="" />
+             </div>
+           </div>
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/70a4f1db2db6ab7d.jpg?q=60" alt="" />
+             </div>
+           </div>
+           <div className="home-ad-outer-wrap">
+             <div className="home-ad-content">
+              <img src="https://rukminim1.flixcart.com/fk-p-flap/640/340/image/998b319bf7ec7880.jpg?q=60" alt="" />
+             </div>
+           </div>
+        </div>
+      </div> 
     </div>
   );
-};
+}; 
 
 export default Bestinrowone;

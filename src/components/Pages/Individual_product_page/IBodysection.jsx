@@ -99,20 +99,6 @@ const product = products.find((p) => p.id.toString() === id);
             </div>
               )
             }
-            {/* <div className="i-image-area">
-              <picture>
-                <img className='i-image-container' src={product.src2} alt="" />
-              </picture>
-            </div>
-             <div className="i-image-area">
-              <picture>
-                <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
-              </picture>
-            </div> <div className="i-image-area">
-              <picture>
-                <img className='i-image-container' src="https://rukminim1.flixcart.com/image/960/1280/xif0q/monitor/i/q/k/-original-imahbzhcdvc6gkhu.jpeg?q=60" alt="" />
-              </picture>
-            </div>  */}
           </div>
           <div className="i-image-heart-container">
             <div className="i-image-heart-button">

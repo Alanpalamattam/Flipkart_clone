@@ -25,6 +25,14 @@
     padding-left: 12px;
     font-family: "roboto";
  }
+ .filter-text2{
+    display: table-cell;
+    vertical-align: middle;
+    padding:0px 12px;
+    text-align: right;
+    color: #2874f0;
+    font-family: "roboto";
+ }
  .filterbottom-flex{
     display: flex;
     align-items: center;
@@ -84,7 +92,10 @@
  .Filterselection{
     width: 100%;
  }
- .selection-flex{
+ .Filterselection-main{
+   background-color: white;
+ }
+ .selection-flex{      
     display: flex;
     flex-direction: row;
     justify-content: space-between;
