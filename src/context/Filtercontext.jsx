@@ -10,6 +10,18 @@ import { createContext, useContext, useState,useEffect} from "react";
   Discount:[],
   "Display Size":[],
   "Screen Resolution":[],
+  "Screen Form Factor":[],
+  "Inbuilt Speaker":[],
+  "Panel Type":[],
+  Connectivity:[],
+  "Suitable For":[],
+  "Response Time":[],
+  "GST Invoice Available":[],
+  "Refresh Rate":[],
+  "Availability":[],
+  "Category":[],
+ 
+  
 };    
 const ItemsContext = createContext();
  

@@ -13,14 +13,14 @@ const FilterSelection = () => {
         return {
           ...prev,
           [category]: prevValues.filter((v) => v !== item),
-        };
+        }; 
       } else {
-        return {
+        return { 
           ...prev,
           [category]: [...prevValues, item],
         };
       }
-    });
+    });  
   };
   useEffect(() => {
     console.log("ticked filters:", selectedfilters);
@@ -46,10 +46,10 @@ const FilterSelection = () => {
                   {checkitem.name}
                 </div>
               </div>
-            ))}
+            ))}       
           </div>
           {console.log(filter)}
-          <div className="filter-rightarea">
+          <div className="filter-rightarea"> 
             {filter != null &&
               checkbox[filter].checkboxes.map((x, index) => {
                 const category = checkbox[filter].name;
@@ -62,7 +62,7 @@ const FilterSelection = () => {
                         {checkbox[filter].subheading}
                       </div>
                     ) : (
-                      ""
+                      ""          
                     )}
                     <div key={index} className="checkbox-main">
                       <div className="checkbox-inner">

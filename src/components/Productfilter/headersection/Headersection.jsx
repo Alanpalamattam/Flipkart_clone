@@ -24,7 +24,7 @@ const Headersection = ({ sortType, onSortChange }) => {
                     d="M17.556 7.847H1M7.45 1L1 7.877l6.45 6.817"
                     stroke="black"
                     stroke-width="1.5"
-                    stroke-linecap="round"
+                    stroke-linecap="round" 
                     stroke-linejoin="round"
                     fill="none"
                   ></path>
