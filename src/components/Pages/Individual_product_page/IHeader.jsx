@@ -1,14 +1,16 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const IHeader = () => {
   return (
     <div className='iheader-main'>
        <div>
         <div className="i-header-main-wrap">
             <div className="i-header-content">
-                <a href="/monitors" className='iback-button'><svg width="24" height="24" fill="none" viewBox="0 0 32 32">
+                <Link to={"/monitors"}>
+                <a href="" className='iback-button'><svg width="24" height="24" fill="none" viewBox="0 0 32 32">
                     <path d="M27 16H5M14 7l-9 9 9 9" stroke="#333333ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg></a>
+                </Link>
             </div>
             <div className="i-header-searchbar">
                 <div className="i-searchicon">
