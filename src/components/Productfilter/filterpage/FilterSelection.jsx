@@ -20,18 +20,18 @@ const FilterSelection = () => {
           [category]: [...prevValues, item],
         };
       }
-    });  
+    });                       
   };
   useEffect(() => {
     console.log("ticked filters:", selectedfilters);
   }, [selectedfilters]);
   return (
-    <div>
-      <div className="Filterselection-main">
+    <div>   
+       <div className="Filterselection-main">
         {/* {console.log("iems",items)} */}
         <div className="selection-flex">
-          <div className="filter-leftarea">
-            {checkbox.map((checkitem, index) => (
+          <div className="filter-leftarea">        
+            {checkbox.map((checkitem, index) => ( 
               <div className="filtercategory-names-outer">
                 <div
                   className="filtercategory-names"
@@ -78,7 +78,7 @@ const FilterSelection = () => {
                                   ? "https://static-assets-web.flixcart.com/www/linchpin/batman-returns/cross-platform-images/images/checked-b672f083.png"
                                   : "https://static-assets-web.flixcart.com/www/linchpin/batman-returns/cross-platform-images/images/unchecked-58d79d4f.png"
                               }
-                            />
+                            /> 
                           </div>
                           {checkbox[filter]["number-checkbox"] === true ? (
                             <div className="checkbox-value">

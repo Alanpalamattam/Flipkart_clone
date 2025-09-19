@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { useItems } from "../../../context/Filtercontext";
 import Productdetails from "../productdisplay/Productdetails";
 import Footerr from "../../../../src/components/Footerr"
-const Headersection = ({ sortType, onSortChange }) => {
-  const { items} = useItems();
+const Headersection = () => {
+  const { items,setSortType,sorttype} = useItems();
   const [sortview, setsortview] = useState(false);
   return (
     <div className="mobilefilter">
@@ -123,12 +123,12 @@ const Headersection = ({ sortType, onSortChange }) => {
                 <div
                   className="sortselecet-btn"
                   onClick={() =>
-                    onSortChange("popularity") & setsortview(false)
+                    setSortType("popularity") & setsortview(false)
                   }
                 >
                   <img
                     src={
-                      sortType === "popularity"
+                      sorttype === "popularity"
                         ? "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60"
                         : "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"
                     }
@@ -139,13 +139,13 @@ const Headersection = ({ sortType, onSortChange }) => {
                 <div className="popularitytextcontainer">
                   Price -- Low to High
                 </div>
-                <div
+                <div 
                   className="sortselecet-btn"
-                  onClick={() => onSortChange("lowtohigh") & setsortview(false)}
+                  onClick={() => setSortType("lowtohigh") & setsortview(false)}
                 >
                   <img
                     src={
-                      sortType === "lowtohigh"
+                      sorttype === "lowtohigh"
                         ? "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60"
                         : "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"
                     }
@@ -158,11 +158,11 @@ const Headersection = ({ sortType, onSortChange }) => {
                 </div>
                 <div
                   className="sortselecet-btn"
-                  onClick={() => onSortChange("hightolow") & setsortview(false)}
+                  onClick={() => setSortType("hightolow") & setsortview(false)}
                 >
                   <img
                     src={
-                      sortType === "hightolow"
+                      sorttype === "hightolow"
                         ? "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60"
                         : "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"
                     }
@@ -173,11 +173,11 @@ const Headersection = ({ sortType, onSortChange }) => {
                 <div className="popularitytextcontainer">Newest First</div>
                 <div
                   className="sortselecet-btn"
-                  onClick={() => onSortChange("newest") & setsortview(false)}
+                  onClick={() => setSortType("newest") & setsortview(false)}
                 >
                   <img
                     src={
-                      sortType === "newest"
+                      sorttype === "newest"
                         ? "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7c0ab296-0784-44d3-be1b-7aaa4c36d990.png?q=60"
                         : "https://rukminim1.flixcart.com/www/32/32/promos/28/04/2022/7b036604-c843-4bb5-af27-7c675bf60f67.png?q=60"
                     }

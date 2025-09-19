@@ -93,11 +93,9 @@ const IProduct_largescreen_body = () => {
                     )
                 }
                      
-            </div>
+            </div> 
 
-           <div className="il-share-button">
-                       
-
+           <div className="il-share-button">                       
            </div> 
          </div>
          <div className="il-product-heading-area">
@@ -143,7 +141,7 @@ const IProduct_largescreen_body = () => {
                 
                   </div>
                 </div>
-                
+              
             </div>
             <div className="il-product-price-description-section">
                 <div className="il-product-price-description-firstrow">

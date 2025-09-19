@@ -2,34 +2,45 @@ import React, { useEffect, useState } from "react";
 import { useItems } from "../../../../context/Filtercontext";
 import { checkbox } from "../../../Productfilter/filterpage/filtercheckboxes.json";
 const Monitorfilter = () => {
-  const { allitems, setItems, selectedfilters, setselectedfilters,initialFilters } =
-    useItems();
-    const minLimit = 250;
+  const {
+    allitems,
+    setItems,
+    selectedfilters,
+    sorttype,
+    setSortType,
+    setselectedfilters,
+    initialFilters,
+  } = useItems();
+  const minLimit = 250;
   const maxLimit = 60000;
   const [minVal, setMinVal] = useState(minLimit);
   const [maxVal, setMaxVal] = useState(maxLimit);
+  const clearfilter=()=>{
+  setselectedfilters(initialFilters);
+  setSortType("popularity");
+  setMinVal(minLimit);
+  setMaxVal(maxLimit);
+  } 
   
-const handleMinChange = (e) => {
-  const value = Math.min(Number(e.target.value), maxVal - 1); 
-  setMinVal(value); 
-  
-  setselectedfilters((prev) => ({
-    ...prev,
-    Price: [[value, prev.Price?.[0]?.[1] ?? maxVal]], 
-  }));
-};
+  const handleMinChange = (e) => {
+    const value = Math.min(Number(e.target.value), maxVal - 1);
+    setMinVal(value);
+     setselectedfilters((prev) => ({
+      ...prev,
+      Price: [[value, prev.Price?.[0]?.[1] ?? maxVal]],
+    }));
+  };
 
-const handleMaxChange = (e) => {
-  const value = Math.max(Number(e.target.value), minVal + 1);
-  setMaxVal(value);
+  const handleMaxChange = (e) => {
+    const value = Math.max(Number(e.target.value), minVal + 1);
+    setMaxVal(value);
 
-  setselectedfilters((prev) => ({
-    ...prev,
-    Price: [[prev.Price?.[0]?.[0] ?? minVal, value]], 
-  }));
-};
+    setselectedfilters((prev) => ({
+      ...prev,
+      Price: [[prev.Price?.[0]?.[0] ?? minVal, value]],
+    }));
+  };
 
-  
   const handleTick = (category, item) => {
     setselectedfilters((prev) => {
       const prevValues = prev[category];
@@ -48,7 +59,7 @@ const handleMaxChange = (e) => {
   };
   useEffect(() => {
     filterapply();
-  }, [selectedfilters]);
+  }, [selectedfilters,sorttype]);
   const [openIndex, setOpenIndex] = useState([]);
   const handleclick = (index) => {
     if (openIndex.includes(index)) {
@@ -64,7 +75,7 @@ const handleMaxChange = (e) => {
       const brandOk =
         selectedfilters.Brand.length === 0 ||
         selectedfilters.Brand.includes(product.brand);
-  
+
       const priceOk =
         selectedfilters.Price.length === 0 ||
         selectedfilters.Price.some(
@@ -74,7 +85,7 @@ const handleMaxChange = (e) => {
       const ratingOk =
         selectedfilters["Customer Ratings"].length === 0 ||
         Number(product.rating) >=
-          Math.max(...selectedfilters["Customer Ratings"]);
+          Math.min(...selectedfilters["Customer Ratings"]);
 
       const discountOk =
         selectedfilters.Discount.length === 0 ||
@@ -87,9 +98,25 @@ const handleMaxChange = (e) => {
       const screenOK =
         selectedfilters["Screen Resolution"].length === 0 ||
         selectedfilters["Screen Resolution"].includes(product.screenresolution);
-      console.log(selectedfilters["Screen Resolution"]);
-      return brandOk && priceOk && ratingOk && discountOk && screenOK;
+       return brandOk && priceOk && ratingOk && discountOk && screenOK;
     });
+    if (sorttype === "popularity") {
+      filteredProducts.sort((a, b) => b.ratingpercent - a.ratingpercent);
+    } else if (sorttype === "lowtohigh") {
+      filteredProducts.sort(
+        (a, b) =>
+          Number(a.org_price.replace(/,/g, "")) -
+          Number(b.org_price.replace(/,/g, ""))
+      );
+    } else if (sorttype === "hightolow") {
+      filteredProducts.sort(
+        (a, b) =>
+          Number(b.org_price.replace(/,/g, "")) -
+          Number(a.org_price.replace(/,/g, ""))
+      );
+    } else if (sorttype === "newest") {
+      filteredProducts.sort((a, b) => a.id - b.id);
+    }
     setItems(filteredProducts);
     console.log("apply", filteredProducts);
   };
@@ -99,14 +126,19 @@ const handleMaxChange = (e) => {
         <div className="Filters-heading-large">
           <div className="f-headingflex">
             <div>Filters</div>
-            <div className="clear-filter-header" onClick={()=>setselectedfilters(initialFilters)}>CLEAR ALL</div>
+            <div
+              className="clear-filter-header"
+              onClick={() => clearfilter()}
+            >
+              CLEAR ALL
+            </div>
           </div>
         </div>
         <div className="f-large-categories">
           <div className="f_large_hading1">
             <span>CATEGORIES</span>
           </div>
-          <div className="f-large-heading2">      
+          <div className="f-large-heading2">
             <span>
               <svg
                 width="10"
@@ -221,55 +253,106 @@ const handleMaxChange = (e) => {
             />
           </div>
           <div className="price-dots">
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
-           <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
+            <div className="price-dot-content">.</div>
           </div>
           <div className="min-max-price-section">
-           <div className="min-price-section">
-            <select className="min-select" onChange={handleMinChange} name="" id="">
-             <option value="value" className="min-option">Min</option>
-             <option value="250" className="min-option" >250</option>
-             <option value="500" className="min-option">500</option>
-             <option value="1000" className="min-option" >1000</option>
-             <option value="2000" className="min-option" >2000</option>
-             <option value="5000" className="min-option">5000</option>
-             <option value="10000" className="min-option" >10000</option>
-             <option value="20000" className="min-option" >20000</option>
-             <option value="30000" className="min-option" >30000</option>
-             <option value="40000" className="min-option">40000</option>
-            </select>
-           </div> 
-           <div className="min-max-price-to-text">to</div>
-          <div className="max-price-section">
-           <select className="min-select" onChange={handleMaxChange} name="" id="">
-            <option value="Max" className="min-option">{maxVal===60000?"60000+":maxVal}</option>
-             <option value="250" className="min-option">250</option>
-              <option value="500" className="min-option">500</option>
-             <option value="1000" className="min-option" >1000</option>
-             <option value="2000" className="min-option" >2000</option>
-             <option value="5000" className="min-option">5000</option>
-             <option value="10000" className="min-option" >10000</option>
-             <option value="20000" className="min-option" >20000</option>
-             <option value="30000" className="min-option" >30000</option>
-             <option value="40000" className="min-option">40000</option>
-              <option value="500" className="min-option">60000</option>
-           </select>
+            <div className="min-price-section">
+              <select
+                className="min-select"
+                onChange={handleMinChange}
+                value={minVal}
+                name=""
+                id=""
+              >
+                <option value="Min" className="min-option">
+                  { minVal === 250 ? "Min" : minVal}
+                </option>
+                <option value="500" className="min-option">
+                  500
+                </option>
+                <option value="1000" className="min-option">
+                  1000
+                </option>
+                <option value="2000" className="min-option"> 
+                  2000
+                </option> 
+                <option value="5000" className="min-option">
+                  5000
+                </option>
+                <option value="10000" className="min-option">
+                  10000
+                </option>
+                <option value="20000" className="min-option">
+                  20000
+                </option>
+                <option value="30000" className="min-option">
+                  30000
+                </option>
+                <option value="40000" className="min-option">
+                  40000
+                </option>
+              </select>   
+            </div>
+            <div className="min-max-price-to-text">to</div>
+            <div className="max-price-section">
+              <select
+                className="min-select"
+                onChange={handleMaxChange}
+                value={maxVal}
+                name=""
+                id=""
+              > 
+                <option value="Max" className="min-option">
+                  {maxVal === 60000 ? "60000+" : maxVal}
+                </option>
+                <option value="250" className="min-option">
+                  250
+                </option>
+                <option value="500" className="min-option">
+                  500
+                </option>
+                <option value="1000" className="min-option">
+                  1000
+                </option>
+                <option value="2000" className="min-option">
+                  2000
+                </option>
+                <option value="5000" className="min-option">
+                  5000
+                </option>
+                <option value="10000" className="min-option">
+                  10000
+                </option>
+                <option value="20000" className="min-option">
+                  20000
+                </option>
+                <option value="30000" className="min-option">
+                  30000
+                </option>
+                <option value="40000" className="min-option">
+                  40000
+                </option>
+                <option value="500" className="min-option">
+                  60000
+                </option>
+              </select>
+            </div>
           </div>
-          </div>               
         </div>
         <div className="flp-assured-large-checkbox">
           <label className="checkboxarea-f-assured">
-            <input type="checkbox" class="f-large-checkbox" />
+            <input type="checkbox" class="f-large-checkbox" /> 
             <div className="checkbox-wrapper-box">
               <img
                 style={{
@@ -278,7 +361,7 @@ const handleMaxChange = (e) => {
                   width: "100%",
                   paddingTop: "-2px",
                 }}
-               src={""}
+                src={""}
               />
             </div>
             <div className="f-assured-logoarea-large">

@@ -912,10 +912,10 @@ color: #2874f0;
   height: 0px;
   background: transparent;
   pointer-events: auto;  
-}
+}  
 
 .sliderinputleft::-webkit-slider-thumb {
-  /* pointer-events: all; */
+  pointer-events: all;
   width: 12.8px;
   height: 12.8px;
   border-radius: 50%;
@@ -926,9 +926,10 @@ color: #2874f0;
   right:10px;
   appearance: none;
   cursor: pointer;
+  z-index: 12;
 } 
 .sliderinputright::-webkit-slider-thumb {
-  /* pointer-events:all; */
+  pointer-events:all;
   width: 13.5px;
   height: 13px;
   border-radius: 50%;
@@ -938,10 +939,10 @@ color: #2874f0;
   top:-2.2px;
   right: -4.4px;
   appearance: none;
+  z-index: 13;
   cursor: pointer;
  }
-    
- 
+
 .sliderfade {
   position: absolute;
   height: 2px;
@@ -951,7 +952,6 @@ color: #2874f0;
   width: 100%;
   border-radius: 5px;
 }
-
 
 .rangearea {
   position: absolute;

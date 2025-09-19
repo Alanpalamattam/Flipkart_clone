@@ -10,7 +10,7 @@
             "checkboxes":["F-Assured"],
             "subheading":"Popular Filters"
          },
-        {
+        { 
             "name":"Brand",
             "checkboxes":["DELL","LG","HP","BenQ","Lenova","Enter","MSI","ViewSonic","Samsung","Acer"]
          },

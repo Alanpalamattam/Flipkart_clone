@@ -1,29 +1,28 @@
-import React,{useEffect, useState} from 'react'
+// import React,{useEffect, useState} from 'react'
 import Product_map_large from './Product_map_large'
 import { useItems } from "../../../../context/Filtercontext";
 
 const Monitor_productdisplay = () => {
-    const [sorttype,setSortType]=useState("popularity")
-    
-      const { items,setItems} = useItems();
-   useEffect(()=>{
-    let sorted=[...items]
-     if (sorttype === "popularity") {  
-    sorted.sort((a, b) => b.ratingpercent - a.ratingpercent);
-  } else if (sorttype === "lowtohigh") { 
-    sorted.sort((a, b) => 
-      Number(a.org_price.replace(/,/g, "")) - Number(b.org_price.replace(/,/g, ""))
-    );
-  } else if (sorttype === "hightolow") {
-    sorted.sort((a, b) => 
-      Number(b.org_price.replace(/,/g, "")) - Number(a.org_price.replace(/,/g, ""))
-    );
-  } else if (sorttype === "newest") {
-    sorted.sort((a, b) => a.id - b.id);
-  }
-  setItems(sorted)
-   },[sorttype])
-  return (
+    // const [sorttype,setSortType]=useState("popularity")
+      const { sorttype,setSortType} = useItems(); 
+  //  useEffect(()=>{ 
+  //   let sorted=[...items]
+  //    if (sorttype === "popularity") {  
+  //   sorted.sort((a, b) => b.ratingpercent - a.ratingpercent);
+  // } else if (sorttype === "lowtohigh") { 
+  //   sorted.sort((a, b) => 
+  //     Number(a.org_price.replace(/,/g, "")) - Number(b.org_price.replace(/,/g, ""))
+  //   );
+  // } else if (sorttype === "hightolow") {
+  //   sorted.sort((a, b) => 
+  //     Number(b.org_price.replace(/,/g, "")) - Number(a.org_price.replace(/,/g, ""))
+  //   );
+  // } else if (sorttype === "newest") {
+  //   sorted.sort((a, b) => a.id - b.id);
+  // }
+  // setItems(sorted)   
+  //  },[sorttype])
+  return ( 
     <div className='filter-display-main-large'>
       <div className="pdisplay-large-header">
         <div className="p-diplay-main">
@@ -60,7 +59,7 @@ const Monitor_productdisplay = () => {
             <div className={sorttype==="lowtohigh"?"sort-text2-filter":"sort-text3-filter"} onClick={()=>setSortType("lowtohigh")}>Price -- Low to High </div>
             <div className={sorttype==="hightolow"?"sort-text2-filter":"sort-text3-filter"} onClick={()=>setSortType("hightolow")}>Price -- High to Low </div>
             <div className={sorttype==="newest"?"sort-text2-filter":"sort-text3-filter"} onClick={()=>setSortType("newest")}>Newest First</div>
-
+ {console.log("sorttype",sorttype)}
           </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import "./productfilter.css";
 import FilterSelection from "./FilterSelection";
 import { useItems } from "../../../context/Filtercontext";
  const Filterpage = () => {
-  const {allitems,setItems, selectedfilters,setselectedfilters,initialFilters} = useItems();
+  const {allitems,setItems,sorttype,setSortType, selectedfilters,setselectedfilters,initialFilters} = useItems();
   const handleApply = () => {
     const filteredProducts = allitems.filter((product) => {
       const price = Number(product.org_price.replace(/,/g, ""));
@@ -16,9 +16,9 @@ import { useItems } from "../../../context/Filtercontext";
     
       const priceOk =  
         selectedfilters.Price.length === 0 ||
-        selectedfilters.Price.some(
+        selectedfilters.Price.some( 
           ([min, max]) => price >= min && price <= max
-        );
+        ); 
                 
       const ratingOk =
         selectedfilters["Customer Ratings"].length === 0 ||
@@ -37,11 +37,28 @@ import { useItems } from "../../../context/Filtercontext";
         console.log(selectedfilters["Screen Resolution"])
       return brandOk && priceOk && ratingOk && discountOk && screenOK;
     });
+    if (sorttype === "popularity") {
+      filteredProducts.sort((a, b) => b.ratingpercent - a.ratingpercent);
+    } else if (sorttype === "lowtohigh") {
+      filteredProducts.sort(
+        (a, b) =>
+          Number(a.org_price.replace(/,/g, "")) -
+          Number(b.org_price.replace(/,/g, ""))
+      );
+    } else if (sorttype === "hightolow") {
+      filteredProducts.sort(
+        (a, b) =>
+          Number(b.org_price.replace(/,/g, "")) -
+          Number(a.org_price.replace(/,/g, ""))
+      );
+    } else if (sorttype === "newest") {
+      filteredProducts.sort((a, b) => a.id - b.id);
+    }
     setItems(filteredProducts);
     console.log("apply", filteredProducts);
   };
   return (
-    <div>
+    <div> 
       <div className="filtercontainer">
         <div className="filter-top">
           <div className="backbutton">
@@ -64,7 +81,7 @@ import { useItems } from "../../../context/Filtercontext";
             </Link>
           </div>
           <div className="filter-text">Filters</div>
-          <div className="filter-text2" onClick={()=>setselectedfilters(initialFilters)}>Clear All</div>
+          <div className="filter-text2" onClick={()=>setselectedfilters(initialFilters) & setSortType("popularity")}>Clear All</div>
         </div>
         <div>
           <FilterSelection />
