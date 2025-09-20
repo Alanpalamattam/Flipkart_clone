@@ -31,7 +31,6 @@ const Footerr = () => {
              <a href="" className="footer-a-tag">Shipping</a>
              <a href="" className="footer-a-tag">Cancellation & Returns</a>
              <a href="" className="footer-a-tag" style={{textDecoration:"underline"}}>FAQ</a>
-
            </div>
            <div className='footer-text-section'>
             <div className="heading-footer-bold">
@@ -93,8 +92,7 @@ const Footerr = () => {
               <p className="footer-mail-content">Karnataka, India</p>
               <p className="footer-mail-content"> CIN : U51109KA2012PTC066107 </p>
               <p className="footer-mail-content"> Telephone: <a href="tel:044-45614700">044-45614700</a> / <a href="tel:044-67415800">044-67415800</a></p>
-
-           </div>
+            </div>
         </div>
         <div  className="footer-second-section">
           <div className="footer-second-section-item">

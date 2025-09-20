@@ -208,7 +208,6 @@ const IProduct_largescreen_body = () => {
                     <li className='il-product-highlights-li'>Cash on Delivery</li>
                     <li className='il-product-highlights-li'>Net banking & Credit/ Debit/ ATM card</li>
                 </ul>   
-
               </div>
             </div>
          </div>
@@ -239,7 +238,6 @@ const IProduct_largescreen_body = () => {
                    <p  className="il-description-paragraphp">
                       This Monitor is built with a ZeroFrame design, pushing the boundaries of minimalism to maximize your viewing area. Its near bezel-less edges eliminate distractions, giving you a wider and more immersive screen space. Whether you’re working on a multi-monitor setup or simply want a clean, uninterrupted view, the ZeroFrame design creates a seamless experience that feels boundless. Place multiple monitors side-by-side for a panoramic, edge-to-edge display that feels as though it has no limits.                    </p>
                   </div>
-                    
                     <div className="li-image-sectionl" style={{paddingLeft:"0px",paddingRight:"32px"}}>
                     <img src="https://rukminim2.flixcart.com/image/200/200/cms-rpd-img/edcb602550614e618b1d1a5f159f58ad_192fffad6ab_2.jpg.jpeg?q=90" alt="" />
                   </div>

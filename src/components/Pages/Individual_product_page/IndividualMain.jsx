@@ -8,7 +8,7 @@ const IndividualMain = () => {
     <>
     <div className='i-product-details-main'>
       <IHeader/>
-       <IBodysection/>
+      <IBodysection/>
     </div>
     <IProduct_large/>
     </>

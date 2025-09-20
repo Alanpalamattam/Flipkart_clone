@@ -4,8 +4,7 @@ import {row1,row2} from './items.json';
 import Newlaunchitems from './Newlaunchitems';
 import {Link} from "react-router-dom";
 const Firstscroolitems = () => {
-
-   return (  
+    return (  
     <>
     <div className="itemmain">
       <div className="itemwrapper">
@@ -15,12 +14,10 @@ const Firstscroolitems = () => {
                     <div key={index} className='itemcontent'>
                         <div className="imagediv">
                           <Link to={"/monitors"}><img src={p.src} alt="nothing"/>  </Link>
-                            
                         </div>
                         <div className="itemname">
                           {p.name}
-                        </div>
-                        
+                        </div>      
                     </div>
                   )
                 }

@@ -11,7 +11,7 @@ const Bestinrowone = () => {
     img: "https://rukminim2.flixcart.com/image/240/240/xif0q/dslr-camera/8/q/r/compact-camera-portable-small-point-and-shoot-digital-camera-for-original-imahec6vcssf4hzg.jpeg?q=60",
     firstheading: "Top Mirrorless Cameras",
     secondheading: "Shop Now!"
-  },
+  },  
   {
     img: "https://rukminim2.flixcart.com/image/240/240/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60",
     firstheading: "Fastrack Smartwatches",

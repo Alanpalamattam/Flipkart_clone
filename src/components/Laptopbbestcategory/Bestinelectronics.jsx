@@ -5,9 +5,8 @@ const Bestinelectronics = () => {
   return (
     <div className='bestmain-wrapper'>
       <Bestinrowone/>
-    </div>
+    </div> 
   )
 }
-
-export default Bestinelectronics
  
+export default Bestinelectronics

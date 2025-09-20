@@ -8,9 +8,9 @@ const IProduct_large = () => {
     <div className='iproduct-laptop-screen'>
        <Monitorheaderlarge/>
            <Monitorlargedropdown_section/>
-      <IProduct_largescreen_body/>
+           <IProduct_largescreen_body/>
        <Footerr/>
-    </div>
+    </div> 
   )
 }
 

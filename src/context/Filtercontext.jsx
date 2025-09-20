@@ -20,8 +20,7 @@ const initialFilters = {
   "Refresh Rate":[],
   "Availability":[],
   "Category":[], 
-};  
-
+};
 const ItemsContext = createContext();  
   export const ItemsProvider = ({ children }) => { 
    const [items, setItems] = useState([]); 
