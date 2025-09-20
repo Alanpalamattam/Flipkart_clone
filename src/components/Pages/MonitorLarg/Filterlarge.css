@@ -5,10 +5,7 @@
   font-family: Inter1;
   src: url("../../../assets/Inter/static/Inter_28pt-SemiBold.ttf");
 }
-.MonitorfilterLarge{
-    display: none;
-    box-sizing: border-box;
-}  
+
 .headerlarge{
     padding-bottom: 56px;
     min-width: 978px;
@@ -1032,3 +1029,4 @@ color: #2874f0;
       letter-spacing: 0.2px;
   }
 }
+ 

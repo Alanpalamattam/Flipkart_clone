@@ -1,27 +1,8 @@
-// import React,{useEffect, useState} from 'react'
-import Product_map_large from './Product_map_large'
+ import Product_map_large from './Product_map_large'
 import { useItems } from "../../../../context/Filtercontext";
 
 const Monitor_productdisplay = () => {
-    // const [sorttype,setSortType]=useState("popularity")
       const { sorttype,setSortType} = useItems(); 
-  //  useEffect(()=>{ 
-  //   let sorted=[...items]
-  //    if (sorttype === "popularity") {  
-  //   sorted.sort((a, b) => b.ratingpercent - a.ratingpercent);
-  // } else if (sorttype === "lowtohigh") { 
-  //   sorted.sort((a, b) => 
-  //     Number(a.org_price.replace(/,/g, "")) - Number(b.org_price.replace(/,/g, ""))
-  //   );
-  // } else if (sorttype === "hightolow") {
-  //   sorted.sort((a, b) => 
-  //     Number(b.org_price.replace(/,/g, "")) - Number(a.org_price.replace(/,/g, ""))
-  //   );
-  // } else if (sorttype === "newest") {
-  //   sorted.sort((a, b) => a.id - b.id);
-  // }
-  // setItems(sorted)   
-  //  },[sorttype])
   return ( 
     <div className='filter-display-main-large'>
       <div className="pdisplay-large-header">
@@ -30,15 +11,15 @@ const Monitor_productdisplay = () => {
             <div className="p-display-row1">
               <div className="p-display-row1-hometext">
                 <a href="/">Home</a>
-                <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="p-diplay-right-arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
+                <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className='p-diplay-right-arrow'><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
               </div>
               <div className="p-display-row1-hometext">
                 <a href="">Computers</a>
-                <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="p-diplay-right-arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
+                <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className='p-diplay-right-arrow'><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
               </div>
               <div className="p-display-row1-hometext">
                 <a href="">Computer Components</a>
-                <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" class="p-diplay-right-arrow"><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
+                <svg width="16" height="27" viewBox="0 0 16 27" xmlns="http://www.w3.org/2000/svg" className='p-diplay-right-arrow'><path d="M16 23.207L6.11 13.161 16 3.093 12.955 0 0 13.161l12.955 13.161z" fill="#878787"></path></svg>
               </div>
               <div className="p-display-row1-hometext">
                 <a href="">Monitors</a>
@@ -70,5 +51,3 @@ const Monitor_productdisplay = () => {
 }
 
 export default Monitor_productdisplay
-
-    

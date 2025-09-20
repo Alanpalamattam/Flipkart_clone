@@ -119,7 +119,7 @@ const Monitorfilter = () => {
     }
     setItems(filteredProducts);
     console.log("apply", filteredProducts);
-  };
+  };  
   return (
     <div className="filter-section-main">
       <div className="filter-large-flexarea">
@@ -465,3 +465,4 @@ const Monitorfilter = () => {
 };
 
 export default Monitorfilter;
+ 
