@@ -533,7 +533,6 @@ font-family:'Times New Roman';
   background: rgba(0, 0, 0, 0.5);
   z-index: 150;
 }
- 
 
 .popup {
   position: fixed;
@@ -547,7 +546,7 @@ font-family:'Times New Roman';
   transition: transform 0.3s ease-in-out;
   z-index: 1500;
 }
- 
+
 .popup.show {
   transform: translateY(0);           
 }      

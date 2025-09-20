@@ -45,7 +45,7 @@ const FilterSelection = () => {
                 >
                   {checkitem.name}
                 </div>
-              </div>
+              </div> 
             ))}       
           </div>
           {console.log(filter)}
