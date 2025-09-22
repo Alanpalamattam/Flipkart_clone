@@ -10,7 +10,7 @@ const IHeader = () => {
                 <a href="" className='iback-button'><svg width="24" height="24" fill="none" viewBox="0 0 32 32">
                     <path d="M27 16H5M14 7l-9 9 9 9" stroke="#333333ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg></a>
-                </Link>     
+                </Link>      
             </div>
             <div className="i-header-searchbar">
                 <div className="i-searchicon">
@@ -19,7 +19,7 @@ const IHeader = () => {
                 <div className="i-searchtext">
                     Search for products
                 </div>     
-            </div>
+            </div> 
             <div className="i-cartarea">
                 <div style={{height:"100%",width:"100%"}}>    
                     <div className="i-cart-content">
@@ -36,3 +36,4 @@ const IHeader = () => {
 }
 
 export default IHeader
+  

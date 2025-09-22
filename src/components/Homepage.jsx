@@ -21,7 +21,7 @@ import Footerr from './Footerr'
     <Firstscroolitems/>
      <div className="bodyparttwo">
       <Festivalscroll/>
-       
+ 
     </div>
     <div className="bodymainwrap" style={{width:"100%",justifyContent:"center"}}>
       <div className='bodypart'>

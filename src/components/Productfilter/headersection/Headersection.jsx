@@ -59,11 +59,11 @@ const Headersection = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
       {sortview && (
         <div className="overlay" onClick={() => setsortview(false)}></div>
       )}
-      <div className={`popup ${sortview ? "show" : ""}`}>
+       <div className={`popup ${sortview ? "show" : ""}`}>
         <div className="popupflexarea">
           <div className="sortbytext">sort by</div>
           <div className="sortbymargin"></div>

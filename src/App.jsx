@@ -21,7 +21,7 @@ function App() {
       </ItemsProvider>
      </Router> 
     </React.StrictMode>   
-
+ 
   );
 }
   

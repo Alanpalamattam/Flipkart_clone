@@ -10,7 +10,7 @@
 body::-webkit-scrollbar {
   display: none;
 } 
- 
+    
  .bodypart{
     background-color: rgb(244, 244, 244);
     align-items: center;
@@ -19,7 +19,7 @@ body::-webkit-scrollbar {
      position: relative;
     box-sizing: border-box;
   }
-  
+   
   .bodyparttwo{
     margin: 12px 16px;
     display: flex; 
@@ -50,4 +50,4 @@ body::-webkit-scrollbar {
  }
 }
 
- 
+   

@@ -39,3 +39,4 @@ import "../styles/slidercss.css";
 };
 
 export default Categoryslider;
+ 

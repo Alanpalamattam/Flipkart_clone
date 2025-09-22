@@ -2,12 +2,11 @@ import React from 'react'
 import { useItems } from "../../../../context/Filtercontext";
 import { Link } from 'react-router-dom';
 const Product_map_large = () => {
-      const { items,setselectedfilters,initialFilters} = useItems();
+      const { items} = useItems();
    return (
   <div>   
-  {
-    items.length >0?(
-    items.map((p,index)=>
+  {  
+     items.map((p,index)=>
         
         <div className="p-large-display-main" key={index}>
             <Link to={`/product/${p.id}`} className='p-large-display-main' style={{textDecoration:"none"}}>
@@ -88,15 +87,11 @@ const Product_map_large = () => {
             </div>
             </Link>
         </div>
-    )):<div className="resetsection">
-          <p>No products found</p>
-          <button onClick={()=>setselectedfilters(initialFilters)}>reset Filter</button>
-        </div>
-  }
-    
-      
+    )
+  } 
     </div>
   );
 }
 
 export default Product_map_large
+ 

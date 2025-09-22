@@ -1273,7 +1273,7 @@ margin: 0;
      color: #878787;
      text-decoration: line-through;
      font-family: "regular";
-  }
+  }  
   .il-product-off-percent-section{
     margin-left: 10px;
     font-size: 15px;
@@ -1440,7 +1440,7 @@ margin: 0;
   padding-left: 32px;
   text-align: right;
 }
- 
+
 .li-image-sectionl img{
   max-width: 100%;
   vertical-align: middle;

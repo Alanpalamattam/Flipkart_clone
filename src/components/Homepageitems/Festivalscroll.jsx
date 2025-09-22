@@ -108,4 +108,5 @@ import {festivalitems1,festivalitems2,festivalitems3,festivalitems4} from "./ite
   )
 } 
 
-export default Festivalscroll  
+export default Festivalscroll
+ 

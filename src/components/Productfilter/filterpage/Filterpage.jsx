@@ -18,8 +18,8 @@ import { useItems } from "../../../context/Filtercontext";
         selectedfilters.Price.length === 0 ||
         selectedfilters.Price.some( 
           ([min, max]) => price >= min && price <= max
-        ); 
-        
+        );  
+      
       const ratingOk =
         selectedfilters["Customer Ratings"].length === 0 ||
         Number(product.rating) >=

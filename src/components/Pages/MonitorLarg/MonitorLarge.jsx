@@ -12,5 +12,5 @@ const MonitorLarge = () => {
     </div>
   )
 } 
-
+  
 export default MonitorLarge

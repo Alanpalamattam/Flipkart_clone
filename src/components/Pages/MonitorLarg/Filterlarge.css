@@ -8,13 +8,14 @@
 .MonitorfilterLarge{
     display: none;
     box-sizing: border-box;
-}  
+}   
 .headerlarge{
     padding-bottom: 56px;
-    min-width: 978px;
-    width: 100%;
+   min-width: 978px;
+    width: 100%; 
     position: relative;
 }
+ 
 .largeheader_flex{
     position: fixed;
     width: 100%;

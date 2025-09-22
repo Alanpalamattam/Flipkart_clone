@@ -14,7 +14,7 @@ const Footerr = () => {
              <a href="" className="footer-a-tag" style={{textDecoration:"underline"}}>Flipkart Stories</a>
              <a href="" className="footer-a-tag">Press</a>
              <a href="" className="footer-a-tag">Corporate Information</a>
-           </div> 
+           </div>  
            <div className='footer-text-section'>
             <div className="heading-footer-bold">
                 Group  

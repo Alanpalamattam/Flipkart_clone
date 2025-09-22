@@ -3,6 +3,7 @@ import { useItems } from "../../../../context/Filtercontext";
 import { checkbox } from "../../../Productfilter/filterpage/filtercheckboxes.json";
 const Monitorfilter = () => {
   const {
+    items,
     allitems,
     setItems,
     selectedfilters,
@@ -13,30 +14,35 @@ const Monitorfilter = () => {
   } = useItems();
   const minLimit = 250;
   const maxLimit = 60000;
-  const [minVal, setMinVal] = useState(minLimit);
-  const [maxVal, setMaxVal] = useState(maxLimit);
+   const minVal = selectedfilters.minprice ?? minLimit;
+  const maxVal = selectedfilters.maxprice ?? maxLimit;
   const clearfilter=()=>{
   setselectedfilters(initialFilters);
   setSortType("popularity");
-  setMinVal(minLimit);
-  setMaxVal(maxLimit);
-  } 
-  
+  setselectedfilters((prev) => ({
+      ...prev,
+      minprice: minLimit,
+      maxprice: maxLimit,
+      Price: [],
+    }));
+  }
+
   const handleMinChange = (e) => {
     const value = Math.min(Number(e.target.value), maxVal - 1);
-    setMinVal(value);
-     setselectedfilters((prev) => ({
+    selectedfilters.minprice=value;
+    setselectedfilters((prev) => ({
       ...prev,
-      Price: [[value, prev.Price?.[0]?.[1] ?? maxVal]],
+      minprice: value,
+      Price: [[value, prev.Price?.[0]?.[1] ?? maxLimit]],
     }));
   };
 
   const handleMaxChange = (e) => {
     const value = Math.max(Number(e.target.value), minVal + 1);
-    setMaxVal(value);
-
+    
     setselectedfilters((prev) => ({
       ...prev,
+      maxprice: value,
       Price: [[prev.Price?.[0]?.[0] ?? minVal, value]],
     }));
   };
@@ -121,6 +127,7 @@ const Monitorfilter = () => {
     console.log("apply", filteredProducts);
   };  
   return (
+    <>
     <div className="filter-section-main">
       <div className="filter-large-flexarea">
         <div className="Filters-heading-large">
@@ -461,6 +468,13 @@ const Monitorfilter = () => {
       </div>
       {console.log("filter", selectedfilters)}
     </div>
+     {items.length==0?(
+    <div className="resetsection">
+       <p>No products found</p>
+         <button onClick={()=>clearfilter()}>reset Filter</button>
+       </div>):""
+     }
+    </>
   );
 };
 

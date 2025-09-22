@@ -3,7 +3,7 @@ import "./Filterlarge.css"
 const Monitorlargedropdown_section = () => {
   return (
     <div className='dropdown_section_large'>
-      <div className="dropdown_outer">
+      <div className="dropdown_outer"> 
         <div className="drop_flexarea">
             <span className="dropdown_content">
                 Electronics
@@ -46,4 +46,4 @@ const Monitorlargedropdown_section = () => {
 }        
       
 export default Monitorlargedropdown_section
-     
+       

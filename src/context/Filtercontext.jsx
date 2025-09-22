@@ -19,7 +19,9 @@ const initialFilters = {
   "GST Invoice Available":[],
   "Refresh Rate":[],
   "Availability":[],
-  "Category":[], 
+  "Category":[],
+  minprice:250,
+  maxprice:60000,
 };
 const ItemsContext = createContext();  
   export const ItemsProvider = ({ children }) => { 

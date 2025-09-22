@@ -76,3 +76,4 @@ const Lapmainslider = ({ data }) => {
 };
 
 export default Lapmainslider;
+ 
