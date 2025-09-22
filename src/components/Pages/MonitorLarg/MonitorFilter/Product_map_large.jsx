@@ -7,7 +7,6 @@ const Product_map_large = () => {
   <div>   
   {  
      items.map((p,index)=>
-        
         <div className="p-large-display-main" key={index}>
             <Link to={`/product/${p.id}`} className='p-large-display-main' style={{textDecoration:"none"}}>
             <div style={{width:"100%"}} >
